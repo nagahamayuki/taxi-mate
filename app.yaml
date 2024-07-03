@@ -1,5 +1,6 @@
 runtime: php81
-
+env: standard
+instance_class: F1
 handlers:
   - url: /css/(.*)
     static_files: css/\1
@@ -10,26 +11,18 @@ handlers:
   - url: /favicon.ico
     static_files: images/favicons/favicon.ico
     upload: images/favicons/favicon.ico
-  - url: /lp-1/assets/css/(.*)
-    static_files: lp-1/assets/css/\1
-    upload: lp-1/assets/css/.*
-  - url: /lp-1/assets/js/(.*)
-    static_files: lp-1/assets/js/\1
-    upload: lp-1/assets/js/.*
-  - url: /lp-1/assets/img/(.*)
-    static_files: lp-1/assets/img/\1
-    upload: lp-1/assets/img/.*
-  - url: /lp-1/assets/scss/(.*)
-    static_files: lp-1/assets/scss/\1
-    upload: lp-1/assets/scss/.*
-  - url: /lp-1$
-    redirect: /lp-1/
   - url: /lp-1/(.*)
     static_files: lp-1/\1
     upload: lp-1/.*
-  - url: /(.+)
-    static_files: \1
-    upload: .*
+  - url: /lp-1
+    static_files: lp-1/index.html
+    upload: lp-1/index.html
   - url: /.*
     static_files: index.html
     upload: index.html
+automatic_scaling:
+  min_idle_instances: automatic
+  max_idle_instances: automatic
+  min_pending_latency: automatic
+  max_pending_latency: automatic
+service_account: 167598555247-compute@developer.gserviceaccount.com
