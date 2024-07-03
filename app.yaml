@@ -8,6 +8,8 @@ handlers:
   - url: /favicon.ico
     static_files: images/favicons/favicon.ico
     upload: images/favicons/favicon.ico
+  - url: /lp-1
+    static_dir: lp-1
   - url: /.*
     static_files: index.html
     upload: index.html
