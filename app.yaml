@@ -1,6 +1,7 @@
 runtime: php81
 env: standard
 instance_class: F1
+
 handlers:
   - url: /css/(.*)
     static_files: css/\1
@@ -23,9 +24,11 @@ handlers:
   - url: /.*
     static_files: index.html
     upload: index.html
+
 automatic_scaling:
   min_idle_instances: automatic
   max_idle_instances: automatic
   min_pending_latency: automatic
   max_pending_latency: automatic
+
 service_account: 167598555247-compute@developer.gserviceaccount.com
