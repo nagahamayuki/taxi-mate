@@ -15,20 +15,18 @@ handlers:
   - url: /lp-1/assets/(.*)
     static_files: lp-1/assets/\1
     upload: lp-1/assets/.*
-  - url: /lp-1$
+  - url: /lp-1
     static_files: lp-1/index.html
     upload: lp-1/index.html
-  - url: /lp-1/(.*)
-    static_files: lp-1/\1
-    upload: lp-1/.*
   - url: /.*
     static_files: index.html
     upload: index.html
+  - url: .*
+    script: auto
 
 automatic_scaling:
   min_idle_instances: automatic
   max_idle_instances: automatic
   min_pending_latency: automatic
   max_pending_latency: automatic
-
 service_account: 167598555247-compute@developer.gserviceaccount.com
