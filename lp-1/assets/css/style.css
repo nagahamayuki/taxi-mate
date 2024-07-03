@@ -3423,6 +3423,9 @@ main#main .second-three-check-one .red-taxi img {
   width: 70%;
   height: auto;
 }
+main#main .second-three-check-one .red-taxi:hover {
+  background-color: #93d7dc;
+}
 main#main .second-three-check-one .black-taxi {
   display: flex;
   flex-direction: column;
@@ -3440,6 +3443,9 @@ main#main .second-three-check-one .black-taxi img {
   width: 70%;
   height: auto;
 }
+main#main .second-three-check-one .black-taxi:hover {
+  background-color: #93d7dc;
+}
 main#main .second-three-check .no-license {
   gap: 20px;
   color: #6e6f71;
@@ -3452,6 +3458,9 @@ main#main .second-three-check .no-license {
   border-radius: 5px;
   border: 1px solid gray;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+}
+main#main .second-three-check .no-license:hover {
+  background-color: #93d7dc;
 }
 main#main .second-three-check .next-img-second {
   width: 60px;
@@ -3472,6 +3481,33 @@ main#main .second-three-check .next-img-second img {
   to {
     right: 22px;
   }
+}
+main#main .second .next-second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+  height: 70px;
+}
+main#main .second .next-second .next-button {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 290px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  align-items: center;
+  background-color: #0d8ea3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main#main .second .next-second .next-button:hover {
+  background-color: #93d7dc;
+}
+main#main .second .next-second .next-button:active {
+  background-color: #6e6f71;
 }
 main#main .third {
   display: none;
@@ -3537,6 +3573,14 @@ main#main .third-five-part .third-two .third-cycle .third-span {
   font-size: 16px;
   font-weight: bold;
 }
+main#main .third-five-part .third-one .third-cycle:hover,
+main#main .third-five-part .third-two .third-cycle:hover {
+  background-color: #93d7dc;
+}
+main#main .third-five-part .third-one .third-three:hover,
+main#main .third-five-part .third-two .third-three:hover {
+  background-color: #93d7dc;
+}
 main#main .third-five-part .third-one .next-img-third,
 main#main .third-five-part .third-two .next-img-third {
   width: 60px;
@@ -3585,6 +3629,33 @@ main#main .third-five-part .third-three .third-img img {
 main#main .third-five-part .third-three .third-span {
   font-size: 16px;
   font-weight: bold;
+}
+main#main .third .next-third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+  height: 70px;
+}
+main#main .third .next-third .next-button {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 290px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  align-items: center;
+  background-color: #0d8ea3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main#main .third .next-third .next-button:hover {
+  background-color: #93d7dc;
+}
+main#main .third .next-third .next-button:active {
+  background-color: #6e6f71;
 }
 main#main .fourth {
   display: none;
@@ -3888,12 +3959,11 @@ main#main .sixth .common-description-six .common-des .description-text {
 main#main .sixth .six-input {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
-  border-bottom: 2px solid black;
+  padding-top: 20px;
   flex-direction: column;
 }
 main#main .sixth .six-input .custom-input-one {
-  width: 180px;
+  width: 320px;
   border: 1px solid gray;
   line-height: 12px;
   height: 36px;
@@ -3958,7 +4028,8 @@ main#main .sixth .six-input .error-message {
 main#main .sixth .nearest-station {
   display: flex;
   justify-content: center;
-  padding-bottom: 5px;
+  padding-bottom: 25px;
+  border-bottom: 2px black solid;
 }
 main#main .sixth .nearest-station .custom-input {
   width: 320px;
@@ -4472,6 +4543,41 @@ main#main .success_modal .modal-content .close-button:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  text-align: center;
+  height: 100vh;
+  background-color: #fefff2;
+}
+.thanks h2 {
+  font-size: 6.4rem;
+  color: #0d7e91;
+}
+.thanks h2 span {
+  font-size: 4.8rem;
+}
+.thanks .goTop {
+  font-size: 2.4rem;
+  width: 320px;
+  height: 44px;
+  background-color: #0d8ea3;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.thanks .goTop:hover {
+  background-color: darkcyan;
+}
+.thanks .goTop:active {
+  background-color: rgb(5, 116, 70);
 }
 
 .footer-update {

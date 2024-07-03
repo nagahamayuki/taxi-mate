@@ -54,27 +54,43 @@ function enableAllButtons() {
 }
 
 function secondCheck1() {
+  var prev_page = document.getElementById("second");
+
+  var next_page = document.getElementById("third");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
+
   var img_container_dom = document.querySelector(".next-img-second");
   var red_taxi_dom = document.getElementById("redtaxi");
 
   if (license === "普通免許") {
     license = "";
-    enableAllButtons();
-    img_container_dom.style.top = "2.5rem";
-    red_taxi_dom.style.backgroundColor = "";
   } else {
     license = "普通免許";
-    disableOtherButtons("redtaxi");
-    img_container_dom.style.top = "340px";
-    red_taxi_dom.style.backgroundColor = "#93d7dc";
   }
+  // Hide the first button
+  prev_page.style.display = "none";
+  // Display the second div
+  next_page.style.display = "block";
 
   updateNextButtonState();
 }
 function secondCheck2() {
   var img_container_dom = document.querySelector(".next-img-second");
   var black_taxi_dom = document.getElementById("blacktaxi");
+  var prev_page = document.getElementById("second");
 
+  var next_page = document.getElementById("third");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
   if (license === "⼆種免許") {
     license = "";
     enableAllButtons();
@@ -82,35 +98,48 @@ function secondCheck2() {
     black_taxi_dom.style.backgroundColor = "";
   } else {
     license = "⼆種免許";
-    disableOtherButtons("blacktaxi");
-    img_container_dom.style.top = "340px";
-    black_taxi_dom.style.backgroundColor = "#93d7dc";
   }
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
 
   updateNextButtonState();
 }
 
 function secondCheck3() {
-  var img_container_dom = document.querySelector(".next-img-second");
+  var prev_page = document.getElementById("second");
+
+  var next_page = document.getElementById("third");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
   var no_license_dom = document.getElementById("nolicense");
 
   if (license === "免許は持っていない") {
     license = "";
     enableAllButtons();
-    img_container_dom.style.top = "2.5rem";
     no_license_dom.style.backgroundColor = "";
   } else {
     license = "免許は持っていない";
     disableOtherButtons("nolicense");
-    img_container_dom.style.top = "340px";
-    no_license_dom.style.backgroundColor = "#93d7dc";
   }
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
 
   updateNextButtonState();
 }
 // Initial check to ensure the second-next button is disabled on page load
 function gotoFirst() {
   var prev_page = document.getElementById("first");
+
   var secondpage = document.getElementById("second");
 
   // Hide the first button
@@ -164,14 +193,19 @@ function thirdCheck(element) {
   const img_container_dom = document.querySelector(".next-img-third");
   if (changing_jobs_time !== "") {
     changing_jobs_time = "";
-    element.style.backgroundColor = "";
-    img_container_dom.style.top = "4rem";
+
     enableAllJob();
   } else {
     changing_jobs_time = element.querySelector("span").textContent;
-    element.style.backgroundColor = "#93d7dc";
-    img_container_dom.style.top = "340px";
-    disableJob(element.id);
+    var prev_page = document.getElementById("third");
+
+    var next_page = document.getElementById("four");
+
+    // Hide the first button
+    prev_page.style.display = "none";
+
+    // Display the second div
+    next_page.style.display = "block";
     updateThirdNextButtonState();
   }
 }
@@ -181,24 +215,12 @@ function gotoSecond() {
   var prev_page = document.getElementById("second");
 
   var next_page = document.getElementById("third");
-
+  enableAllButtons();
   // Hide the first button
   prev_page.style.display = "block";
 
   // Display the second div
   next_page.style.display = "none";
-}
-
-function thirdHidden() {
-  var prev_page = document.getElementById("third");
-
-  var next_page = document.getElementById("four");
-
-  // Hide the first button
-  prev_page.style.display = "none";
-
-  // Display the second div
-  next_page.style.display = "block";
 }
 
 let changing_job_reasons = [];
@@ -328,10 +350,12 @@ function sixAreaClick(element) {
     residence = "";
     element.style.backgroundColor = "";
     img_container_dom.style.top = "0px";
+    enableAllArea();
   } else {
     residence = element.textContent;
     element.style.backgroundColor = "#93d7dc";
     img_container_dom.style.top = "340px";
+    disableOtherArea(element.id);
   }
 }
 
@@ -358,35 +382,49 @@ function sixWayClick(element) {
 
 var post_number = "";
 var nearest_station = "";
-async function checkPost() {
-  post_number = document.getElementById("custom-sixinput-one").value;
-  const postError = document.getElementById("postInputError");
+// async function checkPost() {
+//   post_number = document.getElementById("custom-sixinput-one").value;
+//   const postError = document.getElementById("postInputError");
 
-  await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${post_number}`)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.status === 200) {
-        const img_container_dom = document.querySelector(".next-img-six");
-        img_container_dom.style.top = "865px";
-        postError.style.display = "none";
-        postError.classList.remove("shake");
-        document.getElementById("six-next").classList.remove("disabled");
-      } else {
-        console.log("Address not found");
-        postError.style.display = "block";
-        postError.classList.add("shake");
-        setTimeout(() => (postError.style.display = "none"), 2000); // Remove class after animation
-        document.getElementById("six-next").classList.add("disabled");
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
+//   await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${post_number}`)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       if (data.status === 200) {
+//         const img_container_dom = document.querySelector(".next-img-six");
+//         img_container_dom.style.top = "865px";
+//         postError.style.display = "none";
+//         postError.classList.remove("shake");
+//         document.getElementById("six-next").classList.remove("disabled");
+//       } else {
+//         console.log("Address not found");
+//         postError.style.display = "block";
+//         postError.classList.add("shake");
+//         setTimeout(() => (postError.style.display = "none"), 2000); // Remove class after animation
+//         document.getElementById("six-next").classList.add("disabled");
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//       postError.style.display = "block";
+//       postError.classList.add("shake");
+//       setTimeout(() => postError.classList.remove("shake"), 500); // Remove class after animation
+//       document.getElementById("six-next").classList.add("disabled");
+//     });
+// }
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  const inputField = document.getElementById("custom-sixinput-one");
+  const postError = document.getElementById("postInputError");
+  inputField.addEventListener("input", () => {
+    if (inputField.value.length === 7) {
+      sixHidden();
+    } else if (inputField.value.length > 7) {
       postError.style.display = "block";
       postError.classList.add("shake");
-      setTimeout(() => postError.classList.remove("shake"), 500); // Remove class after animation
-      document.getElementById("six-next").classList.add("disabled");
-    });
-}
+      setTimeout(() => (postError.style.display = "none"), 2000);
+    }
+  });
+});
 
 function gotoFive() {
   var prev_page = document.getElementById("five");
@@ -482,7 +520,8 @@ var lastname = "";
 var age = "10代";
 var phone_number = "";
 var email = "";
-function completeStep() {
+
+async function completeStep() {
   var name_vali = document.getElementById("nameInputError");
   var phone_vali = document.getElementById("phoneInputError");
 
@@ -504,59 +543,49 @@ function completeStep() {
   } else {
     name_vali.style.display = "none";
     name_vali.classList.remove("shake");
-  }
-  if (phone_number === "" || email === "") {
-    phone_vali.style.display = "block";
-    phone_vali.classList.add("shake");
-    setTimeout(() => {
+    if (phone_number === "" || email === "") {
+      phone_vali.style.display = "block";
+      phone_vali.classList.add("shake");
+      setTimeout(() => {
+        phone_vali.style.display = "none";
+      }, 2000);
+    } else {
       phone_vali.style.display = "none";
-    }, 2000);
-  } else {
-    phone_vali.style.display = "none";
-    phone_vali.classList.remove("shake");
+      phone_vali.classList.remove("shake");
+      let sendData = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          experience: exp_type,
+          license: license,
+          changing_jobs_time: changing_jobs_time,
+          changing_job_reasons: changing_job_reasons,
+          attracts_for_taxi: taxi_attracts,
+          residence: residence,
+          commute_ways: commute_ways,
+          post_number: post_number,
+          nearest_station: nearest_station,
+          past_accidents: past_accidents,
+          surname: surname,
+          lastname: lastname,
+          age: age,
+          phone_number: phone_number,
+          email: email,
+        }),
+      };
+      let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
+      const data = await fetch(url, sendData);
+      window.location.href = "thanks/index.html";
+    }
   }
-
-  let sendData = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      experience: exp_type,
-      license: license,
-      changing_jobs_time: changing_jobs_time,
-      changing_job_reasons: changing_job_reasons,
-      attracts_for_taxi: taxi_attracts,
-      residence: residence,
-      commute_ways: commute_ways,
-      post_number: post_number,
-      nearest_station: nearest_station,
-      past_accidents: past_accidents,
-      surname: surname,
-      lastname: lastname,
-      age: age,
-      phone_number: phone_number,
-      email: email,
-    }),
-  };
-  let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
-  fetch(url, sendData);
-  setTimeout(showModal(), 4000);
-}
-
-function showModal() {
-  const modal = document.getElementById("successModal");
-  modal.style.display = "block"; // Show the modal
-}
-function closeModal() {
-  const modal = document.getElementById("successModal");
-  modal.style.display = "none"; // Hide the modal
 }
 
 function goTopPage() {
-  var successModal = document.getElementById('successModal');
+  var successModal = document.getElementById("successModal");
   successModal.style.display = "none";
-  var lastPage = document.getElementById('last');
+  var lastPage = document.getElementById("last");
   lastPage.style.display = "none";
   var prev_page = document.getElementById("first");
   prev_page.style.display = "block";
