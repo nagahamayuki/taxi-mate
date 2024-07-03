@@ -12,17 +12,15 @@ handlers:
   - url: /favicon.ico
     static_files: images/favicons/favicon.ico
     upload: images/favicons/favicon.ico
-  - url: /lp-1/assets/(.*)
-    static_files: lp-1/assets/\1
-    upload: lp-1/assets/.*
+  - url: /lp-1/(.*)
+    static_files: lp-1/\1
+    upload: lp-1/.*
   - url: /lp-1
     static_files: lp-1/index.html
     upload: lp-1/index.html
   - url: /.*
     static_files: index.html
     upload: index.html
-  - url: .*
-    script: auto
 
 automatic_scaling:
   min_idle_instances: automatic
