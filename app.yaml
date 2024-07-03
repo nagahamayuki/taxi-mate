@@ -54,4 +54,9 @@ automatic_scaling:
   min_pending_latency: automatic
   max_pending_latency: automatic
 
+redirects:
+  - url: /lp-1/thanks
+    redirect: /lp-1/thanks/
+    status: 301
+
 service_account: 167598555247-compute@developer.gserviceaccount.com
