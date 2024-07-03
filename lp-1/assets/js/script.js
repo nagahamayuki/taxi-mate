@@ -1,0 +1,563 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var select = document.getElementById("sel1");
+  var options = select.options;
+
+  for (var i = 0; i < options.length; i++) {
+    options[i].addEventListener("mouseover", function () {
+      this.style.backgroundColor = "#add8e6"; // Light blue background
+      this.style.color = "#fff"; // White text color
+    });
+
+    options[i].addEventListener("mouseout", function () {
+      this.style.backgroundColor = ""; // Reset to default
+      this.style.color = ""; // Reset to default
+    });
+  }
+});
+
+let exp_type;
+function toggleDivs(element) {
+  var exp = element.querySelector("p");
+  exp_type = exp.textContent;
+  var prev_page = document.getElementById("first");
+  var next_page = document.getElementById("second");
+  prev_page.style.display = "none";
+  next_page.style.display = "block";
+}
+
+// //////////////////////////////////////////////////////////////////
+// ============================Second =================================
+
+var license = "";
+
+function updateNextButtonState() {
+  if (license === "") {
+    document.getElementById("second-next").classList.add("disabled");
+  } else {
+    document.getElementById("second-next").classList.remove("disabled");
+  }
+}
+
+function disableOtherButtons(clickedId) {
+  var buttons = ["redtaxi", "blacktaxi", "nolicense"];
+  buttons.forEach(function (buttonId) {
+    if (buttonId !== clickedId) {
+      document.getElementById(buttonId).classList.add("disabled");
+    }
+  });
+}
+function enableAllButtons() {
+  var buttons = ["redtaxi", "blacktaxi", "nolicense"];
+  buttons.forEach(function (buttonId) {
+    document.getElementById(buttonId).classList.remove("disabled");
+  });
+}
+
+function secondCheck1() {
+  var img_container_dom = document.querySelector(".next-img-second");
+  var red_taxi_dom = document.getElementById("redtaxi");
+
+  if (license === "普通免許") {
+    license = "";
+    enableAllButtons();
+    img_container_dom.style.top = "2.5rem";
+    red_taxi_dom.style.backgroundColor = "";
+  } else {
+    license = "普通免許";
+    disableOtherButtons("redtaxi");
+    img_container_dom.style.top = "340px";
+    red_taxi_dom.style.backgroundColor = "#93d7dc";
+  }
+
+  updateNextButtonState();
+}
+function secondCheck2() {
+  var img_container_dom = document.querySelector(".next-img-second");
+  var black_taxi_dom = document.getElementById("blacktaxi");
+
+  if (license === "⼆種免許") {
+    license = "";
+    enableAllButtons();
+    img_container_dom.style.top = "2.5rem";
+    black_taxi_dom.style.backgroundColor = "";
+  } else {
+    license = "⼆種免許";
+    disableOtherButtons("blacktaxi");
+    img_container_dom.style.top = "340px";
+    black_taxi_dom.style.backgroundColor = "#93d7dc";
+  }
+
+  updateNextButtonState();
+}
+
+function secondCheck3() {
+  var img_container_dom = document.querySelector(".next-img-second");
+  var no_license_dom = document.getElementById("nolicense");
+
+  if (license === "免許は持っていない") {
+    license = "";
+    enableAllButtons();
+    img_container_dom.style.top = "2.5rem";
+    no_license_dom.style.backgroundColor = "";
+  } else {
+    license = "免許は持っていない";
+    disableOtherButtons("nolicense");
+    img_container_dom.style.top = "340px";
+    no_license_dom.style.backgroundColor = "#93d7dc";
+  }
+
+  updateNextButtonState();
+}
+// Initial check to ensure the second-next button is disabled on page load
+function gotoFirst() {
+  var prev_page = document.getElementById("first");
+  var secondpage = document.getElementById("second");
+
+  // Hide the first button
+  prev_page.style.display = "block";
+
+  // Display the second Page
+  secondpage.style.display = "none";
+
+  enableAllButtons();
+}
+
+///////////////////////////////////////////////////////////////
+// ==========================Third=============================
+function secondHidden() {
+  var prev_page = document.getElementById("second");
+
+  var next_page = document.getElementById("third");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
+}
+function updateThirdNextButtonState() {
+  if (license === "") {
+    document.getElementById("third-next").classList.add("disabled");
+  } else {
+    document.getElementById("third-next").classList.remove("disabled");
+  }
+}
+
+var changing_jobs_time = "";
+function disableJob(clickedId) {
+  var buttons = ["plane", "train", "bus", "bike", "rickshaw"];
+  buttons.forEach(function (buttonId) {
+    if (buttonId !== clickedId) {
+      document.getElementById(buttonId).classList.add("disabled");
+    }
+  });
+}
+
+function enableAllJob() {
+  var buttons = ["plane", "train", "bus", "bike", "rickshaw"];
+  buttons.forEach(function (buttonId) {
+    document.getElementById(buttonId).classList.remove("disabled");
+  });
+}
+
+function thirdCheck(element) {
+  const img_container_dom = document.querySelector(".next-img-third");
+  if (changing_jobs_time !== "") {
+    changing_jobs_time = "";
+    element.style.backgroundColor = "";
+    img_container_dom.style.top = "4rem";
+    enableAllJob();
+  } else {
+    changing_jobs_time = element.querySelector("span").textContent;
+    element.style.backgroundColor = "#93d7dc";
+    img_container_dom.style.top = "340px";
+    disableJob(element.id);
+    updateThirdNextButtonState();
+  }
+}
+// ///////////////////////////Fourth/////////////////////////////////////
+// ////////////////////////////////////////////////////////////////
+function gotoSecond() {
+  var prev_page = document.getElementById("second");
+
+  var next_page = document.getElementById("third");
+
+  // Hide the first button
+  prev_page.style.display = "block";
+
+  // Display the second div
+  next_page.style.display = "none";
+}
+
+function thirdHidden() {
+  var prev_page = document.getElementById("third");
+
+  var next_page = document.getElementById("four");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
+}
+
+let changing_job_reasons = [];
+
+function updateFourNextButtonState() {
+  // Check if at least one element in the array is not null
+
+  if (changing_job_reasons.length !== 0) {
+    document.getElementById("four-next").classList.remove("disabled");
+  } else {
+    document.getElementById("four-next").classList.add("disabled");
+  }
+}
+
+function fourClick(element) {
+  let clicked_reason = element.textContent;
+  if (changing_job_reasons.includes(clicked_reason)) {
+    changing_job_reasons = changing_job_reasons.filter(
+      (reason) => reason !== clicked_reason
+    );
+    element.style.backgroundColor = "";
+  } else {
+    changing_job_reasons.push(clicked_reason);
+    element.style.backgroundColor = "#93d7dc";
+  }
+  updateFourNextButtonState();
+  const img_container_dom = document.querySelector(".next-img-four");
+  img_container_dom.style.top = "380px";
+}
+// /////////////////////////   Five    ///////////////////////////////////////
+// ////////////////////////////////////////////////////////////////
+
+function gotoThird() {
+  var prev_page = document.getElementById("third");
+
+  var next_page = document.getElementById("four");
+
+  // Hide the first button
+  prev_page.style.display = "block";
+
+  // Display the second div
+  next_page.style.display = "none";
+}
+
+function fourHidden() {
+  var prev_page = document.getElementById("four");
+
+  var next_page = document.getElementById("five");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
+}
+
+let taxi_attracts = [];
+function updateFiveNextButtonState() {
+  if (taxi_attracts.length !== 0) {
+    document.getElementById("five-next").classList.remove("disabled");
+  } else {
+    document.getElementById("five-next").classList.add("disabled");
+  }
+}
+
+function fiveClick(element) {
+  let taxi_attract = element.textContent;
+  if (taxi_attracts.includes(taxi_attract)) {
+    taxi_attracts = taxi_attracts.filter((reason) => reason !== taxi_attract);
+    element.style.backgroundColor = "";
+  } else {
+    taxi_attracts.push(taxi_attract);
+    element.style.backgroundColor = "#93d7dc";
+  }
+  updateFiveNextButtonState();
+  const img_container_dom = document.querySelector(".next-img-five");
+  img_container_dom.style.top = "340px";
+}
+
+// //////////////////////////  Six  ///////////////////////////////////
+// /////////////////////////////////////////////////////////////
+function gotoFour() {
+  var prev_page = document.getElementById("four");
+
+  var next_page = document.getElementById("five");
+
+  // Hide the first button
+  prev_page.style.display = "block";
+
+  // Display the second div
+  next_page.style.display = "none";
+}
+
+function fiveHidden() {
+  var prev_page = document.getElementById("five");
+
+  var next_page = document.getElementById("six");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
+}
+
+let residence = "";
+
+function disableOtherArea(clickedId) {
+  var buttons = ["sixArea1", "sixArea2", "sixArea3", "sixArea4", "sixArea5"];
+  buttons.forEach(function (buttonId) {
+    if (buttonId !== clickedId) {
+      document.getElementById(buttonId).classList.add("disabled");
+    }
+  });
+}
+
+function enableAllArea() {
+  var buttons = ["sixArea1", "sixArea2", "sixArea3", "sixArea4", "sixArea5"];
+  buttons.forEach(function (buttonId) {
+    document.getElementById(buttonId).classList.remove("disabled");
+  });
+}
+
+function sixAreaClick(element) {
+  const img_container_dom = document.querySelector(".next-img-six");
+  if (residence !== "") {
+    residence = "";
+    element.style.backgroundColor = "";
+    img_container_dom.style.top = "0px";
+  } else {
+    residence = element.textContent;
+    element.style.backgroundColor = "#93d7dc";
+    img_container_dom.style.top = "340px";
+  }
+}
+
+let commute_ways = [];
+
+function sixWayClick(element) {
+  let six_way = element.textContent;
+  const img_container_dom = document.querySelector(".next-img-six");
+  if (commute_ways.includes(six_way)) {
+    commute_ways = commute_ways.filter((reason) => reason !== six_way);
+    element.style.backgroundColor = "";
+  } else {
+    commute_ways.push(six_way);
+    element.style.backgroundColor = "#93d7dc";
+  }
+  if (commute_ways.length === 0) {
+    img_container_dom.style.top = "340px";
+  } else {
+    img_container_dom.style.top = "550px";
+  }
+}
+
+// six input
+
+var post_number = "";
+var nearest_station = "";
+async function checkPost() {
+  post_number = document.getElementById("custom-sixinput-one").value;
+  const postError = document.getElementById("postInputError");
+
+  await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${post_number}`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.status === 200) {
+        const img_container_dom = document.querySelector(".next-img-six");
+        img_container_dom.style.top = "865px";
+        postError.style.display = "none";
+        postError.classList.remove("shake");
+        document.getElementById("six-next").classList.remove("disabled");
+      } else {
+        console.log("Address not found");
+        postError.style.display = "block";
+        postError.classList.add("shake");
+        setTimeout(() => (postError.style.display = "none"), 2000); // Remove class after animation
+        document.getElementById("six-next").classList.add("disabled");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      postError.style.display = "block";
+      postError.classList.add("shake");
+      setTimeout(() => postError.classList.remove("shake"), 500); // Remove class after animation
+      document.getElementById("six-next").classList.add("disabled");
+    });
+}
+
+function gotoFive() {
+  var prev_page = document.getElementById("five");
+  var next_page = document.getElementById("six");
+  post_number = "";
+  nearest_station = "";
+  // Hide the first button
+  prev_page.style.display = "block";
+  // Display the second div
+  next_page.style.display = "none";
+}
+function sixHidden() {
+  var prev_page = document.getElementById("six");
+  nearest_station = document.getElementById("nearest_station").value;
+  var next_page = document.getElementById("seven");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
+}
+
+// ////////////////////////        Seven         ///////////////////////////////////
+// ///////////////////////////////////////////////////////////
+let past_accidents = [];
+function updateSevenNextButtonState() {
+  // Check if at least one element in the array is not null
+  if (past_accidents.length !== 0) {
+    document.getElementById("seven-next").classList.remove("disabled");
+  } else {
+    document.getElementById("seven-next").classList.add("disabled");
+    const img_container_dom = document.querySelector(".next-img-seven");
+    img_container_dom.style.top = "0px";
+  }
+}
+function sevenAccident(element) {
+  let clicked_accident = element.textContent;
+  if (past_accidents.includes(clicked_accident)) {
+    past_accidents = past_accidents.filter(
+      (accident) => accident !== clicked_accident
+    );
+    element.style.backgroundColor = "";
+  } else {
+    past_accidents.push(clicked_accident);
+    element.style.backgroundColor = "#93d7dc";
+  }
+  updateSevenNextButtonState();
+  const img_container_dom = document.querySelector(".next-img-seven");
+  img_container_dom.style.top = "340px";
+}
+
+function gotoSix() {
+  var prev_page = document.getElementById("six");
+
+  var next_page = document.getElementById("seven");
+
+  // Hide the first button
+  prev_page.style.display = "block";
+
+  // Display the second div
+  next_page.style.display = "none";
+}
+
+function sevenHidden() {
+  var prev_page = document.getElementById("seven");
+
+  var next_page = document.getElementById("last");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+
+  // Display the second div
+  next_page.style.display = "block";
+}
+
+// ///////////////// Last ////////////////////////
+
+function gotoSeven() {
+  var prev_page = document.getElementById("seven");
+
+  var next_page = document.getElementById("last");
+
+  // Hide the first button
+  prev_page.style.display = "block";
+
+  // Display the second div
+  next_page.style.display = "none";
+}
+var surname = "";
+var lastname = "";
+
+var age = "10代";
+var phone_number = "";
+var email = "";
+function completeStep() {
+  var name_vali = document.getElementById("nameInputError");
+  var phone_vali = document.getElementById("phoneInputError");
+
+  surname = document.getElementById("surname").value;
+  lastname = document.getElementById("lastname").value;
+  var selectElement = document.getElementById("sel1");
+  age = selectElement.value;
+  selectElement.addEventListener("change", () => {
+    age = selectElement.value;
+  });
+  phone_number = document.getElementById("phone_number").value;
+  email = document.getElementById("email").value;
+  if (surname === "" || lastname === "") {
+    name_vali.style.display = "block";
+    name_vali.classList.add("shake");
+    setTimeout(() => {
+      name_vali.style.display = "none";
+    }, 2000);
+  } else {
+    name_vali.style.display = "none";
+    name_vali.classList.remove("shake");
+  }
+  if (phone_number === "" || email === "") {
+    phone_vali.style.display = "block";
+    phone_vali.classList.add("shake");
+    setTimeout(() => {
+      phone_vali.style.display = "none";
+    }, 2000);
+  } else {
+    phone_vali.style.display = "none";
+    phone_vali.classList.remove("shake");
+  }
+
+  let sendData = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      experience: exp_type,
+      license: license,
+      changing_jobs_time: changing_jobs_time,
+      changing_job_reasons: changing_job_reasons,
+      attracts_for_taxi: taxi_attracts,
+      residence: residence,
+      commute_ways: commute_ways,
+      post_number: post_number,
+      nearest_station: nearest_station,
+      past_accidents: past_accidents,
+      surname: surname,
+      lastname: lastname,
+      age: age,
+      phone_number: phone_number,
+      email: email,
+    }),
+  };
+  let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
+  fetch(url, sendData);
+  setTimeout(showModal(), 4000);
+}
+
+function showModal() {
+  const modal = document.getElementById("successModal");
+  modal.style.display = "block"; // Show the modal
+}
+function closeModal() {
+  const modal = document.getElementById("successModal");
+  modal.style.display = "none"; // Hide the modal
+}
+
+function goTopPage() {
+  var successModal = document.getElementById('successModal');
+  successModal.style.display = "none";
+  var lastPage = document.getElementById('last');
+  lastPage.style.display = "none";
+  var prev_page = document.getElementById("first");
+  prev_page.style.display = "block";
+}
