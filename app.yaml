@@ -31,6 +31,10 @@ handlers:
     static_files: lp-1/assets/scss/\1
     upload: lp-1/assets/scss/.*
     secure: always
+  - url: /lp-1/thanks/(.*)
+    static_files: lp-1/thanks/index.html
+    upload: lp-1/thanks/index.html
+    secure: always
   - url: /lp-1/(.*)
     static_files: lp-1/index.html
     upload: lp-1/index.html
