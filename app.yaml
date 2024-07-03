@@ -24,6 +24,8 @@ handlers:
   - url: /lp-1/assets/scss/(.*)
     static_files: lp-1/assets/scss/\1
     upload: lp-1/assets/scss/.*
+  - url: /lp-1$
+    redirect_to: /lp-1/
   - url: /lp-1/(.*)
     static_files: lp-1/index.html
     upload: lp-1/index.html
