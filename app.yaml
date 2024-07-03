@@ -27,8 +27,6 @@ handlers:
   - url: /lp-1/(.*)
     static_files: lp-1/index.html
     upload: lp-1/index.html
-  - url: /lp-1
-    redirect_to: /lp-1/
   - url: /(.+)
     static_files: \1
     upload: .*
