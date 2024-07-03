@@ -6,33 +6,43 @@ handlers:
   - url: /css/(.*)
     static_files: css/\1
     upload: css/.*
+    secure: always
   - url: /images/(.*)
     static_files: images/\1
     upload: images/.*
+    secure: always
   - url: /favicon.ico
     static_files: images/favicons/favicon.ico
     upload: images/favicons/favicon.ico
+    secure: always
   - url: /lp-1/assets/css/(.*)
     static_files: lp-1/assets/css/\1
     upload: lp-1/assets/css/.*
+    secure: always
   - url: /lp-1/assets/js/(.*)
     static_files: lp-1/assets/js/\1
     upload: lp-1/assets/js/.*
+    secure: always
   - url: /lp-1/assets/img/(.*)
     static_files: lp-1/assets/img/\1
     upload: lp-1/assets/img/.*
+    secure: always
   - url: /lp-1/assets/scss/(.*)
     static_files: lp-1/assets/scss/\1
     upload: lp-1/assets/scss/.*
+    secure: always
   - url: /lp-1/(.*)
     static_files: lp-1/index.html
     upload: lp-1/index.html
+    secure: always
   - url: /(.+)
     static_files: \1
     upload: .*
+    secure: always
   - url: /.*
     static_files: index.html
     upload: index.html
+    secure: always
 
 automatic_scaling:
   min_idle_instances: automatic
