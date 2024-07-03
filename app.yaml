@@ -12,6 +12,8 @@ handlers:
   - url: /favicon.ico
     static_files: images/favicons/favicon.ico
     upload: images/favicons/favicon.ico
+  - url: /lp-1
+    redirect_to: /lp-1/
   - url: /lp-1/assets/css/(.*)
     static_files: lp-1/assets/css/\1
     upload: lp-1/assets/css/.*
