@@ -1,2 +1,79 @@
-runtime: php
-env: flex
+runtime: php81
+
+handlers:
+# Static file handlers
+- url: /css
+  static_dir: css
+
+- url: /images
+  static_dir: images
+
+- url: /js
+  static_dir: js
+
+- url: /contact/thanks
+  static_dir: contact/thanks
+
+- url: /registration/thanks
+  static_dir: registration/thanks
+
+- url: /lp-1/assets
+  static_dir: lp-1/assets
+
+- url: /lp-1/thanks
+  static_dir: lp-1/thanks
+
+- url: /images/favicons
+  static_dir: images/favicons
+
+# Directory and file handlers
+- url: /about
+  static_files: about/index.html
+  upload: about/index.html
+
+- url: /contact
+  static_files: contact/index.html
+  upload: contact/index.html
+
+- url: /job/01
+  static_files: job/01/index.html
+  upload: job/01/index.html
+
+- url: /job/02
+  static_files: job/02/index.html
+  upload: job/02/index.html
+
+- url: /job/03
+  static_files: job/03/index.html
+  upload: job/03/index.html
+
+- url: /job
+  static_files: job/index.html
+  upload: job/index.html
+
+- url: /lp-1
+  static_files: lp-1/index.html
+  upload: lp-1/index.html
+
+- url: /privacy
+  static_files: privacy/index.html
+  upload: privacy/index.html
+
+- url: /registration
+  static_files: registration/index.html
+  upload: registration/index.html
+
+- url: /
+  static_files: index.html
+  upload: index.html
+
+# PHP script handlers
+- url: /mail.service.php
+  script: mail.service.php
+
+- url: /registration.php
+  script: registration.php
+
+# Catch-all handler
+- url: /.*
+  script: index.php
