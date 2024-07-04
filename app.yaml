@@ -1,24 +1,2 @@
-runtime: php81
-env: standard
-instance_class: F1
-
-handlers:
-  - url: /(.+)/
-    static_files: \1/index.html
-    upload: .*/index.html
-    secure: always
-
-  - url: /(.+)
-    redirect_http_response_code: 301
-    url: /\1/
-
-  - url: /.*
-    static_files: index.html
-    upload: index.html
-    secure: always
-
-automatic_scaling:
-  min_idle_instances: automatic
-  max_idle_instances: automatic
-  min_pending_latency: automatic
-  max_pending_latency: automatic
+runtime: php
+env: flex
