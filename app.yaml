@@ -1,91 +1,61 @@
 runtime: php81
+env: standard
+instance_class: F1
 
 handlers:
-# Static file handlers
-- url: /css
-  static_dir: css
+  - url: /css/(.*)
+    static_files: css/\1
+    upload: css/.*
+    secure: always
+  - url: /images/(.*)
+    static_files: images/\1
+    upload: images/.*
+    secure: always
+  - url: /favicon.ico
+    static_files: images/favicons/favicon.ico
+    upload: images/favicons/favicon.ico
+    secure: always
+  - url: /lp-1/assets/css/(.*)
+    static_files: lp-1/assets/css/\1
+    upload: lp-1/assets/css/.*
+    secure: always
+  - url: /lp-1/assets/js/(.*)
+    static_files: lp-1/assets/js/\1
+    upload: lp-1/assets/js/.*
+    secure: always
+  - url: /lp-1/assets/img/(.*)
+    static_files: lp-1/assets/img/\1
+    upload: lp-1/assets/img/.*
+    secure: always
+  - url: /lp-1/assets/scss/(.*)
+    static_files: lp-1/assets/scss/\1
+    upload: lp-1/assets/scss/.*
+    secure: always
+  - url: /lp-1/thanks/(.*)
+    static_files: lp-1/thanks/index.html
+    upload: lp-1/thanks/index.html
+    secure: always
+  - url: /lp-1/thanks
+    redirect_http_response_code: 301
+    script: auto
+  - url: /lp-1/(.*)
+    static_files: lp-1/index.html
+    upload: lp-1/index.html
+    secure: always
+  - url: /lp-1
+    redirect_http_response_code: 301
+    script: auto
+  - url: /(.+)
+    script: auto
+  - url: /.*
+    static_files: index.html
+    upload: index.html
+    secure: always
 
-- url: /images
-  static_dir: images
+automatic_scaling:
+  min_idle_instances: automatic
+  max_idle_instances: automatic
+  min_pending_latency: automatic
+  max_pending_latency: automatic
 
-- url: /js
-  static_dir: js
-
-- url: /contact/thanks
-  static_dir: contact/thanks
-
-- url: /registration/thanks
-  static_dir: registration/thanks
-
-- url: /lp-1/assets
-  static_dir: lp-1/assets
-
-- url: /lp-1/assets/css
-  static_dir: lp-1/assets/css
-
-- url: /lp-1/assets/img
-  static_dir: lp-1/assets/img
-
-- url: /lp-1/assets/js
-  static_dir: lp-1/assets/js
-
-- url: /lp-1/assets/scss
-  static_dir: lp-1/assets/scss
-
-- url: /lp-1/thanks
-  static_dir: lp-1/thanks
-
-- url: /images/favicons
-  static_dir: images/favicons
-
-# Directory and file handlers
-- url: /about
-  static_files: about/index.html
-  upload: about/index.html
-
-- url: /contact
-  static_files: contact/index.html
-  upload: contact/index.html
-
-- url: /job/01
-  static_files: job/01/index.html
-  upload: job/01/index.html
-
-- url: /job/02
-  static_files: job/02/index.html
-  upload: job/02/index.html
-
-- url: /job/03
-  static_files: job/03/index.html
-  upload: job/03/index.html
-
-- url: /job
-  static_files: job/index.html
-  upload: job/index.html
-
-- url: /lp-1
-  static_files: lp-1/index.html
-  upload: lp-1/index.html
-
-- url: /privacy
-  static_files: privacy/index.html
-  upload: privacy/index.html
-
-- url: /registration
-  static_files: registration/index.html
-  upload: registration/index.html
-
-- url: /
-  static_files: index.html
-  upload: index.html
-
-# PHP script handlers
-- url: /mail.service.php
-  script: mail.service.php
-
-- url: /registration.php
-  script: registration.php
-
-# Catch-all handler
-- url: /.*
-  script: index.php
+service_account: 167598555247-compute@developer.gserviceaccount.com
