@@ -422,7 +422,7 @@ figure img,
 }
 
 .green-txt {
-  color: rgb(68, 229, 222);
+  color: rgb(38, 166, 154);
 }
 
 /* margin css */
@@ -2770,12 +2770,12 @@ figure img,
 }
 .header-logo img {
   width: 140px;
-  height: 12px;
+  height: auto;
 }
 @media only screen and (max-width: 640px) {
   .header-logo img {
     width: 20rem;
-    height: 1.5rem;
+    height: auto;
   }
 }
 .header-bottom {
@@ -3007,7 +3007,7 @@ main#main {
   flex-grow: 1;
   background-image: url("../img/bg.png");
   background-size: cover;
-  background-position: center center;
+  background-position: left;
   object-fit: cover;
   background-repeat: no-repeat;
   overflow-y: scroll;
@@ -3125,11 +3125,12 @@ main#main .disabled {
 }
 main#main .first {
   width: 375px;
-  background-color: rgba(255, 255, 255, 0.6);
-  height: 280px;
+  background-color: rgba(255, 255, 255, 0.75);
+/*  height: 280px;*/
   margin-left: auto;
   margin-right: auto;
   margin-top: 31px;
+  padding-bottom: 50px;
 }
 main#main .first .change-top-first {
   top: 80rem !important; /* New top position when button is pressed */
@@ -3158,7 +3159,7 @@ main#main .first-button1 {
   cursor: pointer;
   transition: 0.3s;
   width: 266px;
-  height: 55px;
+  height: 74px;
   border-radius: 100px;
   background-color: white;
   display: flex;
@@ -3190,12 +3191,12 @@ main#main .first-button1 span {
 main#main .first-button2 {
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 35px;
+  margin-top: 25px;
   border: 1px solid gray;
   margin-left: auto;
   margin-right: auto;
   width: 266px;
-  height: 55px;
+  height: 74px;
   border-radius: 100px;
   background-color: white;
   display: flex;
@@ -3490,18 +3491,13 @@ main#main .second .next-second {
   height: 70px;
 }
 main#main .second .next-second .next-button {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  color: white;
-  width: 290px;
-  height: 35px;
   display: flex;
   justify-content: center;
   font-size: 20px;
   align-items: center;
-  background-color: #0d8ea3;
-  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  padding: 10px 20px;
 }
 main#main .second .next-second .next-button:hover {
   background-color: #93d7dc;
@@ -3638,18 +3634,13 @@ main#main .third .next-third {
   height: 70px;
 }
 main#main .third .next-third .next-button {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  color: white;
-  width: 290px;
-  height: 35px;
   display: flex;
   justify-content: center;
   font-size: 20px;
   align-items: center;
-  background-color: #0d8ea3;
-  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  padding: 10px 20px;
 }
 main#main .third .next-third .next-button:hover {
   background-color: #93d7dc;
@@ -3969,6 +3960,8 @@ main#main .sixth .six-input .custom-input-one {
   height: 36px;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  padding: 20px 10px;
+  font-size: larger;
 }
 main#main .sixth .six-input .six-input-first {
   gap: 20px;
@@ -4040,6 +4033,8 @@ main#main .sixth .nearest-station .custom-input {
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  padding: 20px 10px;
+  font-size: larger;
 }
 main#main .sixth .nearest-description {
   margin-top: 30px;
@@ -4094,18 +4089,13 @@ main#main .sixth .next-six {
   height: 70px;
 }
 main#main .sixth .next-six .next-button {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  color: white;
-  width: 290px;
-  height: 35px;
   display: flex;
   justify-content: center;
   font-size: 20px;
   align-items: center;
-  background-color: #0d8ea3;
-  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  padding: 10px 20px;
 }
 main#main .sixth .next-six .next-button:hover {
   background-color: #93d7dc;

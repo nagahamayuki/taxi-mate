@@ -41,8 +41,10 @@ handlers:
   static_files: lp-1/thanks/index.html
   upload: lp-1/thanks/index.html
   secure: always
+# パスに少なくとも1文字以上含まれるすべてのリクエストに対して、対応するPHPスクリプトが自動的に実行されます。
 - url: /(.+)
   script: auto
+# すべてのリクエストに対して index.html ファイルが返されます。
 - url: /.*
   static_files: index.html
   upload: index.html
