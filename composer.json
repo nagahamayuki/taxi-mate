@@ -1,0 +1,16 @@
+{
+    "name": "yukinagahama/taxi-mate-heroku",
+    "description": "PHP Application for taxi-mate.jp",
+    "autoload": {
+        "psr-4": {
+            "Yukinagahama\\TaxiMateHeroku\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "YUKI NAGAHAMA",
+            "email": "nagahama@anytrail.jp"
+        }
+    ],
+    "require": {}
+}
