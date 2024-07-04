@@ -50,15 +50,27 @@ handlers:
     upload: contact/thanks/index.html
     secure: always
 
+  - url: /job/01
+    redirect_http_response_code: 301
+    url: /job/01/
+
   - url: /job/01/
     static_files: job/01/index.html
     upload: job/01/index.html
     secure: always
 
+  - url: /job/02
+    redirect_http_response_code: 301
+    url: /job/02/
+
   - url: /job/02/
     static_files: job/02/index.html
     upload: job/02/index.html
     secure: always
+
+  - url: /job/03
+    redirect_http_response_code: 301
+    url: /job/03/
 
   - url: /job/03/
     static_files: job/03/index.html
