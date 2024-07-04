@@ -3,158 +3,14 @@ env: standard
 instance_class: F1
 
 handlers:
-  - url: /favicon.ico
-    static_files: images/favicons/favicon.ico
-    upload: images/favicons/favicon.ico
-    secure: always
-
-  - url: /css/(.*)
-    static_files: css/\1
-    upload: css/.*
-    secure: always
-
-  - url: /images/(.*)
-    static_files: images/\1
-    upload: images/.*
-    secure: always
-
-  - url: /js/(.*)
-    static_files: js/\1
-    upload: js/.*
-    secure: always
-
-  - url: /about
-    redirect_http_response_code: 301
-    url: /about/
-
-  - url: /about/
-    static_files: about/index.html
-    upload: about/index.html
-    secure: always
-
-  - url: /contact
-    redirect_http_response_code: 301
-    url: /contact/
-
-  - url: /contact/
-    static_files: contact/index.html
-    upload: contact/index.html
-    secure: always
-
-  - url: /contact/thanks
-    redirect_http_response_code: 301
-    url: /contact/thanks/
-
-  - url: /contact/thanks/
-    static_files: contact/thanks/index.html
-    upload: contact/thanks/index.html
-    secure: always
-
-  - url: /job/01
-    redirect_http_response_code: 301
-    url: /job/01/
-
-  - url: /job/01/
-    static_files: job/01/index.html
-    upload: job/01/index.html
-    secure: always
-
-  - url: /job/02
-    redirect_http_response_code: 301
-    url: /job/02/
-
-  - url: /job/02/
-    static_files: job/02/index.html
-    upload: job/02/index.html
-    secure: always
-
-  - url: /job/03
-    redirect_http_response_code: 301
-    url: /job/03/
-
-  - url: /job/03/
-    static_files: job/03/index.html
-    upload: job/03/index.html
-    secure: always
-
-  - url: /job
-    redirect_http_response_code: 301
-    url: /job/
-
-  - url: /job/
-    static_files: job/index.html
-    upload: job/index.html
-    secure: always
-
-  - url: /lp-1/assets/css/(.*)
-    static_files: lp-1/assets/css/\1
-    upload: lp-1/assets/css/.*
-    secure: always
-
-  - url: /lp-1/assets/js/(.*)
-    static_files: lp-1/assets/js/\1
-    upload: lp-1/assets/js/.*
-    secure: always
-
-  - url: /lp-1/assets/img/(.*)
-    static_files: lp-1/assets/img/\1
-    upload: lp-1/assets/img/.*
-    secure: always
-
-  - url: /lp-1/assets/scss/(.*)
-    static_files: lp-1/assets/scss/\1
-    upload: lp-1/assets/scss/.*
-    secure: always
-
-  - url: /lp-1/thanks
-    redirect_http_response_code: 301
-    url: /lp-1/thanks/
-
-  - url: /lp-1/thanks/
-    static_files: lp-1/thanks/index.html
-    upload: lp-1/thanks/index.html
-    secure: always
-
-  - url: /lp-1
-    redirect_http_response_code: 301
-    url: /lp-1/
-
-  - url: /lp-1/
-    static_files: lp-1/index.html
-    upload: lp-1/index.html
-    secure: always
-
-  - url: /privacy
-    redirect_http_response_code: 301
-    url: /privacy/
-
-  - url: /privacy/
-    static_files: privacy/index.html
-    upload: privacy/index.html
-    secure: always
-
-  - url: /registration
-    redirect_http_response_code: 301
-    url: /registration/
-
-  - url: /registration/
-    static_files: registration/index.html
-    upload: registration/index.html
-    secure: always
-
-  - url: /registration/thanks
-    redirect_http_response_code: 301
-    url: /registration/thanks/
-
-  - url: /registration/thanks/
-    static_files: registration/thanks/index.html
-    upload: registration/thanks/index.html
+  - url: /(.+)/
+    static_files: \1/index.html
+    upload: .*/index.html
     secure: always
 
   - url: /(.+)
-    static_files: \1
-    upload: .*
-    secure: always
+    redirect_http_response_code: 301
+    url: /\1/
 
   - url: /.*
     static_files: index.html
@@ -166,5 +22,3 @@ automatic_scaling:
   max_idle_instances: automatic
   min_pending_latency: automatic
   max_pending_latency: automatic
-
-service_account: 167598555247-compute@developer.gserviceaccount.com
