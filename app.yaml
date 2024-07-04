@@ -20,6 +20,18 @@ handlers:
 - url: /lp-1/assets
   static_dir: lp-1/assets
 
+- url: /lp-1/assets/css
+  static_dir: lp-1/assets/css
+
+- url: /lp-1/assets/img
+  static_dir: lp-1/assets/img
+
+- url: /lp-1/assets/js
+  static_dir: lp-1/assets/js
+
+- url: /lp-1/assets/scss
+  static_dir: lp-1/assets/scss
+
 - url: /lp-1/thanks
   static_dir: lp-1/thanks
 
