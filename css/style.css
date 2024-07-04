@@ -196,7 +196,7 @@
     background-color: white;
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 998;
     border-bottom: 1px solid rgba(36, 37, 40, 0.1);
     .header_wrapper {
       padding: 15px 20px;
@@ -204,9 +204,11 @@
       background-color: white;
       position: relative;
       border-bottom: 1px solid rgba(36, 37, 40, 0.1);
-      z-index: 999;
       figure {
+        z-index: 1000;
         max-width: 140px;
+        margin-bottom: 0px !important;
+        position: relative;
       }
       nav {
         display: none;
@@ -218,7 +220,7 @@
       position: fixed;
       width: 100%;
       top: 0px;
-      z-index: 1000;
+      z-index: 999;
       text-align: right;
       .wrapper {
         height: 100vh;
@@ -784,6 +786,12 @@
       }
     }
 
+    .registration-form {
+.title {
+  padding-top: 50px;
+}
+    }
+
     .accordion {
       padding: 0px 20px 60px;
       width: 100%;
@@ -1020,7 +1028,7 @@
     }
   }
 
-  .contact {
+  /* .contact {
     width: 100%;
     padding-left: 40px;
     padding-right: 40px;
@@ -1117,7 +1125,12 @@
         background-color: #006E62;
       }
     }
-  }
+
+    #regex {
+      color: red;
+      margin-top: 10px;
+    }
+  } */
 
 }
 
