@@ -4086,6 +4086,33 @@ main#main .sixth .nearest-description .common-des .description-text {
   text-align: left;
   color: #1e1e1e;
 }
+main#main .sixth .next-six {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+  height: 70px;
+}
+main#main .sixth .next-six .next-button {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 290px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  align-items: center;
+  background-color: #0d8ea3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main#main .sixth .next-six .next-button:hover {
+  background-color: #93d7dc;
+}
+main#main .sixth .next-six .next-button:active {
+  background-color: #6e6f71;
+}
 main#main .seven {
   display: none;
   width: 375px;

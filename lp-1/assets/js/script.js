@@ -382,42 +382,41 @@ function sixWayClick(element) {
 
 var post_number = "";
 var nearest_station = "";
-// async function checkPost() {
-//   post_number = document.getElementById("custom-sixinput-one").value;
-//   const postError = document.getElementById("postInputError");
-
-//   await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${post_number}`)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       if (data.status === 200) {
-//         const img_container_dom = document.querySelector(".next-img-six");
-//         img_container_dom.style.top = "865px";
-//         postError.style.display = "none";
-//         postError.classList.remove("shake");
-//         document.getElementById("six-next").classList.remove("disabled");
-//       } else {
-//         console.log("Address not found");
-//         postError.style.display = "block";
-//         postError.classList.add("shake");
-//         setTimeout(() => (postError.style.display = "none"), 2000); // Remove class after animation
-//         document.getElementById("six-next").classList.add("disabled");
-//       }
-//     })
-//     .catch((error) => {
-//       console.error("Error:", error);
-//       postError.style.display = "block";
-//       postError.classList.add("shake");
-//       setTimeout(() => postError.classList.remove("shake"), 500); // Remove class after animation
-//       document.getElementById("six-next").classList.add("disabled");
-//     });
-// }
-
+async function checkPost(post_num) {
+  const postError = document.getElementById("postInputError");
+  post_number = post_num;
+  await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${post_num}`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.status === 200) {   
+        sixHidden();   
+        postError.style.display = "none";
+        postError.classList.remove("shake");
+      } else {
+        console.log("Address not found");
+        postError.style.display = "block";
+        postError.classList.add("shake");
+        setTimeout(() => (postError.style.display = "none"), 2000); // Remove class after animation
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      postError.style.display = "block";
+      postError.classList.add("shake");
+      setTimeout(() => postError.classList.remove("shake"), 500); // Remove class after animation
+      document.getElementById("six-next").classList.add("disabled");
+    });
+}
+function validateNumberInput(input) {
+  // Remove non-numeric characters
+  input.value = input.value.replace(/[^0-9]/g, '');
+}
 document.addEventListener("DOMContentLoaded", (event) => {
   const inputField = document.getElementById("custom-sixinput-one");
   const postError = document.getElementById("postInputError");
   inputField.addEventListener("input", () => {
     if (inputField.value.length === 7) {
-      sixHidden();
+      checkPost(inputField.value);
     } else if (inputField.value.length > 7) {
       postError.style.display = "block";
       postError.classList.add("shake");
@@ -484,9 +483,9 @@ function gotoSix() {
 
   // Hide the first button
   prev_page.style.display = "block";
-
   // Display the second div
   next_page.style.display = "none";
+
 }
 
 function sevenHidden() {

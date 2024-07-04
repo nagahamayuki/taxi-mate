@@ -443,8 +443,8 @@
 			<p class="common-text">（必須 複数選択可）</p>
 			<div class="six-input">
 				<div class="six-input-first">
-					<input type="text" class="custom-input-one" id="custom-sixinput-one"
-						title="Please enter a valid postal code (e.g., 12345 or 12345-6789)">
+					<input type="number" class="custom-input-one" id="custom-sixinput-one"
+						placeholder="1234567" oninput="validateNumberInput(this)">
 				</div>
 				<div class="postInputError" id="postInputError">
 					郵便番号を正確に確認してください。
@@ -454,16 +454,15 @@
 				<div class="common-img">
 					<img src="./assets/img/man.png" alt="">
 				</div>
-				<div class="common-des">
+				<div class="common-des">	
 					<div class="description-triangle"></div>
 					<div class="description-text sixth-des">
 						勤務のしやすさも含めてキャリアアドバイザーがご提案いたします。
 					</div>
 				</div>
 			</div>
-			<div class="next">
+			<div class="next-six">
 				<span class="next-button" id="six-before" onclick="gotoFive()">前へ</span>
-				<span class="next-button disabled" id="six-next" onclick="sixHidden()">次へ</span>
 			</div>
 		</div>
 
