@@ -3238,7 +3238,7 @@ main#main .disabled {
 main#main .second {
   display: none;
   width: 375px;
-  height: 560px;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
   margin-left: auto;
@@ -3511,7 +3511,7 @@ main#main .third {
   margin-right: auto;
   margin-top: 30px;
   width: 375px;
-  height: 550px;
+  height: auto;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -3960,7 +3960,7 @@ main#main .sixth .six-input .custom-input-one {
   height: 36px;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  padding: 20px 10px;
+  padding: 25px 10px;
   font-size: larger;
 }
 main#main .sixth .six-input .six-input-first {
@@ -4033,7 +4033,7 @@ main#main .sixth .nearest-station .custom-input {
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  padding: 20px 10px;
+  padding: 25px 10px;
   font-size: larger;
 }
 main#main .sixth .nearest-description {
@@ -4318,7 +4318,7 @@ main#main .last .last-name .shake {
   }
 }
 main#main .last .last-name .last-input .custom-surname-input {
-  padding: 1px 5px !important;
+  padding: 25px 7px !important;
   width: 160px;
   border: 1px solid gray;
   line-height: 12px;
@@ -4327,6 +4327,7 @@ main#main .last .last-name .last-input .custom-surname-input {
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  font-size: larger;
 }
 main#main .last .last-name .last-input .custom-surname-input::placeholder,
 main#main .last .last-name .last-input .custom-name-input::placeholder {
@@ -4347,7 +4348,8 @@ main#main .last .last-name .last-input .custom-name-input {
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  padding: 1px 5px;
+  padding: 25px 7px;
+  font-size: larger;
 }
 main#main .last .last-name .last-input .custom-age-input {
   width: 290px;
@@ -4367,7 +4369,7 @@ main#main .last .last-name .last-input .custom-age-input::placeholder {
   color: #6e6f71;
 }
 main#main .last .last-name .last-input .custom-phone-input {
-  padding: 1px 5px !important;
+  padding: 25px 10px !important;
   width: 330px;
   border: 1px solid gray;
   line-height: 12px;
