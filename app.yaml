@@ -37,14 +37,6 @@ handlers:
   static_files: lp-1/index.html
   upload: lp-1/index.html
   secure: always
-- url: /lp-1(.*)
-  static_files: lp-1/index.html
-  upload: lp-1/index.html
-  secure: always
-- url: /lp-1/thanks(.*)
-  static_files: lp-1/thanks/index.html
-  upload: lp-1/thanks/index.html
-  secure: always
 - url: /lp-1/thanks/(.*)
   static_files: lp-1/thanks/index.html
   upload: lp-1/thanks/index.html
