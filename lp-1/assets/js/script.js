@@ -576,7 +576,7 @@ async function completeStep() {
       };
       let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
       const data = await fetch(url, sendData);
-      window.location.href = "thanks/index.html";
+      window.location.href = "thanks/";
     }
   }
 }
