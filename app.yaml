@@ -35,14 +35,18 @@ handlers:
     static_files: lp-1/thanks/index.html
     upload: lp-1/thanks/index.html
     secure: always
+  - url: /lp-1/thanks
+    redirect_http_response_code: 301
+    script: auto
   - url: /lp-1/(.*)
     static_files: lp-1/index.html
     upload: lp-1/index.html
     secure: always
+  - url: /lp-1
+    redirect_http_response_code: 301
+    script: auto
   - url: /(.+)
-    static_files: \1
-    upload: .*
-    secure: always
+    script: auto
   - url: /.*
     static_files: index.html
     upload: index.html
