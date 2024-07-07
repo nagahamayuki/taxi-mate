@@ -422,7 +422,7 @@ figure img,
 }
 
 .green-txt {
-  color: rgb(38, 166, 154);
+  color: rgb(68, 229, 222);
 }
 
 /* margin css */
@@ -2770,12 +2770,12 @@ figure img,
 }
 .header-logo img {
   width: 140px;
-  height: auto;
+  height: 12px;
 }
 @media only screen and (max-width: 640px) {
   .header-logo img {
     width: 20rem;
-    height: auto;
+    height: 1.5rem;
   }
 }
 .header-bottom {
@@ -3007,7 +3007,7 @@ main#main {
   flex-grow: 1;
   background-image: url("../img/bg.png");
   background-size: cover;
-  background-position: left;
+  background-position: center center;
   object-fit: cover;
   background-repeat: no-repeat;
   overflow-y: scroll;
@@ -3125,12 +3125,11 @@ main#main .disabled {
 }
 main#main .first {
   width: 375px;
-  background-color: rgba(255, 255, 255, 0.75);
-/*  height: 280px;*/
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 280px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 31px;
-  padding-bottom: 50px;
 }
 main#main .first .change-top-first {
   top: 80rem !important; /* New top position when button is pressed */
@@ -3159,7 +3158,7 @@ main#main .first-button1 {
   cursor: pointer;
   transition: 0.3s;
   width: 266px;
-  height: 74px;
+  height: 55px;
   border-radius: 100px;
   background-color: white;
   display: flex;
@@ -3191,12 +3190,12 @@ main#main .first-button1 span {
 main#main .first-button2 {
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 25px;
+  margin-top: 35px;
   border: 1px solid gray;
   margin-left: auto;
   margin-right: auto;
   width: 266px;
-  height: 74px;
+  height: 55px;
   border-radius: 100px;
   background-color: white;
   display: flex;
@@ -3238,7 +3237,7 @@ main#main .disabled {
 main#main .second {
   display: none;
   width: 375px;
-  height: auto;
+  height: 560px;
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
   margin-left: auto;
@@ -3252,7 +3251,7 @@ main#main .second-head {
 main#main .second-head .step-car {
   position: absolute;
   top: 42px;
-  left: 25px;
+  left: 20px;
   z-index: 10;
   width: 30px;
   height: auto;
@@ -3262,7 +3261,7 @@ main#main .second-head .step-car img {
 }
 main#main .second-head .step-text {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
 }
 main#main .second-head .step-text p {
@@ -3290,7 +3289,7 @@ main#main .second-head .step-text .step-check .span-check {
 }
 main#main .second-head .step-road .road-bar {
   background-color: #d9d9d9;
-  width: 300px;
+  width: 328px;
   height: 3px;
   margin-top: 17px;
   margin-left: auto;
@@ -3305,7 +3304,7 @@ main#main .second-head .step-road .span-round1 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 34px;
+  left: 24px;
 }
 main#main .second-head .step-road .span-round2 {
   border-radius: 50%;
@@ -3315,7 +3314,7 @@ main#main .second-head .step-road .span-round2 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 84px;
+  left: 70px;
 }
 main#main .second-head .step-road .span-round3 {
   border-radius: 50%;
@@ -3325,7 +3324,7 @@ main#main .second-head .step-road .span-round3 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 134px;
+  left: 117px;
 }
 main#main .second-head .step-road .span-round4 {
   border-radius: 50%;
@@ -3335,7 +3334,7 @@ main#main .second-head .step-road .span-round4 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 184px;
+  left: 164px;
 }
 main#main .second-head .step-road .span-round5 {
   border-radius: 50%;
@@ -3345,7 +3344,7 @@ main#main .second-head .step-road .span-round5 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 234px;
+  left: 211px;
 }
 main#main .second-head .step-road .span-round6 {
   border-radius: 50%;
@@ -3355,7 +3354,7 @@ main#main .second-head .step-road .span-round6 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 284px;
+  left: 258px;
 }
 main#main .second-head .step-road .span-round7 {
   border-radius: 50%;
@@ -3365,7 +3364,17 @@ main#main .second-head .step-road .span-round7 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 334px;
+  left: 305px;
+}
+main#main .second-head .step-road .span-round8 {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #d9d9d9;
+  display: flex;
+  position: absolute;
+  top: 53px;
+  left: 351px;
 }
 main#main .second .common-title {
   margin-top: 16px;
@@ -3491,13 +3500,18 @@ main#main .second .next-second {
   height: 70px;
 }
 main#main .second .next-second .next-button {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 290px;
+  height: 35px;
   display: flex;
   justify-content: center;
   font-size: 20px;
   align-items: center;
+  background-color: #0d8ea3;
+  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  padding: 10px 20px;
 }
 main#main .second .next-second .next-button:hover {
   background-color: #93d7dc;
@@ -3511,14 +3525,14 @@ main#main .third {
   margin-right: auto;
   margin-top: 30px;
   width: 375px;
-  height: auto;
+  height: 550px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
 }
 main#main .third .step-car-third {
   position: absolute;
   top: 42px;
-  left: 72px;
+  left: 65px;
   z-index: 10;
   width: 30px;
   height: auto;
@@ -3634,13 +3648,18 @@ main#main .third .next-third {
   height: 70px;
 }
 main#main .third .next-third .next-button {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 290px;
+  height: 35px;
   display: flex;
   justify-content: center;
   font-size: 20px;
   align-items: center;
+  background-color: #0d8ea3;
+  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  padding: 10px 20px;
 }
 main#main .third .next-third .next-button:hover {
   background-color: #93d7dc;
@@ -3660,7 +3679,7 @@ main#main .fourth {
 main#main .fourth .step-car-four {
   position: absolute;
   top: 42px;
-  left: 121px;
+  left: 110px;
   z-index: 10;
   width: 30px;
   height: auto;
@@ -3764,7 +3783,7 @@ main#main .fifth .common-title-five .common-text {
 main#main .fifth .step-car-five {
   position: absolute;
   top: 42px;
-  left: 170px;
+  left: 155px;
   z-index: 10;
   width: 30px;
   height: auto;
@@ -3840,7 +3859,7 @@ main#main .sixth {
 main#main .sixth .step-car-six {
   position: absolute;
   top: 42px;
-  left: 225px;
+  left: 200px;
   z-index: 10;
   width: 30px;
   height: auto;
@@ -3947,77 +3966,6 @@ main#main .sixth .common-description-six .common-des .description-text {
   text-align: left;
   color: #1e1e1e;
 }
-main#main .sixth .six-input {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-  flex-direction: column;
-}
-main#main .sixth .six-input .custom-input-one {
-  width: 320px;
-  border: 1px solid gray;
-  line-height: 12px;
-  height: 36px;
-  border-radius: 5px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  padding: 25px 10px;
-  font-size: larger;
-}
-main#main .sixth .six-input .six-input-first {
-  gap: 20px;
-  display: flex;
-  justify-content: center;
-}
-main#main .sixth .six-input .six-input-btn {
-  text-align: center;
-  display: flex;
-  width: 120px;
-  height: 36px;
-  background-color: #0d8ea3;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-main#main .sixth .six-input .postInputError {
-  display: none;
-  color: red;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 15px;
-}
-main#main .sixth .six-input .shake {
-  animation: shake 0.5s;
-}
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-5px);
-  }
-  50% {
-    transform: translateX(5px);
-  }
-  75% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-main#main .sixth .six-input .custom-input-one:invalid {
-  border-color: red;
-}
-main#main .sixth .six-input .custom-input-one:valid {
-  border-color: green;
-}
-main#main .sixth .six-input .error-message {
-  color: red;
-  font-size: 0.8rem;
-  display: none;
-}
 main#main .sixth .nearest-station {
   display: flex;
   justify-content: center;
@@ -4033,8 +3981,6 @@ main#main .sixth .nearest-station .custom-input {
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  padding: 25px 10px;
-  font-size: larger;
 }
 main#main .sixth .nearest-description {
   margin-top: 30px;
@@ -4087,20 +4033,242 @@ main#main .sixth .next-six {
   align-items: center;
   border-top: 2px solid black;
   height: 70px;
+  gap: 10px;
 }
 main#main .sixth .next-six .next-button {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 140px;
+  height: 35px;
   display: flex;
   justify-content: center;
   font-size: 20px;
   align-items: center;
+  background-color: #0d8ea3;
+  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  padding: 10px 20px;
 }
 main#main .sixth .next-six .next-button:hover {
   background-color: #93d7dc;
 }
 main#main .sixth .next-six .next-button:active {
+  background-color: #6e6f71;
+}
+main#main .newstep {
+  display: none;
+  width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+main#main .newstep .common-title-five {
+  font-family: Inter;
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 15px;
+  gap: 4px;
+  align-items: flex-start;
+}
+main#main .newstep .common-title-five span {
+  width: 12px;
+  height: 12px;
+  background-color: #93d7dc;
+  margin-top: 5px;
+}
+main#main .newstep .common-title-five .five-title {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #1e1e1e;
+  margin: 0;
+}
+main#main .newstep .common-title-five .common-text {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-left: 12px;
+}
+main#main .newstep .next-img-newstep {
+  width: 60px;
+  position: absolute;
+  right: 8px;
+  top: 165px;
+  transition: top 0.5s ease;
+  z-index: 3;
+  animation: moveSideways 0.7s infinite alternate;
+}
+main#main .newstep .next-img-newstep img {
+  width: 100%;
+}
+@keyframes moveSideways {
+  from {
+    right: 8px;
+  }
+  to {
+    right: 22px;
+  }
+}
+main#main .newstep .step-car-newstep {
+  position: absolute;
+  top: 42px;
+  left: 245px;
+  z-index: 10;
+  width: 30px;
+  height: auto;
+}
+main#main .newstep .step-car-newstep img {
+  width: 100%;
+}
+main#main .newstep .six-input {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  flex-direction: column;
+}
+main#main .newstep .six-input .custom-input-one {
+  width: 320px;
+  border: 1px solid gray;
+  line-height: 12px;
+  height: 36px;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+main#main .newstep .six-input .six-input-first {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+main#main .newstep .six-input .six-input-btn {
+  text-align: center;
+  display: flex;
+  width: 120px;
+  height: 36px;
+  background-color: #0d8ea3;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main#main .newstep .six-input .postInputError {
+  display: none;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+}
+main#main .newstep .six-input .shake {
+  animation: shake 0.5s;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+main#main .newstep .six-input .custom-input-one:invalid {
+  border-color: red;
+}
+main#main .newstep .six-input .custom-input-one:valid {
+  border-color: green;
+}
+main#main .newstep .six-input .error-message {
+  color: red;
+  font-size: 0.8rem;
+  display: none;
+}
+main#main .newstep .nearest-description {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-bottom: 8px;
+}
+main#main .newstep .nearest-description .common-img {
+  width: 35px;
+}
+main#main .newstep .nearest-description .common-img img {
+  width: 100%;
+}
+main#main .newstep .nearest-description .common-des {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: -3px;
+}
+main#main .newstep .nearest-description .common-des .description-triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 8px 15px 8px 0;
+  border-color: transparent rgba(147, 215, 220, 0.8) transparent transparent;
+  transform: rotate(0deg);
+}
+main#main .newstep .nearest-description .common-des .description-text {
+  padding: 8px;
+  background-color: rgba(147, 215, 220, 0.8);
+  font-weight: bold;
+  border-radius: 5px;
+  width: 280px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  color: #1e1e1e;
+}
+main#main .newstep .next-newstep {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+  height: 70px;
+}
+main#main .newstep .next-newstep .next-button {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 290px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  align-items: center;
+  background-color: #0d8ea3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main#main .newstep .next-newstep .next-button:hover {
+  background-color: #93d7dc;
+}
+main#main .newstep .next-newstep .next-button:active {
   background-color: #6e6f71;
 }
 main#main .seven {
@@ -4119,8 +4287,8 @@ main#main .seven {
 }
 main#main .seven .step-car-seven {
   position: absolute;
-  top: 44px;
-  left: 277px;
+  top: 42px;
+  left: 295px;
   z-index: 10;
   width: 30px;
   height: auto;
@@ -4255,8 +4423,8 @@ main#main .last {
 }
 main#main .last .step-car-last {
   position: absolute;
-  top: 44px;
-  left: 320px;
+  top: 42px;
+  left: 340px;
   z-index: 10;
   width: 30px;
   height: auto;
@@ -4318,7 +4486,7 @@ main#main .last .last-name .shake {
   }
 }
 main#main .last .last-name .last-input .custom-surname-input {
-  padding: 25px 7px !important;
+  padding: 1px 5px !important;
   width: 160px;
   border: 1px solid gray;
   line-height: 12px;
@@ -4327,7 +4495,6 @@ main#main .last .last-name .last-input .custom-surname-input {
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  font-size: larger;
 }
 main#main .last .last-name .last-input .custom-surname-input::placeholder,
 main#main .last .last-name .last-input .custom-name-input::placeholder {
@@ -4348,8 +4515,7 @@ main#main .last .last-name .last-input .custom-name-input {
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  padding: 25px 7px;
-  font-size: larger;
+  padding: 1px 5px;
 }
 main#main .last .last-name .last-input .custom-age-input {
   width: 290px;
@@ -4369,7 +4535,7 @@ main#main .last .last-name .last-input .custom-age-input::placeholder {
   color: #6e6f71;
 }
 main#main .last .last-name .last-input .custom-phone-input {
-  padding: 25px 10px !important;
+  padding: 1px 5px !important;
   width: 330px;
   border: 1px solid gray;
   line-height: 12px;

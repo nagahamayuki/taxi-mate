@@ -300,6 +300,8 @@ function fiveClick(element) {
   img_container_dom.style.top = "340px";
 }
 
+// ////////////// newstep /////////////////////////
+
 // //////////////////////////  Six  ///////////////////////////////////
 // /////////////////////////////////////////////////////////////
 function gotoFour() {
@@ -358,7 +360,14 @@ function sixAreaClick(element) {
     disableOtherArea(element.id);
   }
 }
-
+function updateSixNextButtonState() {
+  console.log(commute_ways, "commmm");
+  if (commute_ways.length !== 0) {
+    document.getElementById("six-next").classList.remove("disabled");
+  } else {
+    document.getElementById("six-next").classList.add("disabled");
+  }
+}
 let commute_ways = [];
 
 function sixWayClick(element) {
@@ -373,8 +382,10 @@ function sixWayClick(element) {
   }
   if (commute_ways.length === 0) {
     img_container_dom.style.top = "340px";
+    updateSixNextButtonState();
   } else {
-    img_container_dom.style.top = "550px";
+    updateSixNextButtonState();
+    img_container_dom.style.top = "590px";
   }
 }
 
@@ -383,13 +394,16 @@ function sixWayClick(element) {
 var post_number = "";
 var nearest_station = "";
 async function checkPost(post_num) {
+  console.log(post_num, "postnum");
   const postError = document.getElementById("postInputError");
   post_number = post_num;
   await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${post_num}`)
     .then((response) => response.json())
     .then((data) => {
-      if (data.status === 200) {   
-        sixHidden();   
+      console.log(data.status, "data");
+      if (data.status === 200) {
+        console.log("ture");
+        newStepHidden();
         postError.style.display = "none";
         postError.classList.remove("shake");
       } else {
@@ -409,7 +423,7 @@ async function checkPost(post_num) {
 }
 function validateNumberInput(input) {
   // Remove non-numeric characters
-  input.value = input.value.replace(/[^0-9]/g, '');
+  input.value = input.value.replace(/[^0-9]/g, "");
 }
 document.addEventListener("DOMContentLoaded", (event) => {
   const inputField = document.getElementById("custom-sixinput-one");
@@ -438,6 +452,26 @@ function gotoFive() {
 function sixHidden() {
   var prev_page = document.getElementById("six");
   nearest_station = document.getElementById("nearest_station").value;
+
+  var next_page = document.getElementById("newstep");
+
+  // Hide the first button
+  prev_page.style.display = "none";
+  // Display the second div
+  next_page.style.display = "block";
+}
+function gotoSix() {
+  var prev_page = document.getElementById("six");
+
+  var next_page = document.getElementById("newstep");
+
+  // Hide the first button
+  prev_page.style.display = "block";
+  // Display the second div
+  next_page.style.display = "none";
+}
+function newStepHidden() {
+  var prev_page = document.getElementById("newstep");
   var next_page = document.getElementById("seven");
 
   // Hide the first button
@@ -452,8 +486,11 @@ function sixHidden() {
 let past_accidents = [];
 function updateSevenNextButtonState() {
   // Check if at least one element in the array is not null
+  const img_container_dom = document.querySelector(".next-img-seven");
+
   if (past_accidents.length !== 0) {
     document.getElementById("seven-next").classList.remove("disabled");
+    img_container_dom.style.top = "340px";
   } else {
     document.getElementById("seven-next").classList.add("disabled");
     const img_container_dom = document.querySelector(".next-img-seven");
@@ -472,12 +509,10 @@ function sevenAccident(element) {
     element.style.backgroundColor = "#93d7dc";
   }
   updateSevenNextButtonState();
-  const img_container_dom = document.querySelector(".next-img-seven");
-  img_container_dom.style.top = "340px";
 }
 
-function gotoSix() {
-  var prev_page = document.getElementById("six");
+function gotoNewStep() {
+  var prev_page = document.getElementById("newstep");
 
   var next_page = document.getElementById("seven");
 
@@ -485,7 +520,6 @@ function gotoSix() {
   prev_page.style.display = "block";
   // Display the second div
   next_page.style.display = "none";
-
 }
 
 function sevenHidden() {

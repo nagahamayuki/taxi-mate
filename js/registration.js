@@ -254,7 +254,7 @@ $(".container--2").on("click", 'input[name="attractive[]"]', function () {
     });
 
     $("#phonenumber").keyup(function () {
-      var regex = /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i;
+      var regex = /^[0-9\-\+]+$/i;
       if ($("#phonenumber").val() != "" && regex.test($("#phonenumber").val()) == true) {
         $("#phonenumber").removeClass("danger");
         $("#regex").addClass("d-none");
@@ -363,8 +363,7 @@ $(".container--3")
     previous33 = $("#phonenumber").val();
   })
   .on("change", "#phonenumber", function () {
-    var regex = /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i;
-
+    var regex = /^[0-9\-\+]+$/i;
     if ($("#phonenumber").val() == "" && previous33 != "" && regex.test(previous33) == true) {
       unentered_count[2]++;
     }

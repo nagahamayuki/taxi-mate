@@ -1,6 +1,6 @@
 .contact {
   width: 100%;
-  padding-left: 40px;
+  padding-left: 300px;
   padding-right: 40px;
   margin-bottom: 80px;
   display: flex;
@@ -98,6 +98,11 @@
 
   #regex {
     color: red;
+    margin-top: 10px;
+  }
+
+  #valid_email {
+    color: #d9534f;
     margin-top: 10px;
   }
 }

@@ -1,7 +1,8 @@
 <?php
 
+// $to = "nagahama@anytrail.jp";
 $to = "nagahama@anytrail.jp";
-$headers = "From: sender@example.com";
+$headers = "From: nagahama@anytrail.jp";
 
 
 $commute = implode(",", $_GET["commute"]);
@@ -18,7 +19,7 @@ $text = $text . "タクシー業界に感じている魅力について教えて
 $text = $text . "お名前(姓):" . $_GET["firstname"] . "\n";
 $text = $text . "お名前(名):" . $_GET["lastname"] . "\n";
 $text = $text . "年代:" . $_GET["age"] . "\n";
-$text = $text . "電話番号:" . $_GET["phonenumber"] . "\n";
+$text = $text . "電話番号:" . $_GET["phone"] . "\n";
 $text = $text . "メールアドレス:" . $_GET["email"] . "\n";
 
 // Send the email

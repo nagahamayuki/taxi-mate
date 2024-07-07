@@ -193,7 +193,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <p>生まれ年</p>
               <span>*</span>
             </div>
-            <input name="birth_year" type="number" placeholder="例：1990年" required />
+            <input name="birth_year" type="text" placeholder="例：1990年" required />
           </div>
           <div class="form-section">
             <div class="label">
@@ -203,9 +203,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <input
               name="email"
               type="email"
+              id="email"
               placeholder="例：mail@taxi-mate.jp"
               required
             />
+            <p id="valid_email" class="d-none">
+              有効なメールアドレスを入力してください。
+            </p>
           </div>
           <div class="form-section">
             <div class="label">
@@ -224,7 +228,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <input type="checkbox" required />
             同意する
           </label>
-          <button type="button" class="sending">
+          <button type="submit" class="sending">
             <span>この内容で送信する</span>
             <span class="arrow">
               <svg

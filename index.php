@@ -1065,7 +1065,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						>電話番号</label
 					  >
 					  <input
-						name="phonenumber"
+						name="phone"
 						id="phonenumber"
 						class="form-control"
 						placeholder="09012345678"

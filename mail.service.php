@@ -1,7 +1,8 @@
 <?php
 // echo json_encode($_POST);
+// $to = "nagahama@anytrail.jp";
 $to = "nagahama@anytrail.jp";
-$headers = "From: sender@example.com";
+$headers = "From: nagahama@anytrail.jp";
 
 $text = "お名前:" . $_GET["name"] . "\n";
 $text = $text . "お住まいの住所:" . $_GET["address"] . "\n";
