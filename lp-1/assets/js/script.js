@@ -182,32 +182,14 @@ function disableJob(clickedId) {
   });
 }
 
-function enableAllJob() {
-  var buttons = ["plane", "train", "bus", "bike", "rickshaw"];
-  buttons.forEach(function (buttonId) {
-    document.getElementById(buttonId).classList.remove("disabled");
-  });
-}
-
 function thirdCheck(element) {
-  const img_container_dom = document.querySelector(".next-img-third");
-  if (changing_jobs_time !== "") {
-    changing_jobs_time = "";
-
-    enableAllJob();
-  } else {
-    changing_jobs_time = element.querySelector("span").textContent;
-    var prev_page = document.getElementById("third");
-
-    var next_page = document.getElementById("four");
-
-    // Hide the first button
-    prev_page.style.display = "none";
-
-    // Display the second div
-    next_page.style.display = "block";
-    updateThirdNextButtonState();
-  }
+  changing_jobs_time = element.querySelector("span").textContent;
+  var prev_page = document.getElementById("third");
+  var next_page = document.getElementById("four");
+  // Hide the first button
+  prev_page.style.display = "none";
+  // Display the second div
+  next_page.style.display = "block";
 }
 // ///////////////////////////Fourth/////////////////////////////////////
 // ////////////////////////////////////////////////////////////////
@@ -361,7 +343,6 @@ function sixAreaClick(element) {
   }
 }
 function updateSixNextButtonState() {
-  console.log(commute_ways, "commmm");
   if (commute_ways.length !== 0) {
     document.getElementById("six-next").classList.remove("disabled");
   } else {
@@ -385,24 +366,29 @@ function sixWayClick(element) {
     updateSixNextButtonState();
   } else {
     updateSixNextButtonState();
-    img_container_dom.style.top = "590px";
+    img_container_dom.style.top = "510px";
   }
 }
-
+document.addEventListener("DOMContentLoaded", (event) => {
+  const img_container_dom = document.querySelector(".next-img-six");
+  let inputStation = document.getElementById("nearest_station");
+  inputStation.addEventListener("input", () => {
+    if (inputStation.value.length > 1) {
+      img_container_dom.style.top = "590px";
+    } 
+  });
+});
 // six input
 
 var post_number = "";
 var nearest_station = "";
 async function checkPost(post_num) {
-  console.log(post_num, "postnum");
   const postError = document.getElementById("postInputError");
   post_number = post_num;
   await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${post_num}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.status, "data");
       if (data.status === 200) {
-        console.log("ture");
         newStepHidden();
         postError.style.display = "none";
         postError.classList.remove("shake");
@@ -426,7 +412,7 @@ function validateNumberInput(input) {
   input.value = input.value.replace(/[^0-9]/g, "");
 }
 document.addEventListener("DOMContentLoaded", (event) => {
-  const inputField = document.getElementById("custom-sixinput-one");
+  let inputField = document.getElementById("custom-sixinput-one");
   const postError = document.getElementById("postInputError");
   inputField.addEventListener("input", () => {
     if (inputField.value.length === 7) {
@@ -462,9 +448,7 @@ function sixHidden() {
 }
 function gotoSix() {
   var prev_page = document.getElementById("six");
-
   var next_page = document.getElementById("newstep");
-
   // Hide the first button
   prev_page.style.display = "block";
   // Display the second div
@@ -480,7 +464,6 @@ function newStepHidden() {
   // Display the second div
   next_page.style.display = "block";
 }
-
 // ////////////////////////        Seven         ///////////////////////////////////
 // ///////////////////////////////////////////////////////////
 let past_accidents = [];
@@ -516,17 +499,18 @@ function gotoNewStep() {
 
   var next_page = document.getElementById("seven");
 
+  document.getElementById("custom-sixinput-one").value = "";
   // Hide the first button
   prev_page.style.display = "block";
   // Display the second div
   next_page.style.display = "none";
+  post_number = "";
 }
 
 function sevenHidden() {
   var prev_page = document.getElementById("seven");
 
   var next_page = document.getElementById("last");
-
   // Hide the first button
   prev_page.style.display = "none";
 

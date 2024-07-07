@@ -3072,7 +3072,7 @@ main#main .next .next-button:hover {
   background-color: #93d7dc;
 }
 main#main .next .next-button:active {
-  background-color: #6e6f71;
+  background-color: #46aec0;
 }
 main#main .common-description {
   display: none;
@@ -3228,7 +3228,7 @@ main#main .first-button2:hover {
 }
 main#main .first .first-button1:active,
 main#main .first .first-button2:active {
-  background-color: #759ef0;
+  background-color: #46aec0;
 }
 main#main .disabled {
   pointer-events: none;
@@ -3472,6 +3472,9 @@ main#main .second-three-check .no-license {
 main#main .second-three-check .no-license:hover {
   background-color: #93d7dc;
 }
+main#main .second-three-check .red-taxi:active, main#main .second-three-check .black-taxi:active, main#main .second-three-check .no-license:active {
+  background-color: #46aec0;
+}
 main#main .second-three-check .next-img-second {
   width: 60px;
   position: absolute;
@@ -3517,7 +3520,7 @@ main#main .second .next-second .next-button:hover {
   background-color: #93d7dc;
 }
 main#main .second .next-second .next-button:active {
-  background-color: #6e6f71;
+  background-color: #46aec0;
 }
 main#main .third {
   display: none;
@@ -3587,9 +3590,9 @@ main#main .third-five-part .third-one .third-cycle:hover,
 main#main .third-five-part .third-two .third-cycle:hover {
   background-color: #93d7dc;
 }
-main#main .third-five-part .third-one .third-three:hover,
-main#main .third-five-part .third-two .third-three:hover {
-  background-color: #93d7dc;
+main#main .third-five-part .third-one .third-cycle:active,
+main#main .third-five-part .third-two .third-cycle:active {
+  background-color: #46aec0;
 }
 main#main .third-five-part .third-one .next-img-third,
 main#main .third-five-part .third-two .next-img-third {
@@ -3640,6 +3643,12 @@ main#main .third-five-part .third-three .third-span {
   font-size: 16px;
   font-weight: bold;
 }
+main#main .third-five-part .third-three:hover {
+  background-color: #93d7dc;
+}
+main#main .third-five-part .third-three:active {
+  background-color: #46aec0;
+}
 main#main .third .next-third {
   display: flex;
   justify-content: center;
@@ -3665,7 +3674,7 @@ main#main .third .next-third .next-button:hover {
   background-color: #93d7dc;
 }
 main#main .third .next-third .next-button:active {
-  background-color: #6e6f71;
+  background-color: #46aec0;
 }
 main#main .fourth {
   display: none;
@@ -4053,7 +4062,7 @@ main#main .sixth .next-six .next-button:hover {
   background-color: #93d7dc;
 }
 main#main .sixth .next-six .next-button:active {
-  background-color: #6e6f71;
+  background-color: #46aec0;
 }
 main#main .newstep {
   display: none;
@@ -4269,7 +4278,7 @@ main#main .newstep .next-newstep .next-button:hover {
   background-color: #93d7dc;
 }
 main#main .newstep .next-newstep .next-button:active {
-  background-color: #6e6f71;
+  background-color: #46aec0;
 }
 main#main .seven {
   display: none;
@@ -4762,7 +4771,7 @@ main#main .success_modal .modal-content .close-button:focus {
   background-color: darkcyan;
 }
 .thanks .goTop:active {
-  background-color: rgb(5, 116, 70);
+  background-color: #46aec0;
 }
 
 .footer-update {

@@ -84,7 +84,7 @@ main#main {
       background-color: #93d7dc;
     }
     .next-button:active {
-      background-color: #6e6f71;
+      background-color: #46aec0;
     }
   }
 
@@ -247,7 +247,7 @@ main#main {
     }
     .first-button1:active,
     .first-button2:active {
-      background-color: #759ef0;
+      background-color: #46aec0;
     }
   }
   .disabled {
@@ -495,6 +495,9 @@ main#main {
       .no-license:hover {
         background-color: #93d7dc;
       }
+      .red-taxi:active, .black-taxi:active, .no-license:active {
+        background-color: #46aec0;
+      }
       .next-img-second {
         width: 60px;
         position: absolute;
@@ -540,7 +543,7 @@ main#main {
         background-color: #93d7dc;
       }
       .next-button:active {
-        background-color: #6e6f71;
+        background-color: #46aec0;
       }
     }
   }
@@ -607,8 +610,8 @@ main#main {
         .third-cycle:hover {
           background-color: #93d7dc;
         }
-        .third-three:hover {
-          background-color: #93d7dc;
+        .third-cycle:active {
+          background-color: #46aec0;
         }
         .next-img-third {
           width: 60px;
@@ -660,6 +663,13 @@ main#main {
           font-weight: bold;
         }
       }
+      .third-three:hover {
+        background-color: #93d7dc;
+      }
+      .third-three:active {
+        background-color: #46aec0;
+      }
+      
     }
     .next-third {
       display: flex;
@@ -685,7 +695,7 @@ main#main {
         background-color: #93d7dc;
       }
       .next-button:active {
-        background-color: #6e6f71;
+        background-color: #46aec0;
       }
     }
   }
@@ -1079,7 +1089,7 @@ main#main {
         background-color: #93d7dc;
       }
       .next-button:active {
-        background-color: #6e6f71;
+        background-color: #46aec0;
       }
     }
   }
@@ -1301,7 +1311,7 @@ main#main {
         background-color: #93d7dc;
       }
       .next-button:active {
-        background-color: #6e6f71;
+        background-color: #46aec0;
       }
     }
   }
@@ -1802,6 +1812,6 @@ main#main {
     background-color: darkcyan;
   }
   .goTop:active {
-    background-color: rgb(5, 116, 70);
+    background-color: #46aec0;
   }
 }
