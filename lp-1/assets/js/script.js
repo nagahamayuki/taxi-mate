@@ -538,6 +538,7 @@ var age = "10代";
 var phone_number = "";
 var email = "";
 
+var page_local_url = "http://localhost:5500"
 async function completeStep() {
   var name_vali = document.getElementById("nameInputError");
   var phone_vali = document.getElementById("phoneInputError");
@@ -590,6 +591,7 @@ async function completeStep() {
           age: age,
           phone_number: phone_number,
           email: email,
+          page_local_url,
         }),
       };
       let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
