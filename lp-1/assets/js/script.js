@@ -570,10 +570,10 @@ async function completeStep() {
     } else {
       phone_vali.style.display = "none";
       phone_vali.classList.remove("shake");
-      let changing_job_reasons_hubspot = changing_job_reasons.join(';');
-      let taxi_attracts_hubspot = taxi_attracts.join(';');
-      let past_accidents_hubspot = past_accidents.join(';');
-      let commute_ways_hubspot = commute_ways.join(';');
+      let changing_job_reasons_hubspot = changing_job_reasons.join(',');
+      let taxi_attracts_hubspot = taxi_attracts.join(',');
+      let past_accidents_hubspot = past_accidents.join(',');
+      let commute_ways_hubspot = commute_ways.join(',');
       let sendData = {
         method: "POST",
         headers: {
@@ -599,7 +599,7 @@ async function completeStep() {
           changing_job_reasons_hubspot: changing_job_reasons_hubspot,
           taxi_attracts_hubspot: taxi_attracts_hubspot,
           past_accidents_hubspot: past_accidents_hubspot,
-          commute_ways_hubspot
+          commute_ways_hubspot,
         }),
       };
       let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
