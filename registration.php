@@ -28,7 +28,7 @@ if (mail($to, "転職支援サービスに登録 がありました / taxi-mate.
     echo "Failed to send email.";
 }
 
-header("Location: ../taxi-mate/registration/thanks/");
+header("Location: ../registration/thanks/");
 
 $webhook_url = "https://hook.us1.make.com/han76gjtlud87lq42t8yqnjqeghyu780";
 
