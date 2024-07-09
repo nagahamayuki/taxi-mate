@@ -96,13 +96,17 @@
     }
   }
 
-  #regex {
+  #regex,
+  #valid_email,
+  #please_enter_name,
+  #please_enter_address,
+  #please_enter_birth_year,
+  #please_enter_email,
+  #please_enter_phone,
+  #please_enter_privacy
+   {
     color: red;
     margin-top: 10px;
   }
 
-  #valid_email {
-    color: #d9534f;
-    margin-top: 10px;
-  }
 }

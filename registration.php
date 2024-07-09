@@ -1,6 +1,5 @@
 <?php
 
-// $to = "nagahama@anytrail.jp";
 $to = "nagahama@anytrail.jp";
 $headers = "From: nagahama@anytrail.jp";
 
@@ -30,4 +29,50 @@ if (mail($to, "転職支援サービスに登録 がありました / taxi-mate.
 }
 
 header("Location: ../taxi-mate/registration/thanks/");
-exit;
+
+$webhook_url = "https://hook.us1.make.com/han76gjtlud87lq42t8yqnjqeghyu780";
+
+// Set the data to be sent
+$data = array(
+   "お住まいの地域" => $_GET["area"],
+   "通勤手段" => $commute,
+   "最寄駅" => $_GET["station"],
+   "転職時期" => $_GET["jobdate"],
+   "今回の転職理由について教えてください" => $changeReason,
+   "タクシー業界に感じている魅力について教えてください" => $attractive,
+   "お名前(姓)" => $_GET["firstname"],
+   "お名前(名)" => $_GET["lastname"],
+   "年代" => $_GET["age"],
+   "電話番号" => $_GET["phone"],
+   "メールアドレス" => $_GET["email"],
+);
+
+// Convert the data to JSON
+$data_json = json_encode($data);
+
+// Initialize cURL
+$ch = curl_init();
+
+// Set cURL options
+curl_setopt($ch, CURLOPT_URL, $webhook_url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    "Content-Type: application/json"
+));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// Execute the cURL request
+$response = curl_exec($ch);
+
+// Check for any cURL errors
+if(curl_errno($ch)){
+    $error_msg = curl_error($ch);
+    echo "cURL error: " . $error_msg;
+} else {
+    // Print the response
+    echo "Webhook response: " . $response;
+}
+
+// Close the cURL session
+curl_close($ch);

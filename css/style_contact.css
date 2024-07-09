@@ -98,11 +98,14 @@
 .contact button:hover .arrow {
   transform: rotate(0deg);
 }
-.contact #regex {
+.contact #regex,
+.contact #valid_email,
+.contact #please_enter_name,
+.contact #please_enter_address,
+.contact #please_enter_birth_year,
+.contact #please_enter_email,
+.contact #please_enter_phone,
+.contact #please_enter_privacy {
   color: red;
-  margin-top: 10px;
-}
-.contact #valid_email {
-  color: #d9534f;
   margin-top: 10px;
 }/*# sourceMappingURL=style_contact.css.map */

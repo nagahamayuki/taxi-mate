@@ -56,7 +56,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0"
   />
-  <link rel="canonical" href="https://taxi-mate.jp/contact/">
 </head>
 
 <body>
@@ -174,9 +173,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <input
               name="name"
+              id="name"
               placeholder="お名前をフルネームで記載してください"
               required
             />
+            <p id="please_enter_name" class="d-none">
+              入力してください
+            </p>
           </div>
           <div class="form-section">
             <div class="label">
@@ -185,16 +188,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <input
               name="address"
+              id="address"
               placeholder="町名まで記載ください（例：東京都 台東区 東上野）"
               required
             />
+            <p id="please_enter_address" class="d-none">
+              入力してください
+            </p>
           </div>
           <div class="form-section">
             <div class="label">
               <p>生まれ年</p>
               <span>*</span>
             </div>
-            <input name="birth_year" type="text" placeholder="例：1990年" required />
+            <input name="birth_year" id="birth_year" type="text" placeholder="例：1990年" required />
+            <p id="please_enter_birth_year" class="d-none">
+              入力してください
+            </p>
           </div>
           <div class="form-section">
             <div class="label">
@@ -208,6 +218,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               placeholder="例：mail@taxi-mate.jp"
               required
             />
+            <p id="please_enter_email" class="d-none">
+              入力してください
+            </p>
             <p id="valid_email" class="d-none">
               有効なメールアドレスを入力してください。
             </p>
@@ -218,6 +231,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <span>*</span>
             </div>
             <input name="phone" placeholder="例：080-1111-2222" id="phonenumber" required />
+            <p id="please_enter_phone" class="d-none">
+              入力してください
+            </p>
             <p id="regex" class="d-none">
               半角数字または +-の記号のみ入力してください。
             </p>
@@ -226,10 +242,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             プライバシーポリシーに同意の上でお問い合わせください。
           </a>
           <label class="privacy-agree">
-            <input type="checkbox" required />
+            <input type="checkbox" name="is_privacy" id="privacy" required />
             同意する
           </label>
-          <button type="submit" class="sending">
+          <p id="please_enter_privacy" class="d-none">入力してください</p>
+          <button type="button" class="sending">
             <span>この内容で送信する</span>
             <span class="arrow">
               <svg
