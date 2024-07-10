@@ -1,11 +1,9 @@
 .contact {
-  width: 100%;
-  padding-left: 300px;
-  padding-right: 40px;
-  margin-bottom: 80px;
+  margin: 0px auto 80px;
+  padding: 0px 20px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 30px;
 }
 .contact .form-section {
@@ -16,7 +14,7 @@
   padding: 10px 0;
   color: rgb(51, 51, 51);
   display: flex;
-  align-items: end;
+  align-items: center;
 }
 .contact .form-section .label p {
   font-size: 18px;
@@ -62,7 +60,8 @@
 }
 .contact .privacy-agree input[type=checkbox] {
   margin-right: 10px;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-appearance: auto;
      -moz-appearance: auto;
           appearance: auto;
@@ -108,4 +107,5 @@
 .contact #please_enter_privacy {
   color: red;
   margin-top: 10px;
-}/*# sourceMappingURL=style_contact.css.map */
+}
+/*# sourceMappingURL=style_contact.css.map */

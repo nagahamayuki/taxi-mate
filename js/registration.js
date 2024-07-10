@@ -8,8 +8,11 @@ $("button.next").on("click", function () {
   if (unentered_count[current_page - 1] == 0) {
     // if current page required field is filled
     if (current_page == 3) {
-      $(this).html("この内容で送信する");
-      $("form").submit();
+      var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (regex.test($("#email").val()) == true && $("#email").val() != "") {
+        $(this).html("この内容で送信する");
+        $("form").submit();
+      }
     } else {
       $(".next").html("次へ");
       $(".back").removeClass("d-none");
@@ -87,6 +90,11 @@ $("button.next").on("click", function () {
       if ($("#phonenumber").val() == "") {
         $("#phonenumber").addClass("danger");
         $("#please_enter_phonenumber").removeClass("d-none");
+      }
+
+      if ($("#email").val() == "") {
+        $("#email").addClass("danger");
+        $("#please_enter_email").removeClass("d-none");
       }
 
       if ($('input[name="is_privacy"]:checked').length == 0) {
@@ -266,6 +274,20 @@ $(".container--2").on("click", 'input[name="attractive[]"]', function () {
         $("#please_enter_phonenumber").removeClass("d-none");
         $("#phonenumber").addClass("danger");
         $("#regex").addClass("d-none");
+      }
+    });
+
+    $("#email").blur(function () {
+      var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (regex.test($("#email").val()) == false && $("#email").val() != "") {
+        $("#valid_email").removeClass("d-none");
+        $("#please_enter_email").addClass("d-none");
+      } else if (regex.test($("#email").val()) == true && $("#email").val() != "") {
+        $("#valid_email").addClass("d-none");
+        $("#please_enter_email").addClass("d-none");
+      } else if (regex.test($("#email").val()) == false && $("#email").val() == "") {
+        $("#valid_email").addClass("d-none");
+        $("#please_enter_email").removeClass("d-none");
       }
     });
 

@@ -183,6 +183,7 @@
 .registration-form #please_enter_firstname,
 .registration-form #please_enter_lastname,
 .registration-form #please_enter_phonenumber,
+.registration-form #please_enter_email,
 .registration-form #please_enter_privacy,
 .registration-form #valid_email {
   color: #d9534f;
