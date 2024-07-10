@@ -378,53 +378,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     } 
   });
 });
-// six input
-
-var post_number = "";
-var nearest_station = "";
-async function checkPost(post_num) {
-  const postError = document.getElementById("postInputError");
-  post_number = post_num;
-  await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${post_num}`)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.status === 200) {
-        newStepHidden();
-        postError.style.display = "none";
-        postError.classList.remove("shake");
-      } else {
-        console.log("Address not found");
-        postError.style.display = "block";
-        postError.classList.add("shake");
-        setTimeout(() => (postError.style.display = "none"), 2000); // Remove class after animation
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      postError.style.display = "block";
-      postError.classList.add("shake");
-      setTimeout(() => postError.classList.remove("shake"), 500); // Remove class after animation
-      document.getElementById("six-next").classList.add("disabled");
-    });
-}
-function validateNumberInput(input) {
-  // Remove non-numeric characters
-  input.value = input.value.replace(/[^0-9]/g, "");
-}
-document.addEventListener("DOMContentLoaded", (event) => {
-  let inputField = document.getElementById("custom-sixinput-one");
-  const postError = document.getElementById("postInputError");
-  inputField.addEventListener("input", () => {
-    if (inputField.value.length === 7) {
-      checkPost(inputField.value);
-    } else if (inputField.value.length > 7) {
-      postError.style.display = "block";
-      postError.classList.add("shake");
-      setTimeout(() => (postError.style.display = "none"), 2000);
-    }
-  });
-});
-
 function gotoFive() {
   var prev_page = document.getElementById("five");
   var next_page = document.getElementById("six");
@@ -446,14 +399,8 @@ function sixHidden() {
   // Display the second div
   next_page.style.display = "block";
 }
-function gotoSix() {
-  var prev_page = document.getElementById("six");
-  var next_page = document.getElementById("newstep");
-  // Hide the first button
-  prev_page.style.display = "block";
-  // Display the second div
-  next_page.style.display = "none";
-}
+// //////////////  New Step /////////////////////
+// six input
 function newStepHidden() {
   var prev_page = document.getElementById("newstep");
   var next_page = document.getElementById("seven");
@@ -464,6 +411,77 @@ function newStepHidden() {
   // Display the second div
   next_page.style.display = "block";
 }
+function gotoSix() {
+  var prev_page = document.getElementById("six");
+  var next_page = document.getElementById("newstep");
+  var next_page_seven = document.getElementById("seven");
+  const sixBeforeButton = document.getElementById('six-before');
+
+  next_page_seven.style.display = "none";
+  // Hide the first button
+  prev_page.style.display = "block";
+  // Display the second div
+  next_page.style.display = "none";
+}
+var post_number = "";
+var nearest_station = "";
+async function checkPost(post_num) {
+  const postError = document.getElementById("postInputError");
+  post_number = post_num;
+  await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${post_num}`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data, "response");
+      if (data.status === 200) {
+        postError.style.display = "none";
+        postError.classList.remove("shake");
+        setTimeout(function() {
+          newStepHidden();
+      }, 2000);
+      } else {
+        sixBefore.classList.remove("disabled");
+
+        console.log("Address not found");
+        postError.style.display = "block";
+        postError.classList.add("shake");
+        setTimeout(() => (postError.style.display = "none"), 2000); // Remove class after animation
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      postError.style.display = "block";
+      postError.classList.add("shake");
+      setTimeout(() => postError.classList.remove("shake"), 500); // Remove class after animation
+    });
+}
+function validateNumberInput(input) {
+  // Remove non-numeric characters
+  input.value = input.value.replace(/[^0-9]/g, "");
+}
+document.addEventListener("DOMContentLoaded", (event) => {
+  let inputField = document.getElementById("custom-sixinput-one");
+  const postError = document.getElementById("postInputError");
+
+  inputField.addEventListener("input", () => {
+    if (inputField.value.length === 7) {
+      sixBeforeButton.classList.add('disabled');
+      checkPost(inputField.value);    
+ 
+    } else if (inputField.value.length > 7) {
+      sixBeforeButton.classList.remove('disabled');
+      postError.style.display = "block";
+      postError.classList.add("shake");
+      setTimeout(() => (postError.style.display = "none"), 2000);
+    } else if (inputField.value.length > 1 && inputField.value.length < 7) {
+      sixBeforeButton.classList.remove('disabled');
+    }     
+  });
+});
+
+
+
+
+
 // ////////////////////////        Seven         ///////////////////////////////////
 // ///////////////////////////////////////////////////////////
 let past_accidents = [];
@@ -538,7 +556,7 @@ var age = "10代";
 var phone_number = "";
 var email = "";
 
-var page_local_url = "http://localhost:5500"
+var page_local_url = window.location.href
 async function completeStep() {
   var name_vali = document.getElementById("nameInputError");
   var phone_vali = document.getElementById("phoneInputError");
@@ -570,10 +588,6 @@ async function completeStep() {
     } else {
       phone_vali.style.display = "none";
       phone_vali.classList.remove("shake");
-      let changing_job_reasons_hubspot = [changing_job_reasons.join('; ')];
-      let taxi_attracts_hubspot = [taxi_attracts.join('; ')];
-      let past_accidents_hubspot = [past_accidents.join('; ')];
-      let commute_ways_hubspot = [commute_ways.join('; ')];
       let sendData = {
         method: "POST",
         headers: {
@@ -596,10 +610,6 @@ async function completeStep() {
           phone_number: phone_number,
           email: email,
           page_local_url,
-          changing_job_reasons_hubspot: changing_job_reasons_hubspot,
-          taxi_attracts_hubspot: taxi_attracts_hubspot,
-          past_accidents_hubspot: past_accidents_hubspot,
-          commute_ways_hubspot,
         }),
       };
       let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
