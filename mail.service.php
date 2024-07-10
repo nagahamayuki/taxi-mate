@@ -1,7 +1,7 @@
 <?php
 
 //$to = "nagahama@anytrail.jp";
-$to = "shoji0014@gmail.com";
+$to = "nagahama@anytrail.jp";
 $headers = "From: nagahama@anytrail.jp";
 
 $text = "お名前:" . $_GET["name"] . "\n";
