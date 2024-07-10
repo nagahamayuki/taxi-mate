@@ -30,13 +30,13 @@ function toggleDivs(element) {
 
 var license = "";
 
-function updateNextButtonState() {
-  if (license === "") {
-    document.getElementById("second-next").classList.add("disabled");
-  } else {
-    document.getElementById("second-next").classList.remove("disabled");
-  }
-}
+// function updateNextButtonState() {
+//   if (license === "") {
+//     document.getElementById("second-next").classList.add("disabled");
+//   } else {
+//     document.getElementById("second-next").classList.remove("disabled");
+//   }
+// }
 
 function disableOtherButtons(clickedId) {
   var buttons = ["redtaxi", "blacktaxi", "nolicense"];
@@ -77,7 +77,7 @@ function secondCheck1() {
   // Display the second div
   next_page.style.display = "block";
 
-  updateNextButtonState();
+  // updateNextButtonState();
 }
 function secondCheck2() {
   var img_container_dom = document.querySelector(".next-img-second");
@@ -105,7 +105,7 @@ function secondCheck2() {
   // Display the second div
   next_page.style.display = "block";
 
-  updateNextButtonState();
+  // updateNextButtonState();
 }
 
 function secondCheck3() {
@@ -134,7 +134,7 @@ function secondCheck3() {
   // Display the second div
   next_page.style.display = "block";
 
-  updateNextButtonState();
+  // updateNextButtonState();
 }
 // Initial check to ensure the second-next button is disabled on page load
 function gotoFirst() {
