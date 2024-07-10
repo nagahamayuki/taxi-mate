@@ -588,6 +588,11 @@ async function completeStep() {
     } else {
       phone_vali.style.display = "none";
       phone_vali.classList.remove("shake");
+      // hubspot用で追加
+      let changing_jobs_time_hubspot = new Array(changing_jobs_time.join("; "));
+      let changing_job_reasons_hubspot = new Array(changing_job_reasons.join("; "));
+      let taxi_attracts_hubspot = new Array(taxi_attracts.join("; "));
+      let past_accidents_hubspot = new Array(past_accidents.join("; "));
       let sendData = {
         method: "POST",
         headers: {
@@ -610,6 +615,10 @@ async function completeStep() {
           phone_number: phone_number,
           email: email,
           page_local_url,
+          changing_jobs_time_hubspot,
+          changing_job_reasons_hubspot,
+          taxi_attracts_hubspot,
+          past_accidents_hubspot,
         }),
       };
       let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
