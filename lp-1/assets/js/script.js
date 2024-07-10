@@ -589,10 +589,10 @@ async function completeStep() {
       phone_vali.style.display = "none";
       phone_vali.classList.remove("shake");
       // hubspot用で追加
-      let changing_job_reasons_hubspot = new Array(changing_job_reasons.join("; "));
-      let taxi_attracts_hubspot = new Array(taxi_attracts.join("; "));
-      let past_accidents_hubspot = new Array(past_accidents.join("; "));
-      let commute_ways_hubspot = new Array(commute_ways.join("; "));
+      let changing_job_reasons_hubspot = new Array(changing_job_reasons.join(";"));
+      let taxi_attracts_hubspot = new Array(taxi_attracts.join(";"));
+      let past_accidents_hubspot = new Array(past_accidents.join(";"));
+      let commute_ways_hubspot = new Array(commute_ways.join(";"));
       let sendData = {
         method: "POST",
         headers: {
