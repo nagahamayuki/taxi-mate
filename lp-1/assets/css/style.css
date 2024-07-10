@@ -2770,10 +2770,12 @@ figure img,
 }
 .header-logo img {
   width: 140px;
+  height: 12px;
 }
 @media only screen and (max-width: 640px) {
   .header-logo img {
     width: 20rem;
+    height: 1.5rem;
   }
 }
 .header-bottom {
@@ -4252,16 +4254,16 @@ main#main .newstep .nearest-description .common-des .description-text {
 }
 main#main .newstep .next-newstep {
   display: flex;
-  margin-top: 3rem;
   justify-content: center;
   align-items: center;
   border-top: 2px solid black;
   height: 70px;
+  gap: 10px;
 }
 main#main .newstep .next-newstep .next-button {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   color: white;
-  width: 290px;
+  width: 140px;
   height: 35px;
   display: flex;
   justify-content: center;
