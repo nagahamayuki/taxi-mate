@@ -538,7 +538,7 @@ var age = "10代";
 var phone_number = "";
 var email = "";
 
-var page_local_url = "http://localhost:5500"
+var page_local_url = window.location.href;
 async function completeStep() {
   var name_vali = document.getElementById("nameInputError");
   var phone_vali = document.getElementById("phoneInputError");
