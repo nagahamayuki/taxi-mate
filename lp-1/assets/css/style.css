@@ -2898,6 +2898,28 @@ figure img,
   }
 }
 
+.required-tag {
+  width: 30px !important;
+  font-size: 11px;
+  background: red !important;
+  border-radius: 4px;
+  text-align: center;
+  padding: 2px;
+  height: auto !important;
+  color: white;
+  font-weight: 600;
+}
+.any-tag {
+  width: 30px !important;
+  font-size: 11px;
+  background: gray !important;
+  border-radius: 4px;
+  text-align: center;
+  padding: 2px;
+  height: auto !important;
+  color: white;
+  font-weight: 600;
+}
 #mobile-nav {
   position: fixed;
   top: 0;
@@ -3117,6 +3139,12 @@ main#main .common-description .common-des .description-text {
   text-align: left;
   color: #1e1e1e;
 }
+.padding-5-7 {
+  padding:5px 7px !important;
+}
+.auto-height {
+  height: auto !important;
+}
 main#main .disabled {
   pointer-events: none;
   opacity: 0.5;
@@ -3124,7 +3152,6 @@ main#main .disabled {
 main#main .first {
   width: 375px;
   background-color: rgba(255, 255, 255, 0.6);
-  height: 280px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 31px;
@@ -3133,7 +3160,7 @@ main#main .first .change-top-first {
   top: 80rem !important; /* New top position when button is pressed */
 }
 main#main .first-question {
-  margin-top: 41px;
+  margin-top: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3156,7 +3183,7 @@ main#main .first-button1 {
   cursor: pointer;
   transition: 0.3s;
   width: 266px;
-  height: 55px;
+  height: 80px;
   border-radius: 100px;
   background-color: white;
   display: flex;
@@ -3167,6 +3194,7 @@ main#main .first-button1 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
 }
 main#main .first-button1 p {
   font-family: Inter;
@@ -3188,18 +3216,19 @@ main#main .first-button1 span {
 main#main .first-button2 {
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 35px;
+  margin-top: 20px;
   border: 1px solid gray;
   margin-left: auto;
   margin-right: auto;
   width: 266px;
-  height: 55px;
+  height: 80px;
   border-radius: 100px;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 26px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
 }
 main#main .first-button2 p {
   font-family: Inter;
@@ -3235,7 +3264,6 @@ main#main .disabled {
 main#main .second {
   display: none;
   width: 375px;
-  height: 560px;
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
   margin-left: auto;
@@ -3402,6 +3430,7 @@ main#main .second-three-check {
   margin-top: 10px;
   position: relative;
   gap: 10px;
+  margin-bottom: 20px;
 }
 main#main .second-three-check span {
   font-size: 16px;
@@ -3526,7 +3555,6 @@ main#main .third {
   margin-right: auto;
   margin-top: 30px;
   width: 375px;
-  height: 550px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -3653,6 +3681,7 @@ main#main .third .next-third {
   align-items: center;
   border-top: 2px solid black;
   height: 70px;
+  margin-top: 10px;
 }
 main#main .third .next-third .next-button {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
@@ -3925,8 +3954,8 @@ main#main .sixth .sixth-one .option-one:hover {
   color: #0d8ea3;
 }
 main#main .sixth .border-b {
-  border-bottom: 2px solid black;
-  padding-bottom: 20px;
+  /*border-bottom: 2px solid black;
+  padding-bottom: 20px;*/
 }
 main#main .sixth .common-description-six {
   margin-top: 30px;
@@ -3983,11 +4012,13 @@ main#main .sixth .nearest-station .custom-input {
   width: 320px;
   border: 1px solid gray;
   line-height: 12px;
-  height: 36px;
+  height: 54px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  font-weight: 800;
 }
 main#main .sixth .nearest-description {
   margin-top: 30px;
@@ -4139,16 +4170,17 @@ main#main .newstep .step-car-newstep img {
 main#main .newstep .six-input {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
   flex-direction: column;
 }
 main#main .newstep .six-input .custom-input-one {
   width: 320px;
   border: 1px solid gray;
   line-height: 12px;
-  height: 36px;
+  height: 54px;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  font-size:20px;
+  font-weight:800;
 }
 main#main .newstep .six-input .six-input-first {
   gap: 20px;
@@ -4464,6 +4496,16 @@ main#main .last .last-name .phoneInputError {
   margin-top: 10px;
   font-size: 15px;
 }
+main#main .age-last .ageInputError {
+  display: none;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+}
+main#main .age-last .shake {
+  animation: shake 0.5s;
+}
 main#main .last .last-name .emailInputError {
   display: none;
   color: red;
@@ -4496,11 +4538,13 @@ main#main .last .last-name .last-input .custom-surname-input {
   width: 160px;
   border: 1px solid gray;
   line-height: 12px;
-  height: 36px;
+  height: 54px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  font-weight: 800;
 }
 main#main .last .last-name .last-input .custom-surname-input::placeholder,
 main#main .last .last-name .last-input .custom-name-input::placeholder {
@@ -4516,12 +4560,14 @@ main#main .last .last-name .last-input .custom-name-input {
   width: 160px;
   border: 1px solid gray;
   line-height: 12px;
-  height: 36px;
+  height: 54px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   padding: 1px 5px;
+  font-size: 20px;
+  font-weight: 800;
 }
 main#main .last .last-name .last-input .custom-age-input {
   width: 290px;
@@ -4545,11 +4591,13 @@ main#main .last .last-name .last-input .custom-phone-input {
   width: 330px;
   border: 1px solid gray;
   line-height: 12px;
-  height: 36px;
+  height: 54px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  font-weight: 800;
 }
 main#main .last .last-name .last-input .custom-phone-input::placeholder {
   font-size: 16px;
@@ -4608,10 +4656,12 @@ main#main .last .age-last {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  flex-direction: column;
+  align-items: center;
 }
 main#main .last .age-last .age-option {
   width: 330px;
-  height: 36px;
+  height: 54px;
   border-radius: 5px;
   font-size: 16px;
   display: flex;
@@ -4625,6 +4675,8 @@ main#main .last .age-last .age-option {
   justify-content: center;
   text-align: center;
   color: gray;
+  font-size: 20px;
+  font-weight: 800;
 }
 main#main .last .age-last .age-option::after {
   border-radius: 5px;

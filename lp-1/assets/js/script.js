@@ -223,10 +223,14 @@ function fourClick(element) {
     changing_job_reasons = changing_job_reasons.filter(
       (reason) => reason !== clicked_reason
     );
-    element.style.backgroundColor = "";
+    // element.style.backgroundColor = "";
+    element.classList.add("bg-white");
+    element.style.color = "gray";
   } else {
     changing_job_reasons.push(clicked_reason);
+    element.classList.remove("bg-white");
     element.style.backgroundColor = "#93d7dc";
+    element.style.color = "#0d8ea3";
   }
   updateFourNextButtonState();
   const img_container_dom = document.querySelector(".next-img-four");
@@ -272,14 +276,17 @@ function fiveClick(element) {
   let taxi_attract = element.textContent;
   if (taxi_attracts.includes(taxi_attract)) {
     taxi_attracts = taxi_attracts.filter((reason) => reason !== taxi_attract);
-    element.style.backgroundColor = "";
+    element.classList.add("bg-white");
+    element.style.color = "gray";
   } else {
     taxi_attracts.push(taxi_attract);
+    element.classList.remove("bg-white");
     element.style.backgroundColor = "#93d7dc";
+    element.style.color = "#0d8ea3";
   }
   updateFiveNextButtonState();
   const img_container_dom = document.querySelector(".next-img-five");
-  img_container_dom.style.top = "340px";
+  img_container_dom.style.top = "250px";
 }
 
 // ////////////// newstep /////////////////////////
@@ -332,13 +339,16 @@ function sixAreaClick(element) {
   const img_container_dom = document.querySelector(".next-img-six");
   if (residence !== "") {
     residence = "";
-    element.style.backgroundColor = "";
+    element.classList.add("bg-white");
+    element.style.color = "gray";
     img_container_dom.style.top = "0px";
     enableAllArea();
   } else {
     residence = element.textContent;
     element.style.backgroundColor = "#93d7dc";
-    img_container_dom.style.top = "340px";
+    element.classList.remove("bg-white");
+    element.style.color = "#0d8ea3";
+    img_container_dom.style.top = "180px";
     disableOtherArea(element.id);
   }
 }
@@ -356,17 +366,20 @@ function sixWayClick(element) {
   const img_container_dom = document.querySelector(".next-img-six");
   if (commute_ways.includes(six_way)) {
     commute_ways = commute_ways.filter((reason) => reason !== six_way);
-    element.style.backgroundColor = "";
+    element.classList.add("bg-white");
+    element.style.color = "gray";
   } else {
     commute_ways.push(six_way);
     element.style.backgroundColor = "#93d7dc";
+    element.classList.remove("bg-white");
+    element.style.color = "#0d8ea3";
   }
   if (commute_ways.length === 0) {
     img_container_dom.style.top = "340px";
     updateSixNextButtonState();
   } else {
     updateSixNextButtonState();
-    img_container_dom.style.top = "510px";
+    img_container_dom.style.top = "340px";
   }
 }
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -374,7 +387,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let inputStation = document.getElementById("nearest_station");
   inputStation.addEventListener("input", () => {
     if (inputStation.value.length > 1) {
-      img_container_dom.style.top = "590px";
+      img_container_dom.style.top = "430px";
     } 
   });
 });
@@ -486,10 +499,13 @@ function sevenAccident(element) {
     past_accidents = past_accidents.filter(
       (accident) => accident !== clicked_accident
     );
-    element.style.backgroundColor = "";
+    element.classList.add("bg-white");
+    element.style.color = "gray";
   } else {
     past_accidents.push(clicked_accident);
+    element.classList.remove("bg-white");
     element.style.backgroundColor = "#93d7dc";
+    element.style.color = "#0d8ea3";
   }
   updateSevenNextButtonState();
 }
@@ -542,7 +558,7 @@ var page_local_url = window.location.href;
 async function completeStep() {
   var name_vali = document.getElementById("nameInputError");
   var phone_vali = document.getElementById("phoneInputError");
-
+  var age_vali = document.getElementById("ageInputError");
   surname = document.getElementById("surname").value;
   lastname = document.getElementById("lastname").value;
   var selectElement = document.getElementById("sel1");
@@ -552,6 +568,7 @@ async function completeStep() {
   });
   phone_number = document.getElementById("phone_number").value;
   email = document.getElementById("email").value;
+
   if (surname === "" || lastname === "") {
     name_vali.style.display = "block";
     name_vali.classList.add("shake");
@@ -561,46 +578,59 @@ async function completeStep() {
   } else {
     name_vali.style.display = "none";
     name_vali.classList.remove("shake");
-    if (phone_number === "" || email === "") {
-      phone_vali.style.display = "block";
-      phone_vali.classList.add("shake");
+
+    if (age === "") {
+      age_vali.style.display = "block";
+      age_vali.classList.add("shake");
       setTimeout(() => {
-        phone_vali.style.display = "none";
+        age_vali.style.display = "none";
       }, 2000);
     } else {
-      phone_vali.style.display = "none";
-      phone_vali.classList.remove("shake");
-      let sendData = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          experience: exp_type,
-          license: license,
-          changing_jobs_time: changing_jobs_time,
-          changing_job_reasons: changing_job_reasons,
-          taxi_attracts: taxi_attracts,
-          residence: residence,
-          commute_ways: commute_ways,
-          post_number: post_number,
-          nearest_station: nearest_station,
-          past_accidents: past_accidents,
-          surname: surname,
-          lastname: lastname,
-          age: age,
-          phone_number: phone_number,
-          email: email,
-          page_local_url: page_local_url,
-          changing_job_reasons_hubspot: changing_job_reasons.join(";"),
-          taxi_attracts_hubspot: taxi_attracts.join(";"),
-          commute_ways_hubspot: commute_ways.join(";"),
-          past_accidents_hubspot: past_accidents.join(";")
-        }),
-      };
-      let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
-      const data = await fetch(url, sendData);
-      window.location.href = "thanks/";
+      age_vali.style.display = "none";
+      age_vali.classList.remove("shake");
+
+      if (phone_number === "") {
+        phone_vali.style.display = "block";
+        phone_vali.classList.add("shake");
+        setTimeout(() => {
+          phone_vali.style.display = "none";
+        }, 2000);
+      } else {
+        phone_vali.style.display = "none";
+        phone_vali.classList.remove("shake");
+
+        let sendData = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            experience: exp_type,
+            license: license,
+            changing_jobs_time: changing_jobs_time,
+            changing_job_reasons: changing_job_reasons,
+            taxi_attracts: taxi_attracts,
+            residence: residence,
+            commute_ways: commute_ways,
+            post_number: post_number,
+            nearest_station: nearest_station,
+            past_accidents: past_accidents,
+            surname: surname,
+            lastname: lastname,
+            age: age,
+            phone_number: phone_number,
+            email: email,
+            page_local_url: page_local_url,
+            changing_job_reasons_hubspot: changing_job_reasons.join(";"),
+            taxi_attracts_hubspot: taxi_attracts.join(";"),
+            commute_ways_hubspot: commute_ways.join(";"),
+            past_accidents_hubspot: past_accidents.join(";")
+          }),
+        };
+        let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
+        const data = await fetch(url, sendData);
+        window.location.href = "thanks/";
+      }
     }
   }
 }

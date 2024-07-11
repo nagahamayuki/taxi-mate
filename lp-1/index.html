@@ -77,6 +77,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<p id="first-button2-content">勤務したことがない</p>
 				<span></span>
 			</div>
+			<div class="common-description mt-30 mb-30">
+				<div class="common-img">
+					<img src="./assets/img/man.png" alt="">
+				</div>
+				<div class="common-des">
+					<div class="description-triangle"></div>
+					<div class="description-text padding-5-7 auto-height">
+						タクシーメイトは無料の転職支援サービスです。転職に成功した多くの方がご登録しています。
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="second" id="second">
 			<div class="second-head">
@@ -117,16 +128,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 			<div class="second-three-check">
 				<div class="second-three-check-one">
-					<div class="red-taxi" id="redtaxi" onclick="secondCheck1()">
+					<div class="red-taxi bg-white" id="redtaxi" onclick="secondCheck1()">
 						<img src="./assets/img/red-taxi.png" alt="">
 						<span id="red-taxi">普通免許</span>
 					</div>
-					<div class="black-taxi" id="blacktaxi" onclick="secondCheck2()">
+					<div class="black-taxi bg-white" id="blacktaxi" onclick="secondCheck2()">
 						<img src="./assets/img/black-taxi.png" alt="">
 						<span id="black-taxi">二種免許</span>
 					</div>
 				</div>
-				<div class="no-license" id="nolicense" onclick="secondCheck3()">
+				<div class="no-license bg-white" id="nolicense" onclick="secondCheck3()">
 					<img src="./assets/img/nolicense.png" alt="">
 					<span id="no-license">免許は持っていない</span>
 				</div>
@@ -134,7 +145,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<img src="./assets/img/next.png" alt="">
 				</div>
 			</div>
-			<div class="common-description">
+			<!-- <div class="common-description">
 				<div class="common-img">
 					<img src="./assets/img/man.png" alt="">
 				</div>
@@ -144,7 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						「二種免許の取得費⽤」を出している<br>タクシー会社をご紹介します。
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="next-second">
 				<span class="next-button" id="second-before" onclick="gotoFirst()">< 戻る</span>
 
@@ -191,13 +202,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 			<div class="third-five-part">
 				<div class="third-one">
-					<div class="third-cycle" id="plane" data-index="1" onclick="thirdCheck(this)">
+					<div class="third-cycle bg-white" id="plane" data-index="1" onclick="thirdCheck(this)">
 						<div class="third-img">
 							<img src="./assets/img/plane.png" alt="">
 						</div>
 						<span class="third-span" id="plane-content">直ぐにでも</span>
 					</div>
-					<div class="third-cycle" id="train" data-index="2" onclick="thirdCheck(this)">
+					<div class="third-cycle bg-white" id="train" data-index="2" onclick="thirdCheck(this)">
 						<div class="third-img">
 							<img src="./assets/img/train.png" alt="">
 						</div>
@@ -208,20 +219,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</div>
 				</div>
 				<div class="third-two">
-					<div class="third-cycle" id="bus" data-index="3" onclick="thirdCheck(this)">
+					<div class="third-cycle bg-white" id="bus" data-index="3" onclick="thirdCheck(this)">
 						<div class="third-img">
 							<img src="./assets/img/bus.png" alt="">
 						</div>
 						<span class="third-span" id="bus-content">3ヶ月以内</span>
 					</div>
-					<div class="third-cycle" id="bike" data-index="4" onclick="thirdCheck(this)">
+					<div class="third-cycle bg-white" id="bike" data-index="4" onclick="thirdCheck(this)">
 						<div class="third-img">
 							<img src="./assets/img/bike.png" alt="">
 						</div>
 						<span class="third-span" id="bike-content">半年以内</span>
 					</div>
 				</div>
-				<div class="third-three" id="rickshaw" data-index="5" onclick="thirdCheck(this)">
+				<div class="third-three bg-white" id="rickshaw" data-index="5" onclick="thirdCheck(this)">
 					<div class="third-img">
 						<img src="./assets/img/old.png" alt="">
 					</div>
@@ -277,14 +288,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="next-img-four">
 					<img src="./assets/img/next.png" alt="">
 				</div>
-				<div class="option-one" id="f1" data-index="1" onclick="fourClick(this)">収入を上げたいから</div>
-				<div class="option-one" id="f2" data-index="2" onclick="fourClick(this)">自分のペースで仕事をしたいから</div>
-				<div class="option-one" id="f3" data-index="3" onclick="fourClick(this)">もっとやりがいを感じる仕事をしたいから</div>
-				<div class="option-one" id="f4" data-index="4" onclick="fourClick(this)">正社員になりたいから</div>
-				<div class="option-one" id="f5" data-index="5" onclick="fourClick(this)">副業ができる会社で働きたいから</div>
-				<div class="option-one" id="f6" data-index="6" onclick="fourClick(this)">自宅から近い会社で働きたいから</div>
-				<div class="option-one" id="f7" data-index="7" onclick="fourClick(this)">今の仕事を中長期的に続けるイメージができないから</div>
-				<div class="option-one" id="f8" data-index="8" onclick="fourClick(this)">人間関係に疲れてしまったから</div>
+				<div class="option-one bg-white" id="f1" data-index="1" onclick="fourClick(this)">収入を上げたいから</div>
+				<div class="option-one bg-white" id="f2" data-index="2" onclick="fourClick(this)">自分のペースで仕事をしたいから</div>
+				<div class="option-one bg-white" id="f3" data-index="3" onclick="fourClick(this)">もっとやりがいを感じる仕事をしたいから</div>
+				<div class="option-one bg-white" id="f4" data-index="4" onclick="fourClick(this)">正社員になりたいから</div>
+				<div class="option-one bg-white" id="f5" data-index="5" onclick="fourClick(this)">副業ができる会社で働きたいから</div>
+				<div class="option-one bg-white" id="f6" data-index="6" onclick="fourClick(this)">自宅から近い会社で働きたいから</div>
+				<div class="option-one bg-white" id="f7" data-index="7" onclick="fourClick(this)">今の仕事を中長期的に続けるイメージができないから</div>
+				<div class="option-one bg-white" id="f8" data-index="8" onclick="fourClick(this)">人間関係に疲れてしまったから</div>
 			</div>
 
 			<div class="next">
@@ -333,17 +344,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 
 			<div class="four-options">
-				<div class="option-one" id="five1" data-index="1" onclick="fiveClick(this)">年収が高いから</div>
-				<div class="option-one" id="five2" data-index="2" onclick="fiveClick(this)">自分のペースで仕事ができるから</div>
-				<div class="option-one" id="five3" data-index="3" onclick="fiveClick(this)">人の役に立っている感覚をもてるから</div>
-				<div class="option-one" id="five4" data-index="4" onclick="fiveClick(this)">シフト制で勤務に融通が効きそうだから</div>
-				<div class="option-one" id="five5" data-index="5" onclick="fiveClick(this)">年齢を重ねても仕事を続けられそうだから</div>
+				<div class="option-one bg-white" id="five1" data-index="1" onclick="fiveClick(this)">年収が高いから</div>
+				<div class="option-one bg-white" id="five2" data-index="2" onclick="fiveClick(this)">自分のペースで仕事ができるから</div>
+				<div class="option-one bg-white" id="five3" data-index="3" onclick="fiveClick(this)">人の役に立っている感覚をもてるから</div>
+				<div class="option-one bg-white" id="five4" data-index="4" onclick="fiveClick(this)">シフト制で勤務に融通が効きそうだから</div>
+				<div class="option-one bg-white" id="five5" data-index="5" onclick="fiveClick(this)">年齢を重ねても仕事を続けられそうだから</div>
 				<div class="next-img-five">
 					<img src="./assets/img/next.png" alt="">
 				</div>
 			</div>
 
-			<div class="common-description">
+			<!-- <div class="common-description">
 				<div class="common-img">
 					<img src="./assets/img/man.png" alt="">
 				</div>
@@ -353,7 +364,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						「明確な条件がある⼈ほどご希望に<br>合ったタクシー会社を選びます。
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="next">
 				<span class="next-button" id="five-before" onclick="gotoFour()">< 戻る</span>
 
@@ -399,18 +410,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="common-title">
 				<span></span>
 				<p>お住まいの地域を教えてください</p>
+				<span class="required-tag">必須</span>
 			</div>
 			<div class="sixth-one">
 				<div class="next-img-six">
 					<img src="./assets/img/next.png" alt="">
 				</div>
-				<div class="option-one" id="sixArea1" data-index="1" onclick="sixAreaClick(this)">東京都</div>
-				<div class="option-one" id="sixArea2" data-index="2" onclick="sixAreaClick(this)">神奈川県</div>
-				<div class="option-one" id="sixArea3" data-index="3" onclick="sixAreaClick(this)">埼⽟県</div>
-				<div class="option-one" id="sixArea4" data-index="4" onclick="sixAreaClick(this)">千葉県</div>
-				<div class="option-one" id="sixArea5" data-index="5" onclick="sixAreaClick(this)">その他の地域</div>
+				<div class="option-one bg-white" id="sixArea1" data-index="1" onclick="sixAreaClick(this)">東京都</div>
+				<div class="option-one bg-white" id="sixArea2" data-index="2" onclick="sixAreaClick(this)">神奈川県</div>
+				<div class="option-one bg-white" id="sixArea3" data-index="3" onclick="sixAreaClick(this)">埼⽟県</div>
+				<div class="option-one bg-white" id="sixArea4" data-index="4" onclick="sixAreaClick(this)">千葉県</div>
+				<div class="option-one bg-white" id="sixArea5" data-index="5" onclick="sixAreaClick(this)">その他の地域</div>
 			</div>
-			<div class="common-description-six">
+			<!-- <div class="common-description-six">
 				<div class="common-img">
 					<img src="./assets/img/man.png" alt="">
 				</div>
@@ -420,25 +432,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						タクシーメイトでは⽉収45万円以上が⽬指せる求⼈のみを厳選して紹介しているため、⾸都圏エリアの求⼈のみの紹介となりますので予めご了承ください。
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="common-title">
 				<span></span>
 				<p>通勤⼿段について教えてください(全て)</p>
+				<span class="required-tag">必須</span>
 			</div>
 			<div class="sixth-one border-b">
-				<div class="option-one" id="sixWay1" data-index="1" onclick="sixWayClick(this)">電車</div>
-				<div class="option-one" id="sixWay2" data-index="2" onclick="sixWayClick(this)">バス</div>
-				<div class="option-one" id="sixWay3" data-index="3" onclick="sixWayClick(this)">自家用車</div>
-				<div class="option-one" id="sixWay4" data-index="4" onclick="sixWayClick(this)">バイク</div>
-				<div class="option-one" id="sixWay5" data-index="5" onclick="sixWayClick(this)">自転車</div>
-				<div class="option-one" id="sixWay6" data-index="6" onclick="sixWayClick(this)">徒歩圏内が良い</div>
+				<div class="option-one bg-white" id="sixWay1" data-index="1" onclick="sixWayClick(this)">電車</div>
+				<div class="option-one bg-white" id="sixWay2" data-index="2" onclick="sixWayClick(this)">バス</div>
+				<div class="option-one bg-white" id="sixWay3" data-index="3" onclick="sixWayClick(this)">自家用車</div>
+				<div class="option-one bg-white" id="sixWay4" data-index="4" onclick="sixWayClick(this)">バイク</div>
+				<div class="option-one bg-white" id="sixWay5" data-index="5" onclick="sixWayClick(this)">自転車</div>
+				<div class="option-one bg-white" id="sixWay6" data-index="6" onclick="sixWayClick(this)">徒歩圏内が良い</div>
 			</div>
 			<div class="common-title">
 				<span></span>
-				<p>最寄駅を教えてください(任意)</p>
+				<p>最寄駅を教えてください</p>
+				<span class="any-tag">任意</span>
 			</div>
 			<div class="nearest-station">
-				<input type="text" class="custom-input" id="nearest_station" placeholder="例：上野駅など。電車/バスの場合のみ">
+				<input type="text" class="custom-input" id="nearest_station" placeholder="例：上野駅">
 			</div>
 			
 			
@@ -557,10 +571,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="next-img-seven">
 					<img src="./assets/img/next.png" alt="">
 				</div>
-				<div class="option-one-seven" id="accident1" data-index="1" onclick="sevenAccident(this)">これまで事故をしたことはない</div>
-				<div class="option-one-seven" id="accident2" data-index="2" onclick="sevenAccident(this)">駐⾞場でぶつけた/縁⽯で擦った程度の軽い事故</div>
-				<div class="option-one-seven" id="accident3" data-index="3" onclick="sevenAccident(this)">居眠り運転をしたことがある</div>
-				<div class="option-one-seven" id="accident4" data-index="4" onclick="sevenAccident(this)">⼈⾝事故を起こしたことがある</div>
+				<div class="option-one-seven bg-white" id="accident1" data-index="1" onclick="sevenAccident(this)">これまで事故をしたことはない</div>
+				<div class="option-one-seven bg-white" id="accident2" data-index="2" onclick="sevenAccident(this)">駐⾞場でぶつけた/縁⽯で擦った程度の軽い事故</div>
+				<div class="option-one-seven bg-white" id="accident3" data-index="3" onclick="sevenAccident(this)">居眠り運転をしたことがある</div>
+				<div class="option-one-seven bg-white" id="accident4" data-index="4" onclick="sevenAccident(this)">⼈⾝事故を起こしたことがある</div>
 			</div>
 			<div class="nearest-description">
 				<div class="common-img">
@@ -616,6 +630,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="common-title">
 				<span></span>
 				<p>お名前</p>
+				<span class="required-tag">必須</span>
 			</div>
 			<div class="last-name">
 				<div class="last-name-input">
@@ -633,6 +648,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="common-title">
 				<span></span>
 				<p>年代</p>
+				<span class="required-tag">必須</span>
 			</div>
 			<div class="age-last">
 				<select class="form-control age-option" id="sel1">
@@ -645,20 +661,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<option class="age-option-item" value="60代">60代</option>
 					<option class="age-option-item" value="70代">70代</option>
 				</select>
+				<div class="ageInputError" id="ageInputError">
+					年代を入力してください。
+				</div>
 			</div>
 			<div class="common-title">
 				<span></span>
 				<p>電話番号</p>
+				<span class="required-tag">必須</span>
 			</div>
 			<div class="last-name">
 				<div class="last-input">
-					<input type="text" name="phone" inputmode="numeric" pattern="\d*" class="custom-phone-input" id="phone_number" placeholder="例：03-6825-2404">
+					<input type="text" name="phone" inputmode="numeric" pattern="\d*" class="custom-phone-input" id="phone_number" placeholder="09012345678">
 				</div>
 
 			</div>
 			<div class="common-title">
 				<span></span>
 				<p>メールアドレス</p>
+				<span class="any-tag">任意</span>
 			</div>
 			<div class="last-name">
 				<div class="last-input">
@@ -666,7 +687,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 
 				<div class="phoneInputError" id="phoneInputError">
-					電話番号とメールを正確に入力してください。
+					電話番号を正確に入力してください。
 				</div>
 			</div>
 			<div class="last-des">
