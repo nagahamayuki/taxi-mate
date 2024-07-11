@@ -580,7 +580,7 @@ async function completeStep() {
           license: license,
           changing_jobs_time: changing_jobs_time,
           changing_job_reasons: changing_job_reasons,
-          attracts_for_taxi: taxi_attracts,
+          taxi_attracts: taxi_attracts,
           residence: residence,
           commute_ways: commute_ways,
           post_number: post_number,
@@ -593,7 +593,7 @@ async function completeStep() {
           email: email,
           page_local_url: page_local_url,
           changing_job_reasons_hubspot: changing_job_reasons.join(";"),
-          attracts_for_taxi_hubspot: attracts_for_taxi.join(";"),
+          taxi_attracts_hubspot: taxi_attracts.join(";"),
           commute_ways_hubspot: commute_ways.join(";"),
           past_accidents_hubspot: past_accidents.join(";")
         }),
