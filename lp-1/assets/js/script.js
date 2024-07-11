@@ -591,7 +591,11 @@ async function completeStep() {
           age: age,
           phone_number: phone_number,
           email: email,
-          page_local_url,
+          page_local_url: page_local_url,
+          changing_job_reasons_hubspot: changing_job_reasons.join(";"),
+          attracts_for_taxi_hubspot: attracts_for_taxi.join(";"),
+          commute_ways_hubspot: commute_ways.join(";"),
+          past_accidents_hubspot: past_accidents.join(";")
         }),
       };
       let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
