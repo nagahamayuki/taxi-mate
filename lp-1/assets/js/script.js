@@ -628,6 +628,7 @@ async function completeStep() {
           }),
         };
         let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
+        // let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
         const data = await fetch(url, sendData);
         window.location.href = "thanks/";
       }
