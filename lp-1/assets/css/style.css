@@ -3025,7 +3025,7 @@ main#main {
   flex-direction: column;
   background-color: #FFFFFF;
   flex-grow: 1;
-  background-image: url("../img/bg.png");
+  background-image: url("../img/bg.webp");
   background-size: cover;
   background-position: center center;
   object-fit: cover;
