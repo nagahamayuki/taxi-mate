@@ -75,7 +75,7 @@ body {
   font-weight: normal;
   font-size: 1.8rem;
   line-height: 1.5;
-  color: #231815;
+  color: #444444;
   word-break: break-all;
   padding: 0;
 }
@@ -422,7 +422,7 @@ figure img,
 }
 
 .green-txt {
-  color: rgb(68, 229, 222);
+  color: #2bbbad;
 }
 
 /* margin css */
@@ -3052,7 +3052,7 @@ main#main .common-title {
 main#main .common-title span {
   width: 12px;
   height: 12px;
-  background-color: #93d7dc;
+  background-color: #2bbbad;
 }
 main#main .common-title p {
   font-family: Inter;
@@ -3084,8 +3084,8 @@ main#main .next {
 main#main .next .next-button {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   color: white;
-  width: 140px;
-  height: 35px;
+  width: 230px;
+  height: 45px;
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -3094,6 +3094,22 @@ main#main .next .next-button {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+}
+main#main .next .next-button.first-child {
+  box-shadow: none !important;
+  color: currentColor !important;
+  background: none;
+  width: 100px;
+}
+main#main .next .next-button.first-child {
+  box-shadow: none !important;
+  color: currentColor !important;
+  background: none;
+} 
+main#main .next .next-button.first-child {
+  box-shadow: none !important;
+  color: currentColor !important;
+  background: none;
 }
 main#main .next .next-button:hover {
   background-color: #93d7dc;
@@ -3419,7 +3435,7 @@ main#main .second .common-title {
 main#main .second .common-title span {
   width: 12px;
   height: 12px;
-  background-color: #93d7dc;
+  background-color: #2bbbad;
 }
 main#main .second .common-title p {
   font-family: Inter;
@@ -3445,7 +3461,6 @@ main#main .second-three-check span {
   font-weight: bold;
 }
 main#main .second-three-check-one {
-  color: #6e6f71;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3493,7 +3508,6 @@ main#main .second-three-check-one .black-taxi:hover {
 }
 main#main .second-three-check .no-license {
   gap: 20px;
-  color: #6e6f71;
   width: 295px;
   height: 100px;
   align-items: center;
@@ -3692,15 +3706,12 @@ main#main .third .next-third {
   margin-top: 10px;
 }
 main#main .third .next-third .next-button {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  color: white;
   width: 290px;
   height: 35px;
   display: flex;
   justify-content: center;
   font-size: 20px;
   align-items: center;
-  background-color: #0d8ea3;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
@@ -3736,7 +3747,7 @@ main#main .fourth .four-options {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-top: 6px;
   gap: 8px;
   position: relative;
@@ -3757,7 +3768,6 @@ main#main .fourth .four-options .option-one {
   line-height: 15.2px;
   letter-spacing: -0.04em;
   text-align: left;
-  color: gray;
 }
 main#main .fourth .four-options .next-img-four {
   width: 60px;
@@ -3802,7 +3812,7 @@ main#main .fifth .common-title-five {
 main#main .fifth .common-title-five span {
   width: 12px;
   height: 12px;
-  background-color: #93d7dc;
+  background-color: #2bbbad;
   margin-top: 5px;
 }
 main#main .fifth .common-title-five .five-title {
@@ -3840,7 +3850,7 @@ main#main .fifth .four-options {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-top: 6px;
   gap: 8px;
   position: relative;
@@ -3880,7 +3890,6 @@ main#main .fifth .four-options .option-one {
   line-height: 15.2px;
   letter-spacing: -0.04em;
   text-align: left;
-  color: gray;
   cursor: pointer;
 }
 main#main .fifth .four-options .option-one:hover {
@@ -3955,7 +3964,6 @@ main#main .sixth .sixth-one .option-one {
   line-height: 15.2px;
   letter-spacing: -0.04em;
   text-align: left;
-  color: gray;
   cursor: pointer;
 }
 main#main .sixth .sixth-one .option-one:hover {
@@ -4014,7 +4022,6 @@ main#main .sixth .nearest-station {
   display: flex;
   justify-content: center;
   padding-bottom: 25px;
-  border-bottom: 2px black solid;
 }
 main#main .sixth .nearest-station .custom-input {
   width: 320px;
@@ -4084,8 +4091,8 @@ main#main .sixth .next-six {
 main#main .sixth .next-six .next-button {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   color: white;
-  width: 140px;
-  height: 35px;
+  width: 230px;
+  height: 45px;
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -4094,6 +4101,12 @@ main#main .sixth .next-six .next-button {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+}
+main#main .sixth .next-six .next-button.first-child {
+  box-shadow: none !important;
+  color: currentColor !important;
+  background: none;
+  width: 100px;
 }
 main#main .sixth .next-six .next-button:hover {
   background-color: #93d7dc;
@@ -4301,8 +4314,8 @@ main#main .newstep .next-newstep {
 main#main .newstep .next-newstep .next-button {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   color: white;
-  width: 140px;
-  height: 35px;
+  width: 230px;
+  height: 45px;
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -4311,6 +4324,12 @@ main#main .newstep .next-newstep .next-button {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+}
+main#main .newstep .next-newstep .next-button.first-child {
+  box-shadow: none !important;
+  color: currentColor !important;
+  background: none;
+  width: 100px;
 }
 main#main .newstep .next-newstep .next-button:hover {
   background-color: #93d7dc;
@@ -4387,7 +4406,6 @@ main#main .seven .four-options-seven .option-one-seven {
   line-height: 15.2px;
   letter-spacing: -0.04em;
   text-align: left;
-  color: gray;
   cursor: pointer;
 }
 main#main .seven .four-options-seven .option-one:hover {
@@ -4494,14 +4512,12 @@ main#main .last .last-name .nameInputError {
   display: none;
   color: red;
   text-align: center;
-  margin-top: 10px;
   font-size: 15px;
 }
 main#main .last .last-name .phoneInputError {
   display: none;
   color: red;
   text-align: center;
-  margin-top: 10px;
   font-size: 15px;
 }
 main#main .age-last .ageInputError {
@@ -4614,8 +4630,8 @@ main#main .last .last-name .last-input .custom-phone-input::placeholder {
   color: #6e6f71;
 }
 main#main .last .last-des {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 18px;
+/*  margin-bottom: 30px;*/
   justify-content: center;
   align-items: center;
   display: flex;

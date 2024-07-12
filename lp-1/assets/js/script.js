@@ -214,6 +214,7 @@ function updateFourNextButtonState() {
     document.getElementById("four-next").classList.remove("disabled");
   } else {
     document.getElementById("four-next").classList.add("disabled");
+    document.querySelector(".next-img-four").style.top = "0px";
   }
 }
 
@@ -225,16 +226,16 @@ function fourClick(element) {
     );
     // element.style.backgroundColor = "";
     element.classList.add("bg-white");
-    element.style.color = "gray";
+    element.style.color = "currentcolor";
   } else {
     changing_job_reasons.push(clicked_reason);
     element.classList.remove("bg-white");
     element.style.backgroundColor = "#93d7dc";
     element.style.color = "#0d8ea3";
   }
-  updateFourNextButtonState();
   const img_container_dom = document.querySelector(".next-img-four");
   img_container_dom.style.top = "380px";
+  updateFourNextButtonState();
 }
 // /////////////////////////   Five    ///////////////////////////////////////
 // ////////////////////////////////////////////////////////////////
@@ -269,6 +270,7 @@ function updateFiveNextButtonState() {
     document.getElementById("five-next").classList.remove("disabled");
   } else {
     document.getElementById("five-next").classList.add("disabled");
+    document.querySelector(".next-img-five").style.top = "0px";
   }
 }
 
@@ -277,16 +279,16 @@ function fiveClick(element) {
   if (taxi_attracts.includes(taxi_attract)) {
     taxi_attracts = taxi_attracts.filter((reason) => reason !== taxi_attract);
     element.classList.add("bg-white");
-    element.style.color = "gray";
+    element.style.color = "currentcolor";
   } else {
     taxi_attracts.push(taxi_attract);
     element.classList.remove("bg-white");
     element.style.backgroundColor = "#93d7dc";
     element.style.color = "#0d8ea3";
   }
-  updateFiveNextButtonState();
   const img_container_dom = document.querySelector(".next-img-five");
   img_container_dom.style.top = "250px";
+  updateFiveNextButtonState();
 }
 
 // ////////////// newstep /////////////////////////
@@ -340,9 +342,10 @@ function sixAreaClick(element) {
   if (residence !== "") {
     residence = "";
     element.classList.add("bg-white");
-    element.style.color = "gray";
+    element.style.color = "currentcolor";
     img_container_dom.style.top = "0px";
     enableAllArea();
+    updateSixNextButtonState();
   } else {
     residence = element.textContent;
     element.style.backgroundColor = "#93d7dc";
@@ -350,10 +353,11 @@ function sixAreaClick(element) {
     element.style.color = "#0d8ea3";
     img_container_dom.style.top = "180px";
     disableOtherArea(element.id);
+    updateSixNextButtonState();
   }
 }
 function updateSixNextButtonState() {
-  if (commute_ways.length !== 0) {
+  if (commute_ways.length !== 0 && residence !== "") {
     document.getElementById("six-next").classList.remove("disabled");
   } else {
     document.getElementById("six-next").classList.add("disabled");
@@ -367,7 +371,7 @@ function sixWayClick(element) {
   if (commute_ways.includes(six_way)) {
     commute_ways = commute_ways.filter((reason) => reason !== six_way);
     element.classList.add("bg-white");
-    element.style.color = "gray";
+    element.style.color = "currentcolorsevenAccident(this)";
   } else {
     commute_ways.push(six_way);
     element.style.backgroundColor = "#93d7dc";
@@ -375,7 +379,7 @@ function sixWayClick(element) {
     element.style.color = "#0d8ea3";
   }
   if (commute_ways.length === 0) {
-    img_container_dom.style.top = "340px";
+    img_container_dom.style.top = "180px";
     updateSixNextButtonState();
   } else {
     updateSixNextButtonState();
@@ -402,6 +406,7 @@ async function checkPost(post_num) {
     .then((response) => response.json())
     .then((data) => {
       if (data.status === 200) {
+        document.getElementById("newstep-next").classList.remove("disabled");
         newStepHidden();
         postError.style.display = "none";
         postError.classList.remove("shake");
@@ -417,7 +422,7 @@ async function checkPost(post_num) {
       postError.style.display = "block";
       postError.classList.add("shake");
       setTimeout(() => postError.classList.remove("shake"), 500); // Remove class after animation
-      document.getElementById("six-next").classList.add("disabled");
+      document.getElementById("newstep-next").classList.add("disabled");
     });
 }
 function validateNumberInput(input) {
@@ -500,7 +505,7 @@ function sevenAccident(element) {
       (accident) => accident !== clicked_accident
     );
     element.classList.add("bg-white");
-    element.style.color = "gray";
+    element.style.color = "currentcolor";
   } else {
     past_accidents.push(clicked_accident);
     element.classList.remove("bg-white");

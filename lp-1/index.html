@@ -251,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 			</div>
 			<div class="next-third">
-				<span class="next-button" id="third-before" onclick="gotoSecond()">< 戻る</span>
+				<span class="next-button first-child" id="third-before" onclick="gotoSecond()">< 戻る</span>
 
 
 			</div>
@@ -310,7 +310,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
 
 			<div class="next">
-				<span class="next-button" id="third-before" onclick="gotoThird()">< 戻る</span>
+				<span class="next-button first-child" id="third-before" onclick="gotoThird()">< 戻る</span>
 
 				<span class="next-button disabled" id="four-next" onclick="fourHidden()">次へ</span>
 
@@ -377,7 +377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 			</div> -->
 			<div class="next">
-				<span class="next-button" id="five-before" onclick="gotoFour()">< 戻る</span>
+				<span class="next-button first-child" id="five-before" onclick="gotoFour()">< 戻る</span>
 
 				<span class="next-button disabled" id="five-next" onclick="fiveHidden()">次へ</span>
 
@@ -468,7 +468,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			
 			
 			<div class="next-six">
-				<span class="next-button" id="six-before" onclick="gotoFive()">< 戻る</span>
+				<span class="next-button first-child" id="six-before" onclick="gotoFive()">< 戻る</span>
 
 				<span class="next-button disabled" id="six-next" onclick="sixHidden()">次へ</span>
 
@@ -537,8 +537,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 			</div>
 			<div class="next-newstep">
-				<span class="next-button" id="six-before" onclick="gotoSix()">< 戻る</span>
-				<span class="next-button" id="six-next" onclick="newStepHidden()">次へ</span>
+				<span class="next-button first-child" id="six-before" onclick="gotoSix()">< 戻る</span>
+				<span class="next-button disabled" id="newstep-next" onclick="newStepHidden()">次へ</span>
 			</div>
 		</div>
 		<div class="seven" id="seven">
@@ -599,7 +599,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 			</div>
 			<div class="next">
-				<span class="next-button" id="seven-before" onclick="gotoNewStep()">< 戻る</span>
+				<span class="next-button first-child" id="seven-before" onclick="gotoNewStep()">< 戻る</span>
 
 				<span class="next-button disabled" id="seven-next" onclick="sevenHidden()">次へ</span>
 
@@ -638,7 +638,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</span>
 				</div>
 			</div>
-			<div class="common-title">
+			<div class="last-des">
+				<div class="common-img">
+					<img src="./assets/img/man.png" alt="">
+				</div>
+				<div class="common-des">
+					<div class="description-triangle"></div>
+					<div class="description-text sixth-des">
+						このページの入力で登録完了。<br>無料で転職支援サービスが受けられます。
+					</div>
+				</div>
+			</div>
+			<div class="common-title mt-0">
 				<span></span>
 				<p>お名前</p>
 				<span class="required-tag">必須</span>
@@ -686,22 +697,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<input type="text" name="phone" inputmode="numeric" pattern="\d*" class="custom-phone-input" id="phone_number" placeholder="09012345678">
 				</div>
 
+				<div class="phoneInputError" id="phoneInputError">
+					電話番号を正確に入力してください。
+				</div>
+
 			</div>
 			<div class="common-title">
 				<span></span>
 				<p>メールアドレス</p>
 				<span class="any-tag">任意</span>
 			</div>
-			<div class="last-name">
+			<div class="last-name mb-40">
 				<div class="last-input">
 					<input type="text" name="email" class="custom-phone-input" id="email" placeholder="例：advisor@anytrai.jp">
 				</div>
-
-				<div class="phoneInputError" id="phoneInputError">
-					電話番号を正確に入力してください。
-				</div>
 			</div>
-			<div class="last-des">
+			<!-- <div class="last-des">
 				<div class="common-img">
 					<img src="./assets/img/man.png" alt="">
 				</div>
@@ -711,9 +722,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						メールアドレスの記載がある⽅には厳選した求⼈もお送りします。
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="next">
-				<span class="next-button" id="last-before" onclick="gotoSeven()">< 戻る</span>
+				<span class="next-button first-child" id="last-before" onclick="gotoSeven()">< 戻る</span>
 
 				<span class="next-button" id="last-next" onclick="completeStep()">送信する</span>
 				<div class="next-seven-img" id="">
