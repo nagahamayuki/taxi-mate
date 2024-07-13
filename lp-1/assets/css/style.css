@@ -10,6 +10,8 @@ html {
   font-size: 0.76923vw;
   font-size: clamp(6px, 0.76923vw, 10px);
   margin: 0;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
 }
 @media print, screen and (max-width: 640px) {
   html {
@@ -119,6 +121,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Arial", "メイリオ", sans-serif;
 }
 
 article,
@@ -2989,7 +2992,6 @@ main#main {
   }
 }
 main#main .common-title {
-  font-family: Inter;
   margin-top: 16px;
   display: flex;
   justify-content: flex-start;
@@ -3003,7 +3005,6 @@ main#main .common-title span {
   background-color: #2bbbad;
 }
 main#main .common-title p {
-  font-family: Inter;
   font-size: 15px;
   font-weight: 600;
   line-height: 33.89px;
@@ -3013,7 +3014,6 @@ main#main .common-title p {
   margin: 0;
 }
 main#main .common-text {
-  font-family: Inter;
   font-size: 12px;
   font-weight: 600;
   line-height: 18px;
@@ -3103,7 +3103,6 @@ main#main .common-description .common-des .description-text {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
@@ -3144,7 +3143,6 @@ main#main .first-question span {
   background-color: #93d7dc;
 }
 main#main .first-question p {
-  font-family: Inter;
   font-size: 16px;
   font-weight: 600;
   line-height: 23px;
@@ -3169,7 +3167,6 @@ main#main .first-button1 {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
 }
 main#main .first-button1 p {
-  font-family: Inter;
   font-size: 16px;
   font-weight: 600;
   line-height: 33.89px;
@@ -3203,7 +3200,6 @@ main#main .first-button2 {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
 }
 main#main .first-button2 p {
-  font-family: Inter;
   font-size: 16px;
   font-weight: 600;
   line-height: 33.89px;
@@ -3386,7 +3382,6 @@ main#main .second .common-title span {
   background-color: #2bbbad;
 }
 main#main .second .common-title p {
-  font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 33.89px;
@@ -3710,7 +3705,6 @@ main#main .fourth .four-options .option-one {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 15.2px;
@@ -3749,7 +3743,6 @@ main#main .fifth {
   background-color: rgba(255, 255, 255, 0.8);
 }
 main#main .fifth .common-title-five {
-  font-family: Inter;
   margin-top: 16px;
   display: flex;
   justify-content: flex-start;
@@ -3764,7 +3757,6 @@ main#main .fifth .common-title-five span {
   margin-top: 5px;
 }
 main#main .fifth .common-title-five .five-title {
-  font-family: Inter;
   font-size: 15px;
   font-weight: 600;
   line-height: 22px;
@@ -3774,7 +3766,6 @@ main#main .fifth .common-title-five .five-title {
   margin: 0;
 }
 main#main .fifth .common-title-five .common-text {
-  font-family: Inter;
   font-size: 12px;
   font-weight: 600;
   line-height: 18px;
@@ -3832,7 +3823,6 @@ main#main .fifth .four-options .option-one {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 15.2px;
@@ -3906,7 +3896,6 @@ main#main .sixth .sixth-one .option-one {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 15.2px;
@@ -3959,7 +3948,6 @@ main#main .sixth .common-description-six .common-des .description-text {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-family: Inter;
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
@@ -4021,7 +4009,6 @@ main#main .sixth .nearest-description .common-des .description-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
@@ -4072,7 +4059,6 @@ main#main .newstep {
   background-color: rgba(255, 255, 255, 0.8);
 }
 main#main .newstep .common-title-five {
-  font-family: Inter;
   margin-top: 16px;
   display: flex;
   justify-content: flex-start;
@@ -4087,7 +4073,6 @@ main#main .newstep .common-title-five span {
   margin-top: 5px;
 }
 main#main .newstep .common-title-five .five-title {
-  font-family: Inter;
   font-size: 15px;
   font-weight: 600;
   line-height: 22px;
@@ -4097,7 +4082,6 @@ main#main .newstep .common-title-five .five-title {
   margin: 0;
 }
 main#main .newstep .common-title-five .common-text {
-  font-family: Inter;
   font-size: 12px;
   font-weight: 600;
   line-height: 18px;
@@ -4244,7 +4228,6 @@ main#main .newstep .nearest-description .common-des .description-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
@@ -4348,7 +4331,6 @@ main#main .seven .four-options-seven .option-one-seven {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 600;
   line-height: 15.2px;
@@ -4412,7 +4394,6 @@ main#main .seven .nearest-description .common-des .description-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
@@ -4521,7 +4502,6 @@ main#main .last .last-name .last-input .custom-surname-input {
 main#main .last .last-name .last-input .custom-surname-input::placeholder,
 main#main .last .last-name .last-input .custom-name-input::placeholder {
   font-size: 18px;
-  font-family: Inter;
   font-weight: 600;
   color: #6e6f71;
   display: flex;
@@ -4553,7 +4533,6 @@ main#main .last .last-name .last-input .custom-age-input {
 }
 main#main .last .last-name .last-input .custom-age-input::placeholder {
   font-size: 16px;
-  font-family: Inter;
   font-weight: 600;
   text-align: center;
   color: #6e6f71;
@@ -4573,7 +4552,6 @@ main#main .last .last-name .last-input .custom-phone-input {
 }
 main#main .last .last-name .last-input .custom-phone-input::placeholder {
   font-size: 16px;
-  font-family: Inter;
   font-weight: 600;
   color: #6e6f71;
 }
@@ -4615,7 +4593,6 @@ main#main .last .last-des .common-des .description-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Inter;
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
