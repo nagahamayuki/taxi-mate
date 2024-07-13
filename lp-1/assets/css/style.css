@@ -11,7 +11,7 @@ html {
   font-size: clamp(6px, 0.76923vw, 10px);
   margin: 0;
   -webkit-font-smoothing: antialiased; 
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
 }
 @media print, screen and (max-width: 640px) {
   html {
@@ -22,7 +22,7 @@ html {
 body {
   position: relative;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  font-weight: normal;
+  font-weight: 600;
   font-size: 1.8rem;
   line-height: 1.5;
   color: #444444;
@@ -122,6 +122,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-weight: 600;
 }
 
 article,
@@ -2729,7 +2730,6 @@ figure img,
 }
 .header-bottom {
   font-size: 18px;
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2858,7 +2858,6 @@ figure img,
   padding: 2px;
   height: auto !important;
   color: white;
-  font-weight: 600;
 }
 .any-tag {
   width: 30px !important;
@@ -2869,7 +2868,6 @@ figure img,
   padding: 2px;
   height: auto !important;
   color: white;
-  font-weight: 600;
 }
 #mobile-nav {
   position: fixed;
@@ -2956,9 +2954,8 @@ body.mobile-nav-active #mobile-nav {
 
 html {
   scroll-behavior: smooth;
-  font-family: "Arial", "メイリオ", sans-serif;
-  font-weight: 600;
   height: 100%;
+  color:#444444;
 }
 
 body {
@@ -2966,6 +2963,9 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-weight: 600;
+  color:#444444;
 }
 
 main#main {
@@ -3006,16 +3006,13 @@ main#main .common-title span {
 }
 main#main .common-title p {
   font-size: 15px;
-  font-weight: 600;
   line-height: 33.89px;
   letter-spacing: 0.02em;
   text-align: left;
-  color: #1e1e1e;
   margin: 0;
 }
 main#main .common-text {
   font-size: 12px;
-  font-weight: 600;
   line-height: 18px;
   letter-spacing: 0.02em;
   text-align: left;
@@ -3096,7 +3093,6 @@ main#main .common-description .common-des .description-triangle {
 main#main .common-description .common-des .description-text {
   padding-top: 10px;
   background-color: rgba(147, 215, 220, 0.8);
-  font-weight: bold;
   border-radius: 5px;
   width: 255px;
   height: 67px;
@@ -3104,10 +3100,8 @@ main#main .common-description .common-des .description-text {
   justify-content: center;
   align-items: flex-start;
   font-size: 14px;
-  font-weight: 500;
   line-height: 22px;
   text-align: left;
-  color: #1e1e1e;
 }
 .padding-5-7 {
   padding:5px 7px !important;
@@ -3144,7 +3138,6 @@ main#main .first-question span {
 }
 main#main .first-question p {
   font-size: 16px;
-  font-weight: 600;
   line-height: 23px;
   letter-spacing: 0.02em;
   text-align: left;
@@ -3168,7 +3161,6 @@ main#main .first-button1 {
 }
 main#main .first-button1 p {
   font-size: 16px;
-  font-weight: 600;
   line-height: 33.89px;
   letter-spacing: 1px;
   text-align: left;
@@ -3201,7 +3193,6 @@ main#main .first-button2 {
 }
 main#main .first-button2 p {
   font-size: 16px;
-  font-weight: 600;
   line-height: 33.89px;
   letter-spacing: 1px;
   text-align: left;
@@ -3264,7 +3255,6 @@ main#main .second-head .step-text p {
   margin-left: 2px;
   margin-right: 2px;
   color: #d9d9d9;
-  font-weight: bold;
 }
 main#main .second-head .step-text p span {
   font-size: 14px;
@@ -3275,7 +3265,6 @@ main#main .second-head .step-text .step-check {
   margin-top: 15px;
   margin-left: 2px;
   margin-right: 2px;
-  font-weight: bold;
 }
 main#main .second-head .step-text .step-check .span-check {
   font-size: 14px;
@@ -3383,11 +3372,9 @@ main#main .second .common-title span {
 }
 main#main .second .common-title p {
   font-size: 14px;
-  font-weight: 600;
   line-height: 33.89px;
   letter-spacing: 0.02em;
   text-align: left;
-  color: #1e1e1e;
 }
 main#main .second-three-check {
   display: flex;
@@ -3401,7 +3388,6 @@ main#main .second-three-check {
 }
 main#main .second-three-check span {
   font-size: 16px;
-  font-weight: bold;
 }
 main#main .second-three-check-one {
   display: flex;
@@ -3575,7 +3561,6 @@ main#main .third-five-part .third-two .third-cycle .third-img img {
 main#main .third-five-part .third-one .third-cycle .third-span,
 main#main .third-five-part .third-two .third-cycle .third-span {
   font-size: 16px;
-  font-weight: bold;
 }
 main#main .third-five-part .third-one .third-cycle:hover,
 main#main .third-five-part .third-two .third-cycle:hover {
@@ -3632,7 +3617,6 @@ main#main .third-five-part .third-three .third-img img {
 }
 main#main .third-five-part .third-three .third-span {
   font-size: 16px;
-  font-weight: bold;
 }
 main#main .third-five-part .third-three:hover {
   background-color: #93d7dc;
@@ -3706,7 +3690,6 @@ main#main .fourth .four-options .option-one {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
   line-height: 15.2px;
   letter-spacing: -0.04em;
   text-align: left;
@@ -3758,16 +3741,13 @@ main#main .fifth .common-title-five span {
 }
 main#main .fifth .common-title-five .five-title {
   font-size: 15px;
-  font-weight: 600;
   line-height: 22px;
   letter-spacing: 0.02em;
   text-align: left;
-  color: #1e1e1e;
   margin: 0;
 }
 main#main .fifth .common-title-five .common-text {
   font-size: 12px;
-  font-weight: 600;
   line-height: 18px;
   letter-spacing: 0.02em;
   text-align: left;
@@ -3824,7 +3804,6 @@ main#main .fifth .four-options .option-one {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
   line-height: 15.2px;
   letter-spacing: -0.04em;
   text-align: left;
@@ -3897,7 +3876,6 @@ main#main .sixth .sixth-one .option-one {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
   line-height: 15.2px;
   letter-spacing: -0.04em;
   text-align: left;
@@ -3941,7 +3919,6 @@ main#main .sixth .common-description-six .common-des .description-triangle {
 main#main .sixth .common-description-six .common-des .description-text {
   padding: 8px;
   background-color: rgba(147, 215, 220, 0.8);
-  font-weight: bold;
   border-radius: 5px;
   width: 280px;
   height: 96px;
@@ -3949,10 +3926,8 @@ main#main .sixth .common-description-six .common-des .description-text {
   justify-content: center;
   align-items: flex-start;
   font-size: 13px;
-  font-weight: 500;
   line-height: 18px;
   text-align: left;
-  color: #1e1e1e;
 }
 main#main .sixth .nearest-station {
   display: flex;
@@ -3969,7 +3944,6 @@ main#main .sixth .nearest-station .custom-input {
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   font-size: 20px;
-  font-weight: 800;
 }
 main#main .sixth .nearest-description {
   margin-top: 30px;
@@ -4002,7 +3976,6 @@ main#main .sixth .nearest-description .common-des .description-triangle {
 main#main .sixth .nearest-description .common-des .description-text {
   padding: 8px;
   background-color: rgba(147, 215, 220, 0.8);
-  font-weight: bold;
   border-radius: 5px;
   width: 280px;
   height: 65px;
@@ -4010,10 +3983,8 @@ main#main .sixth .nearest-description .common-des .description-text {
   justify-content: center;
   align-items: center;
   font-size: 13px;
-  font-weight: 500;
   line-height: 18px;
   text-align: left;
-  color: #1e1e1e;
 }
 main#main .sixth .next-six {
   display: flex;
@@ -4074,16 +4045,13 @@ main#main .newstep .common-title-five span {
 }
 main#main .newstep .common-title-five .five-title {
   font-size: 15px;
-  font-weight: 600;
   line-height: 22px;
   letter-spacing: 0.02em;
   text-align: left;
-  color: #1e1e1e;
   margin: 0;
 }
 main#main .newstep .common-title-five .common-text {
   font-size: 12px;
-  font-weight: 600;
   line-height: 18px;
   letter-spacing: 0.02em;
   text-align: left;
@@ -4133,7 +4101,6 @@ main#main .newstep .six-input .custom-input-one {
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   font-size:20px;
-  font-weight:800;
 }
 main#main .newstep .six-input .six-input-first {
   gap: 20px;
@@ -4221,7 +4188,6 @@ main#main .newstep .nearest-description .common-des .description-triangle {
 main#main .newstep .nearest-description .common-des .description-text {
   padding: 8px;
   background-color: rgba(147, 215, 220, 0.8);
-  font-weight: bold;
   border-radius: 5px;
   width: 280px;
   height: 65px;
@@ -4229,10 +4195,8 @@ main#main .newstep .nearest-description .common-des .description-text {
   justify-content: center;
   align-items: center;
   font-size: 13px;
-  font-weight: 500;
   line-height: 18px;
   text-align: left;
-  color: #1e1e1e;
 }
 main#main .newstep .next-newstep {
   display: flex;
@@ -4332,7 +4296,6 @@ main#main .seven .four-options-seven .option-one-seven {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
   line-height: 15.2px;
   letter-spacing: -0.04em;
   text-align: left;
@@ -4387,7 +4350,6 @@ main#main .seven .nearest-description .common-des .description-triangle {
 main#main .seven .nearest-description .common-des .description-text {
   padding: 8px;
   background-color: rgba(147, 215, 220, 0.8);
-  font-weight: bold;
   border-radius: 5px;
   width: 280px;
   height: 65px;
@@ -4395,10 +4357,8 @@ main#main .seven .nearest-description .common-des .description-text {
   justify-content: center;
   align-items: center;
   font-size: 13px;
-  font-weight: 500;
   line-height: 18px;
   text-align: left;
-  color: #1e1e1e;
 }
 main#main .last {
   display: none;
@@ -4497,12 +4457,10 @@ main#main .last .last-name .last-input .custom-surname-input {
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   font-size: 20px;
-  font-weight: 800;
 }
 main#main .last .last-name .last-input .custom-surname-input::placeholder,
 main#main .last .last-name .last-input .custom-name-input::placeholder {
   font-size: 18px;
-  font-weight: 600;
   color: #6e6f71;
   display: flex;
   justify-content: center;
@@ -4519,7 +4477,6 @@ main#main .last .last-name .last-input .custom-name-input {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   padding: 1px 5px;
   font-size: 20px;
-  font-weight: 800;
 }
 main#main .last .last-name .last-input .custom-age-input {
   width: 290px;
@@ -4533,7 +4490,6 @@ main#main .last .last-name .last-input .custom-age-input {
 }
 main#main .last .last-name .last-input .custom-age-input::placeholder {
   font-size: 16px;
-  font-weight: 600;
   text-align: center;
   color: #6e6f71;
 }
@@ -4548,11 +4504,9 @@ main#main .last .last-name .last-input .custom-phone-input {
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   font-size: 20px;
-  font-weight: 800;
 }
 main#main .last .last-name .last-input .custom-phone-input::placeholder {
   font-size: 16px;
-  font-weight: 600;
   color: #6e6f71;
 }
 main#main .last .last-des {
@@ -4586,7 +4540,6 @@ main#main .last .last-des .common-des .description-triangle {
 main#main .last .last-des .common-des .description-text {
   padding: 8px;
   background-color: rgba(147, 215, 220, 0.8);
-  font-weight: bold;
   border-radius: 5px;
   width: 280px;
   height: 65px;
@@ -4594,10 +4547,8 @@ main#main .last .last-des .common-des .description-text {
   justify-content: center;
   align-items: center;
   font-size: 13px;
-  font-weight: 500;
   line-height: 18px;
   text-align: left;
-  color: #1e1e1e;
 }
 main#main .last .age-last {
   display: none;
@@ -4618,14 +4569,12 @@ main#main .last .age-last .age-option {
   border: 1px solid gray;
   box-sizing: border-box;
   padding: 1px 5px;
-  font-weight: normal;
   line-height: 26px;
   display: flex;
   justify-content: center;
   text-align: center;
   color: gray;
   font-size: 20px;
-  font-weight: 800;
 }
 main#main .last .age-last .age-option::after {
   border-radius: 5px;
@@ -4725,7 +4674,6 @@ main#main .success_modal .modal-content .close-button {
   color: #aaa;
   float: right;
   font-size: 28px;
-  font-weight: bold;
   position: absolute;
   top: 8px;
   right: 12px;
