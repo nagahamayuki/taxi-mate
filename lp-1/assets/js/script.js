@@ -371,7 +371,7 @@ function sixWayClick(element) {
   if (commute_ways.includes(six_way)) {
     commute_ways = commute_ways.filter((reason) => reason !== six_way);
     element.classList.add("bg-white");
-    element.style.color = "currentcolorsevenAccident(this)";
+    element.style.color = "currentcolor";
   } else {
     commute_ways.push(six_way);
     element.style.backgroundColor = "#93d7dc";
