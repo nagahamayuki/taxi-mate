@@ -1,55 +1,3 @@
-@font-face {
-  font-family: noto-bold;
-  src: url("../fonts/NotoSansJP-Bold.otf");
-}
-@font-face {
-  font-family: noto-regular;
-  src: url("../fonts/NotoSansJP-Regular.otf");
-}
-@font-face {
-  font-family: NotoSerifJP-Black;
-  src: url("../fonts/NotoSerifJP-Black.otf");
-}
-@font-face {
-  font-family: noto-cjk-jp;
-  src: url("../fonts/Noto Sans Mono CJK JP Regular.otf");
-}
-@font-face {
-  font-family: noto-cjk-bold;
-  src: url("../fonts/NotoSansCJKjp-Bold.otf");
-}
-@font-face {
-  font-family: NotoSerifJP-Bold;
-  src: url("../fonts/NotoSerifJP-Bold.otf");
-}
-@font-face {
-  font-family: NotoSansCJKjp-Medium;
-  src: url("../fonts/NotoSansCJKjp-Medium.otf");
-}
-@font-face {
-  font-family: hiragino-w3;
-  src: url("../fonts/Hiragino Kaku Gothic ProN W3.otf");
-}
-@font-face {
-  font-family: hiragino-w6;
-  src: url("../fonts/Hiragino Kaku Gothic ProN W6.otf");
-}
-@font-face {
-  font-family: shin-pro-bold;
-  src: url("../fonts/A-OTF Shin Go Pro DB.otf");
-}
-@font-face {
-  font-family: shin-pro;
-  src: url("../fonts/AOTFShinGoProBold.otf");
-}
-@font-face {
-  font-family: Outfit;
-  src: url("../fonts/Outfit-Medium.ttf");
-}
-@font-face {
-  font-family: Outfit-regular;
-  src: url("../fonts/Outfit-Regular.ttf");
-}
 *,
 *:before,
 *:after {
@@ -71,7 +19,7 @@ html {
 
 body {
   position: relative;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Arial", "メイリオ", sans-serif;
   font-weight: normal;
   font-size: 1.8rem;
   line-height: 1.5;
@@ -3005,7 +2953,7 @@ body.mobile-nav-active #mobile-nav {
 
 html {
   scroll-behavior: smooth;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Arial", "メイリオ", sans-serif;
   font-weight: 600;
   height: 100%;
 }
@@ -3300,10 +3248,10 @@ main#main .second-head {
 }
 main#main .second-head .step-car {
   position: absolute;
-  top: 42px;
+  top: 48px;
   left: 20px;
   z-index: 10;
-  width: 30px;
+  width: 34px;
   height: auto;
 }
 main#main .second-head .step-car img {
@@ -3315,7 +3263,7 @@ main#main .second-head .step-text {
   justify-content: center;
 }
 main#main .second-head .step-text p {
-  font-size: 9px;
+  font-size: 10px;
   margin-top: 15px;
   margin-left: 2px;
   margin-right: 2px;
@@ -3327,7 +3275,7 @@ main#main .second-head .step-text p span {
 }
 main#main .second-head .step-text .step-check {
   color: #c88282;
-  font-size: 9px;
+  font-size: 10px;
   margin-top: 15px;
   margin-left: 2px;
   margin-right: 2px;
@@ -3341,7 +3289,7 @@ main#main .second-head .step-road .road-bar {
   background-color: #d9d9d9;
   width: 328px;
   height: 3px;
-  margin-top: 17px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
@@ -3582,10 +3530,10 @@ main#main .third {
 }
 main#main .third .step-car-third {
   position: absolute;
-  top: 42px;
+  top: 48px;
   left: 65px;
   z-index: 10;
-  width: 30px;
+  width: 34px;
   height: auto;
 }
 main#main .third .step-car-third img {
@@ -3733,10 +3681,10 @@ main#main .fourth {
 }
 main#main .fourth .step-car-four {
   position: absolute;
-  top: 42px;
+  top: 48px;
   left: 110px;
   z-index: 10;
-  width: 30px;
+  width: 34px;
   height: auto;
 }
 main#main .fourth .step-car-four img {
@@ -3836,10 +3784,10 @@ main#main .fifth .common-title-five .common-text {
 }
 main#main .fifth .step-car-five {
   position: absolute;
-  top: 42px;
+  top: 48px;
   left: 155px;
   z-index: 10;
-  width: 30px;
+  width: 34px;
   height: auto;
 }
 main#main .fifth .step-car-five img {
@@ -3911,10 +3859,10 @@ main#main .sixth {
 }
 main#main .sixth .step-car-six {
   position: absolute;
-  top: 42px;
+  top: 48px;
   left: 200px;
   z-index: 10;
-  width: 30px;
+  width: 34px;
   height: auto;
 }
 main#main .sixth .step-car-six img {
@@ -4179,10 +4127,10 @@ main#main .newstep .next-img-newstep img {
 }
 main#main .newstep .step-car-newstep {
   position: absolute;
-  top: 42px;
+  top: 48px;
   left: 245px;
   z-index: 10;
-  width: 30px;
+  width: 34px;
   height: auto;
 }
 main#main .newstep .step-car-newstep img {
@@ -4352,10 +4300,10 @@ main#main .seven {
 }
 main#main .seven .step-car-seven {
   position: absolute;
-  top: 42px;
+  top: 48px;
   left: 295px;
   z-index: 10;
-  width: 30px;
+  width: 34px;
   height: auto;
 }
 main#main .seven .step-car-seven img {
@@ -4487,10 +4435,10 @@ main#main .last {
 }
 main#main .last .step-car-last {
   position: absolute;
-  top: 42px;
+  top: 48px;
   left: 340px;
   z-index: 10;
-  width: 30px;
+  width: 34px;
   height: auto;
 }
 main#main .last .step-car-last img {
