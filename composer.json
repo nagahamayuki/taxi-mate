@@ -1,28 +1,22 @@
 {
-  "name": "yukinagahama/taxi-mate-heroku",
-  "description": "PHP Application for taxi-mate.jp",
-  "autoload": {
-    "psr-4": {
-      "Yukinagahama\\TaxiMateHeroku\\": "src/"
-    }
-  },
-  "authors": [
-    {
-      "name": "YUKI NAGAHAMA",
-      "email": "nagahama@anytrail.jp"
-    }
-  ],
-  "scripts": {
-    "post-install-cmd": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-      "npm install",
-      "npm run build"
+    "name": "yukinagahama/taxi-mate-heroku",
+    "description": "PHP Application for taxi-mate.jp",
+    "autoload": {
+        "psr-4": {
+            "Yukinagahama\\TaxiMateHeroku\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "YUKI NAGAHAMA",
+            "email": "nagahama@anytrail.jp"
+        }
     ],
-    "post-update-cmd": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-      "npm install",
-      "npm run build"
-    ]
-  },
-  "require": {}
+    "require": {},
+    "scripts": {
+        "post-install-cmd": [
+            "npm install",
+            "npm run build"
+        ]
+    }
 }
