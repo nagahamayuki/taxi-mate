@@ -8,6 +8,6 @@
   },
   "scripts": {
     "build": "gulp",
-    "heroku-postbuild": "gulp"
+    "heroku-postbuild": "gulp deploy"
   }
 }
