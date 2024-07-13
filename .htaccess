@@ -2,5 +2,11 @@ RewriteEngine On
 
 # ローカル環境ではリダイレクトを無効にする
 RewriteCond %{HTTP_HOST} !^localhost
+
+# HTTPS へのリダイレクト
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www から始まるサブドメインをリダイレクト
+RewriteCond %{HTTP_HOST} ^www\.taxi-mate\.jp [NC]
+RewriteRule ^(.*)$ https://taxi-mate.jp/$1 [L,R=301]
