@@ -4732,6 +4732,9 @@ main#main .success_modal .modal-content .close-button:focus {
   font-size: 16px;
 }
 @media only screen and (max-width: 640px) {
+  footer {
+    position: static;
+  }
   .footer-update {
     padding: 1.5rem;
     font-size: 1.5rem;
