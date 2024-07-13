@@ -3323,7 +3323,7 @@ main#main .second-head .step-text p {
   font-weight: bold;
 }
 main#main .second-head .step-text p span {
-  font-size: 16px;
+  font-size: 14px;
 }
 main#main .second-head .step-text .step-check {
   color: #c88282;
@@ -3334,9 +3334,8 @@ main#main .second-head .step-text .step-check {
   font-weight: bold;
 }
 main#main .second-head .step-text .step-check .span-check {
-  font-size: 13px;
+  font-size: 14px;
   color: #c88282;
-  font-weight: normal;
 }
 main#main .second-head .step-road .road-bar {
   background-color: #d9d9d9;
