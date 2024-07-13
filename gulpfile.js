@@ -30,5 +30,8 @@ gulp.task('watch', function() {
     gulp.watch('lp-1/assets/css/*.css', gulp.series('styles'));
 });
 
+// デプロイ専用のタスク
+gulp.task('deploy', gulp.series('scripts', 'styles'));
+
 // デフォルトタスク
 gulp.task('default', gulp.series('scripts', 'styles', 'watch'));
