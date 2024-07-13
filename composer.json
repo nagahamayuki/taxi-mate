@@ -14,10 +14,12 @@
   ],
   "scripts": {
     "post-install-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
       "npm install",
       "npm run build"
     ],
     "post-update-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
       "npm install",
       "npm run build"
     ]
