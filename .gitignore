@@ -1,1 +1,5 @@
 /vendor/
+# node_modulesフォルダを除外
+/node_modules/
+# ソースマップファイルを除外
+*.map
