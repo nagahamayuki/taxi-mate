@@ -24,5 +24,11 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('lp-1/assets/css')); // 圧縮後のファイルの出力ディレクトリ
 });
 
+// 変更を監視するタスク
+gulp.task('watch', function() {
+    gulp.watch('lp-1/assets/js/*.js', gulp.series('scripts'));
+    gulp.watch('lp-1/assets/css/*.css', gulp.series('styles'));
+});
+
 // デフォルトタスク
-gulp.task('default', gulp.series('scripts', 'styles'));
+gulp.task('default', gulp.series('scripts', 'styles', 'watch'));
