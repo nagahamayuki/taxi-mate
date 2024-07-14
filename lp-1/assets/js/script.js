@@ -183,7 +183,7 @@ function disableJob(clickedId) {
 }
 
 function thirdCheck(element) {
-  changing_jobs_time = element.querySelector("span").textContent;
+  changing_jobs_time = element.getAttribute("data-value");
   var prev_page = document.getElementById("third");
   var next_page = document.getElementById("four");
   // Hide the first button
@@ -219,7 +219,7 @@ function updateFourNextButtonState() {
 }
 
 function fourClick(element) {
-  let clicked_reason = element.textContent;
+  let clicked_reason = element.getAttribute("data-value");
   if (changing_job_reasons.includes(clicked_reason)) {
     changing_job_reasons = changing_job_reasons.filter(
       (reason) => reason !== clicked_reason
@@ -275,7 +275,7 @@ function updateFiveNextButtonState() {
 }
 
 function fiveClick(element) {
-  let taxi_attract = element.textContent;
+  let taxi_attract = element.getAttribute("data-value");
   if (taxi_attracts.includes(taxi_attract)) {
     taxi_attracts = taxi_attracts.filter((reason) => reason !== taxi_attract);
     element.classList.add("bg-white");
@@ -347,7 +347,7 @@ function sixAreaClick(element) {
     enableAllArea();
     updateSixNextButtonState();
   } else {
-    residence = element.textContent;
+    residence = element.getAttribute("data-value");
     element.style.backgroundColor = "#93d7dc";
     element.classList.remove("bg-white");
     element.style.color = "#0d8ea3";
@@ -366,7 +366,7 @@ function updateSixNextButtonState() {
 let commute_ways = [];
 
 function sixWayClick(element) {
-  let six_way = element.textContent;
+  let six_way = element.getAttribute("data-value");
   const img_container_dom = document.querySelector(".next-img-six");
   if (commute_ways.includes(six_way)) {
     commute_ways = commute_ways.filter((reason) => reason !== six_way);
@@ -499,7 +499,7 @@ function updateSevenNextButtonState() {
   }
 }
 function sevenAccident(element) {
-  let clicked_accident = element.textContent;
+  let clicked_accident = element.getAttribute("data-value");
   if (past_accidents.includes(clicked_accident)) {
     past_accidents = past_accidents.filter(
       (accident) => accident !== clicked_accident
