@@ -23,6 +23,13 @@ $("button.next").on("click", function () {
       $(".progress-bar").attr("aria-valuenow", current_page * 33);
       $(".container").addClass("d-none");
       $(".container--" + current_page).removeClass("d-none");
+
+      const targetElement = document.getElementsByTagName('form')[0];
+
+      targetElement.scrollIntoView({
+        behavior: 'smooth', 
+        block: 'start' 
+      });
     }
   } else {
     if (current_page == 1) {
@@ -113,7 +120,6 @@ $("button.back").on("click", function () {
   if (current_page == 1) {
     $(this).addClass("d-none");
   } else {
-    console.log(current_page);
     $(this).removeClass("d-none");
     $(this).html("戻る");
     current_page--;
@@ -123,6 +129,13 @@ $("button.back").on("click", function () {
     $(".progress-bar").attr("aria-valuenow", current_page * 33);
     $(".container").addClass("d-none");
     $(".container--" + current_page).removeClass("d-none");
+
+    const targetElement = document.getElementsByTagName('form')[0];
+
+    targetElement.scrollIntoView({
+      behavior: 'smooth', 
+      block: 'start' 
+    });
   }
 });
 

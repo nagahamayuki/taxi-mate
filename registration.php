@@ -1,6 +1,5 @@
 <?php
 
-//$to = "nagahama@anytrail.jp";
 $to = "nagahama@anytrail.jp";
 $headers = "From: nagahama@anytrail.jp";
 
@@ -29,23 +28,37 @@ if (mail($to, "転職支援サービスに登録 がありました / taxi-mate.
     echo "Failed to send email.";
 }
 
-header("Location: ../registration/thanks/");
-
 $webhook_url = "https://hook.us1.make.com/han76gjtlud87lq42t8yqnjqeghyu780";
 
-// Set the data to be sent
+// Get the URL parameters
+$area = $_GET["area"];
+$commute = $commute;
+$station = $_GET["station"];
+$jobdate = $_GET["jobdate"];
+$changeReason = $changeReason;
+$attractive = $attractive;
+$firstname = $_GET["firstname"];
+$lastname = $_GET["lastname"];
+$age = $_GET["age"];
+$phone = $_GET["phone"];
+$email = $_GET["email"];
+
+// Construct the full URL with parameters
+$full_url = $webhook_url . "?area=" . urlencode($area) . "&commute=" . urlencode($commute) . "&station=" . urlencode($station) . "&jobdate=" . urlencode($jobdate) . "&changeReason=" . urlencode($changeReason) . "&attractive=" . urlencode($attractive) . "&firstname=" . urlencode($firstname) . "&lastname=" . urlencode($lastname) . "&age=" . urlencode($age) . "&phone=" . urlencode($phone) . "&email=" . urlencode($email);
+
+// Set the data to be sent in the request body
 $data = array(
-   "お住まいの地域" => $_GET["area"],
+   "お住まいの地域" => $area,
    "通勤手段" => $commute,
-   "最寄駅" => $_GET["station"],
-   "転職時期" => $_GET["jobdate"],
+   "最寄駅" => $station,
+   "転職時期" => $jobdate,
    "今回の転職理由について教えてください" => $changeReason,
    "タクシー業界に感じている魅力について教えてください" => $attractive,
-   "お名前(姓)" => $_GET["firstname"],
-   "お名前(名)" => $_GET["lastname"],
-   "年代" => $_GET["age"],
-   "電話番号" => $_GET["phone"],
-   "メールアドレス" => $_GET["email"],
+   "お名前(姓)" => $firstname,
+   "お名前(名)" => $lastname,
+   "年代" => $age,
+   "電話番号" => $phone,
+   "メールアドレス" => $email,
 );
 
 // Convert the data to JSON
@@ -55,7 +68,7 @@ $data_json = json_encode($data);
 $ch = curl_init();
 
 // Set cURL options
-curl_setopt($ch, CURLOPT_URL, $webhook_url);
+curl_setopt($ch, CURLOPT_URL, $full_url);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data_json);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -77,3 +90,5 @@ if(curl_errno($ch)){
 
 // Close the cURL session
 curl_close($ch);
+
+header("Location: ../registration/thanks/");

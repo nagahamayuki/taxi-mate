@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0" />
-	<link rel="canonical" href="https://taxi-mate.jp">
+	<link rel="canonical" href="https://taxi-mate.jp/">
 </head>
 
 <body>

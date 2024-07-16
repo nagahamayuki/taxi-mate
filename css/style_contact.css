@@ -60,8 +60,7 @@
 }
 .contact .privacy-agree input[type=checkbox] {
   margin-right: 10px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-appearance: auto;
      -moz-appearance: auto;
           appearance: auto;
@@ -107,5 +106,4 @@
 .contact #please_enter_privacy {
   color: red;
   margin-top: 10px;
-}
-/*# sourceMappingURL=style_contact.css.map */
+}/*# sourceMappingURL=style_contact.css.map */
