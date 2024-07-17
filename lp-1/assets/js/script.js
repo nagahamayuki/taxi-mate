@@ -597,7 +597,7 @@ async function completeStep() {
       age_vali.style.display = "none";
       age_vali.classList.remove("shake");
 
-      const phoneRegex = /^(0[5-9]0[-(]?[0-9]{4}[-)]?[0-9]{4}|0120[-]?\d{1,3}[-]?\d{4}|050[-]?\d{4}[-]?\d{4}|0[1-9][-]?\d{1,4}[-]?\d{1,4}[-]?\d{4})*$/;
+      const phoneRegex = /^(0[5-9]0[-(]?[0-9]{4}[-)]?[0-9]{4}|0120[-]?\d{1,3}[-]?\d{4}|050[-]?\d{4}[-]?\d{4}|0\d{1,3}[-]?\d{1,4}[-]?\d{4}|0570[-]?\d{1,4}[-]?\d{4})$/;
       if (phone_number === "" || !phoneRegex.test(phone_number)) {
         phone_vali.style.display = "block";
         phone_vali.classList.add("shake");
