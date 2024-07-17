@@ -29,6 +29,7 @@ if (mail($to, "転職支援サービスに登録 がありました / taxi-mate.
 }
 
 $webhook_url = "https://hook.us1.make.com/han76gjtlud87lq42t8yqnjqeghyu780";
+// $webhook_url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用
 
 // Get the URL parameters
 $area = $_GET["area"];
@@ -91,4 +92,4 @@ if(curl_errno($ch)){
 // Close the cURL session
 curl_close($ch);
 
-header("Location: ../registration/thanks/");
+header("Location: ./registration/thanks/");
