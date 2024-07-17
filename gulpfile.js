@@ -5,33 +5,40 @@ const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 
 // JSファイルを圧縮するタスク
-gulp.task('scripts', function() {
+function scripts() {
     return gulp.src('lp-1/assets/js/script.js') // JSファイルのソースディレクトリ
         .pipe(sourcemaps.init())
         .pipe(concat('script.min.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('lp-1/assets/js')); // 圧縮後のファイルの出力ディレクトリ
-});
+}
 
 // CSSファイルを圧縮するタスク
-gulp.task('styles', function() {
+function styles() {
     return gulp.src('lp-1/assets/css/style.css') // CSSファイルのソースディレクトリ
         .pipe(sourcemaps.init())
         .pipe(concat('style.min.css'))
         .pipe(cleanCSS())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('lp-1/assets/css')); // 圧縮後のファイルの出力ディレクトリ
-});
+}
 
 // 変更を監視するタスク
-gulp.task('watch', function() {
-    gulp.watch('lp-1/assets/js/*.js', gulp.series('scripts'));
-    gulp.watch('lp-1/assets/css/*.css', gulp.series('styles'));
-});
+function watch() {
+    gulp.watch('lp-1/assets/js/*.js', scripts);
+    gulp.watch('lp-1/assets/css/*.css', styles);
+}
 
 // デプロイ専用のタスク
-gulp.task('deploy', gulp.series('scripts', 'styles'));
+const deploy = gulp.series(scripts, styles);
 
 // デフォルトタスク
-gulp.task('default', gulp.series('scripts', 'styles', 'watch'));
+const defaultTask = gulp.series(scripts, styles, watch);
+
+// タスクのエクスポート
+exports.scripts = scripts;
+exports.styles = styles;
+exports.watch = watch;
+exports.deploy = deploy;
+exports.default = defaultTask;
