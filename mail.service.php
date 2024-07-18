@@ -1,21 +1,5 @@
 <?php
 
-$to = "nagahama@anytrail.jp";
-$headers = "From: nagahama@anytrail.jp";
-
-$text = "お名前:" . $_GET["name"] . "\n";
-$text = $text . "お住まいの住所:" . $_GET["address"] . "\n";
-$text = $text . "生まれ年:" . $_GET["birth_year"] . "\n";
-$text = $text . "メールアドレス:" . $_GET["email"] . "\n";
-$text = $text . "電話番号:" . $_GET["phone"] . "\n";
-
-// Send the email
-if (mail($to, "メールで求人を受け取る に登録がありました / taxi-mate.jp", $text, $headers)) {
-    echo "Email sent successfully!";
-} else {
-    echo "Failed to send email.";
-}
-
 $webhook_url = "https://hook.us1.make.com/61ljr4ueovmcd7791h6yanpqdj7kt8l9";
 // $webhook_url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用
 
@@ -69,3 +53,5 @@ if(curl_errno($ch)){
 curl_close($ch);
 
 header("Location: ./contact/thanks/");
+
+?>
