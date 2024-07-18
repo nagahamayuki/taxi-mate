@@ -1,6 +1,10 @@
 <?php
 
+error_log("Request Method: " . $_SERVER['REQUEST_METHOD']);
+error_log("Request Parameters: " . json_encode($_GET));
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["name"]) && !empty($_GET["name"])) {
+    error_log("Valid request received. Name: " . $_GET["name"]);
 
     $webhook_url = "https://hook.us1.make.com/61ljr4ueovmcd7791h6yanpqdj7kt8l9";
     // $webhook_url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用
@@ -56,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET["name"]) && !empty($_GET
 
     header("Location: ./contact/thanks/");
 } else {
+    error_log("Invalid request received.");
     echo "Invalid request.";
 }
 
