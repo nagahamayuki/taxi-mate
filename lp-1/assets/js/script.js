@@ -626,6 +626,17 @@ async function completeStep() {
         }
 
         if (!emailError) {
+          const ageValues = {
+              '10代': 7000,
+              '20代': 10000,
+              '30代': 15000,
+              '40代': 10000,
+              '50代': 3000,
+              '60代': 0,
+              '70代': 0
+          };
+          const value = ageValues[age] || 0;
+
           let sendData = {
             method: "POST",
             headers: {
@@ -657,6 +668,9 @@ async function completeStep() {
           let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
           // let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
           const data = await fetch(url, sendData);
+
+          sessionStorage.setItem("ageValue", value);
+
           window.location.href = "thanks/";
         }
       }
