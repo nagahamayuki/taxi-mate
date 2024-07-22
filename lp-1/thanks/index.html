@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>お問い合わせありがとうございます｜タクシーメイト</title>
 
     <!-- Google Tag Manager -->
@@ -14,13 +15,118 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KX8ZQFSX');</script>
     <!-- End Google Tag Manager -->
+
     <link rel="canonical" href="https://taxi-mate.jp/lp-1/thanks/">
 
     <style>
+        .thanks {
+            padding:0px 20px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .small {
+            font-size: 12px;
+        }
+        .thin {
+            font-weight:400;
+        }
         .tel {
-            color:#00897b !important;
             font-size: 1.4em;
-            margin-right:10px;
+            margin-right:5px;
+        }
+        .green-marker {
+            background: linear-gradient(transparent 0%, #45d4c6 0%);
+            margin: 0px 3px;
+        }
+        .original-icon {
+            font-size:16px !important;
+        }
+        .marker-light-green {
+            color: #00897b;
+            font-weight: 400;
+            padding: 2px 4px;
+            background: rgba(0, 137, 123, 0.25);
+            border-radius: 5px;
+            margin-right: 4px;
+            font-size: 0.8em;
+        }
+        .button {
+            text-align: center;
+            display: block;
+            color: white;
+            padding: 14px 15px 10px;
+            border-radius: 120px;
+            max-width: 100%;
+            width: 340px;
+            margin-bottom: 20px;
+            span {
+                font-size:2em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px 6px 4px;
+                &::before {
+                    font-family: "Material Icons";
+                    line-height: 0;
+                    font-size: 20px;
+                    margin-right:3px;
+                }
+                &::after {
+                    font-family: "Material Icons";
+                    line-height: 0;
+                    font-size: 20px;
+                    margin-right:3px;
+                }
+            }
+        }
+        .b_tel {
+            border: 1px solid rgba(36, 37, 40, 0.1);
+            color: #00897b !important;
+            .tel_icon {
+              &::before {
+                content: "\e0b0";
+              }
+            }
+            div {
+              display: flex;
+              justify-content: center;
+              gap: 10px;            
+              p {
+                display: flex;
+                align-items: center;
+                color: #242528;
+                font-weight: 400;
+                font-size: 0.9em !important;
+                span {
+                    font-size: 0.9em !important;
+                    font-weight: 400;
+                    padding: 2px 4px;
+                    color: #00897b;
+                    background: rgba(0, 137, 123, 0.25);
+                    border-radius: 5px;
+                    margin-right: 4px;
+                }
+              }
+            }
+        }
+        .b_job {
+            background-color: #0d8ea3;
+            span {
+                font-size: 1.4em;
+              &::after {
+                content: "\f8ce";
+              }
+            }
+        }
+        .b_line {
+            background-color: #06c755;
+            span {
+                font-size: 1.4em;
+              &::after {
+                content: "\f8ce";
+              }
+            }
         }
     </style>
 </head>
@@ -44,6 +150,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="header-bottom">
             <p>
+                <span class="sm-txt">未経験<img src="../assets/img/biginner.webp" height="20px" alt="未経験" style="margin:0px 2px;">でも</span>
                 <span class="green-txt">月給45万円が目指せる求人</span>
                 <span class="sm-txt">のみを</span>
                 <span>ご紹介！</span>
@@ -54,15 +161,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="thanks">
         <p>
             ご登録ありがとうございました。<br>
-            <span class="tel">0120-935-196</span>の番号よりお電話いたします。<br>
-            こちらの番号を「タクシーメイト」でご登録ください。<br>
-            お電話にて転職支援の相談をさせていただきます。
+            営業時間内に
+            <span class="tel green-marker">
+                <span class="material-icons original-icon">
+                    phone_in_talk
+                </span>
+            0120-935-196
+            </span>
+            の番号よりお電話いたします。<br>
+            こちらの番号を「<span class="green-marker">タクシーメイト</span>」で登録ください。<br>
+            <br>
+            <span class="small thin">折り返しお電話時間（営業時間）<br><span class="marker-light-green">平日</span>10:00〜19:00
+            </span>
         </p>
-        <a href="../">
-            <div class="goTop">
-                トップページに戻る
-            </div>
-        </a>
+
+        <div class="link">
+            <a href="tel:0120-935-196" class="button b_tel">
+                ＼最短で面談！このまま電話で転職相談する／
+                <span class="tel_icon">
+                    0120-935-196
+                </span>
+                <div>
+                    <p>
+                        <span>平日</span>
+                        10:00-19:00
+                    </p>
+                    <p>
+                        <span>定休日</span>
+                        土日・祝日
+                    </p>
+                </div>
+            </a>
+            <a href="https://lin.ee/ufsBuLq" class="button b_line" target="_blank">
+                ＼LINEでもやり取りできます／
+                <span>
+                    LINEの友達登録する
+                </span>
+            </a>
+            <a href="../../job" class="button b_job">
+                ＼月給45万円が目指せる求人を厳選／
+                <span>
+                    おすすめ求人を見る
+                </span>
+            </a>
+        </div>
     </div>
 
     <footer id="footer" class="footer">

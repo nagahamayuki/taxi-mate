@@ -2713,12 +2713,10 @@ figure img,
 }
 .header-top img {
   width: 80px;
-  height: 30px;
 }
 @media only screen and (max-width: 640px) {
   .header-top img {
     width: 11rem;
-    height: 4rem;
   }
 }
 .header-logo img {
@@ -3100,7 +3098,7 @@ main#main .common-description .common-des .description-text {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 22px;
   text-align: left;
 }
@@ -4693,8 +4691,7 @@ main#main .success_modal .modal-content .close-button:focus {
   align-items: center;
   gap: 10rem;
   text-align: center;
-  height: 100vh;
-  background-color: #fefff2;
+  height: 85vh;
 }
 .thanks h2 {
   font-size: 6.4rem;
