@@ -63,7 +63,7 @@ function enableAllButtons() {
 function secondCheck1() {
   var prev_page = document.getElementById("second");
 
-  var next_page = document.getElementById("third");
+  var next_page = document.getElementById("five");
 
   // Hide the first button
   prev_page.style.display = "none";
@@ -89,9 +89,9 @@ function secondCheck1() {
 function secondCheck2() {
   var img_container_dom = document.querySelector(".next-img-second");
   var black_taxi_dom = document.getElementById("blacktaxi");
-  var prev_page = document.getElementById("second");
+  var prev_page = document.getElementById("five");
 
-  var next_page = document.getElementById("third");
+  var next_page = document.getElementById("newstep");
 
   // Hide the first button
   prev_page.style.display = "none";
@@ -118,7 +118,7 @@ function secondCheck2() {
 function secondCheck3() {
   var prev_page = document.getElementById("second");
 
-  var next_page = document.getElementById("third");
+  var next_page = document.getElementById("five");
 
   // Hide the first button
   prev_page.style.display = "none";
@@ -317,7 +317,7 @@ function gotoFour() {
 function fiveHidden() {
   var prev_page = document.getElementById("five");
 
-  var next_page = document.getElementById("six");
+  var next_page = document.getElementById("newstep");
 
   // Hide the first button
   prev_page.style.display = "none";
@@ -481,7 +481,7 @@ function gotoSix() {
 }
 function newStepHidden() {
   var prev_page = document.getElementById("newstep");
-  var next_page = document.getElementById("seven");
+  var next_page = document.getElementById("last");
 
   // Hide the first button
   prev_page.style.display = "none";
