@@ -16,28 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let exp_type;
-// 質問を消したのでコメントアウト
-// function toggleDivs(element) {
-//   var exp = element.querySelector("p");
-//   exp_type = exp.textContent;
-//   var prev_page = document.getElementById("first");
-//   var next_page = document.getElementById("second");
-//   prev_page.style.display = "none";
-//   next_page.style.display = "block";
-// }
+function toggleDivs(element) {
+  var exp = element.querySelector("p");
+  exp_type = exp.textContent;
+  var prev_page = document.getElementById("first");
+  var next_page = document.getElementById("second");
+  prev_page.style.display = "none";
+  next_page.style.display = "block";
+}
 
-// //////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
 // ============================Second =================================
 
 var license = "";
 
-// function updateNextButtonState() {
-//   if (license === "") {
-//     document.getElementById("second-next").classList.add("disabled");
-//   } else {
-//     document.getElementById("second-next").classList.remove("disabled");
-//   }
-// }
+function updateNextButtonState() {
+  if (license === "") {
+    document.getElementById("second-next").classList.add("disabled");
+  } else {
+    document.getElementById("second-next").classList.remove("disabled");
+  }
+}
 
 function disableOtherButtons(clickedId) {
   var buttons = ["redtaxi", "blacktaxi", "nolicense"];

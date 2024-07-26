@@ -3113,7 +3113,6 @@ main#main .disabled {
   opacity: 0.5;
 }
 main#main .first {
-  display: none;
   width: 375px;
   background-color: rgba(255, 255, 255, 0.6);
   margin-left: auto;
@@ -3220,7 +3219,7 @@ main#main .disabled {
   opacity: 0.5;
 }
 main#main .second {
-  display: block;
+  display: none;
   width: 375px;
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
