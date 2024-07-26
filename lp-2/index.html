@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta property="og:image" content="/images/ogimage.png">
 	<!-- SNS END -->
 
-	<link rel="stylesheet" href="./assets/css/style.min.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
 	<link rel="canonical" href="https://taxi-mate.jp/lp-2/"> <!-- /taxi-mate.jp, /taxi-mate.jp/index.html でアクセスされても /taxi-mate.jp/ が正規だという記載 -->
 
@@ -64,39 +64,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<main id="main" class="mainpage">
 		<div class="first" id="first">
-			<div>
-				<p>＼タクシー専門の転職支援サービス／</p>
-				<p>タクシー未経験でも</p>
-				<p>月給45万円が目指せるタクシー会社をご紹介！</p>
-				<img src="./assets/img/taxi-top.png" width="40%" alt="">
-				<p>
-					タクシーメイトではこれまで多くのタクシー未経験者の転職支援を成功させてきました。<br>
+			<div class="carrier-support">
+				<p class="t-small">＼タクシー専門の転職支援サービス／</p>
+				<p class="t-large">
+					タクシー未経験でも月給45万円が目指せるタクシー会社をご紹介！
+				</p>
+				<img class="top-img" src="./assets/img/taxi-top.png" width="60%" alt="">
+				<p class="t-small">
+					タクシーメイトではこれまで多くのタクシー未経験者の転職支援を成功させてきました。
 					無料で受けられる転職支援で、タクシー転職を成功させませんか？</p>
-				<button>今すぐ無料の転職支援を受ける</button>
-				<p>推薦書を作成し高い合格率を実現！</p>
-			</div>
-			<div class="first-question">
-				<span></span>
-				<p>タクシー会社での勤務経験はありますか？</p>
-			</div>
-			<div class="first-button1" id="first-button1" data-index="1" onclick="toggleDivs(this)">
-				<p id="first-button1-content">勤務経験がある</p>
-				<span></span>
-			</div>
-			<div class="first-button2" data-index="2" onclick="toggleDivs(this)">
-				<p id="first-button2-content">勤務したことがない</p>
-				<span></span>
-			</div>
-			<div class="common-description mt-30 mb-30">
-				<div class="common-img">
-					<img src="./assets/img/man.png" alt="">
-				</div>
-				<div class="common-des">
-					<div class="description-triangle"></div>
-					<div class="description-text padding-5-7 auto-height">
-						タクシーメイトは無料の転職支援サービスです。転職に成功した多くの方がご登録しています。
-					</div>
-				</div>
+				<button onclick="startCarrierSupport()">今すぐ無料の転職支援を受ける</button>
+				<p class="t-small">推薦書を作成し高い合格率を実現！</p>
 			</div>
 		</div>
 		<div class="second" id="second">

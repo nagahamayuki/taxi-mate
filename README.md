@@ -29,3 +29,6 @@
 ### 設定している開発環境
 ・デプロイ時にPHPアプリケーションとして実行され（composer.json）、その次にNode.jsアプリケーションとして実行されている模様（package.json）
 
+### ブラウザリロード
+・localhost:3000
+・npx browser-sync start --config bs-config.js で実行

@@ -15,10 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-let exp_type;
-function toggleDivs(element) {
-  var exp = element.querySelector("p");
-  exp_type = exp.textContent;
+// let exp_type;
+// function toggleDivs(element) {
+//   var exp = element.querySelector("p");
+//   exp_type = exp.textContent;
+//   var prev_page = document.getElementById("first");
+//   var next_page = document.getElementById("second");
+//   prev_page.style.display = "none";
+//   next_page.style.display = "block";
+// }
+
+function startCarrierSupport() {
   var prev_page = document.getElementById("first");
   var next_page = document.getElementById("second");
   prev_page.style.display = "none";
