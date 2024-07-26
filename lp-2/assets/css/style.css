@@ -2999,32 +2999,33 @@ main#main {
   padding:40px 20px;
   font-size: 1.2em;
   gap:0.6rem;
-  .t-large {
-    font-size: 1.3em;
-    letter-spacing: -0.5px;
-  }.t-larger {
-    font-size: 1.2em;
-    letter-spacing: -1px;
-  }
-  .t-small {
-    font-size: 0.9em;
-    letter-spacing: 1px;
-  }
-  .top-img {
+}
+.carrier-support .t-large {
+  font-size: 1.3em;
+  letter-spacing: -0.5px;
+}
+.carrier-support .t-larger {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+}
+.carrier-support .t-small {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+.carrier-support .top-img {
     margin:20px 0px;
   }
-  button {
-    cursor:pointer;
-    border-radius: 100px;
-    height:64px;
-    font-size: 1.2em;
-    padding:0px 30px;
-    margin:10px 0px 7px 0px;
-    background: #13988b;
-    color: #fff;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-  }
+.carrier-support button {
+  cursor:pointer;
+  border-radius: 100px;
+  height:64px;
+  font-size: 1.2em;
+  padding:0px 30px;
+  margin:10px 0px 7px 0px;
+  background: #13988b;
+  color: #fff;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 main#main .common-title {
   margin-top: 16px;
