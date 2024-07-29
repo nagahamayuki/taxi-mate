@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// let exp_type;
+let exp_type;
 // function toggleDivs(element) {
 //   var exp = element.querySelector("p");
 //   exp_type = exp.textContent;
@@ -303,7 +303,7 @@ function fiveClick(element) {
 // //////////////////////////  Six  ///////////////////////////////////
 // /////////////////////////////////////////////////////////////
 function gotoFour() {
-  var prev_page = document.getElementById("four");
+  var prev_page = document.getElementById("second");
 
   var next_page = document.getElementById("five");
 
@@ -472,7 +472,7 @@ function sixHidden() {
   next_page.style.display = "block";
 }
 function gotoSix() {
-  var prev_page = document.getElementById("six");
+  var prev_page = document.getElementById("five");
   var next_page = document.getElementById("newstep");
   // Hide the first button
   prev_page.style.display = "block";
@@ -549,12 +549,13 @@ function sevenHidden() {
 // ///////////////// Last ////////////////////////
 
 function gotoSeven() {
-  var prev_page = document.getElementById("seven");
+  var prev_page = document.getElementById("newstep");
 
   var next_page = document.getElementById("last");
 
   // Hide the first button
   prev_page.style.display = "block";
+  document.getElementById("custom-sixinput-one").value = "";
 
   // Display the second div
   next_page.style.display = "none";
@@ -571,7 +572,6 @@ async function completeStep() {
   var name_vali = document.getElementById("nameInputError");
   var phone_vali = document.getElementById("phoneInputError");
   var age_vali = document.getElementById("ageInputError");
-  var email_vali = document.getElementById("emailInputError");
 
   surname = document.getElementById("surname").value;
   lastname = document.getElementById("lastname").value;
@@ -581,7 +581,6 @@ async function completeStep() {
     age = selectElement.value;
   });
   phone_number = document.getElementById("phone_number").value;
-  email = document.getElementById("email").value;
 
   if (surname === "" || lastname === "") {
     name_vali.style.display = "block";
@@ -614,25 +613,7 @@ async function completeStep() {
         phone_vali.style.display = "none";
         phone_vali.classList.remove("shake");
 
-        // メールアドレスのバリデーション（任意項目）
-        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        let emailError = false;
-
-        if (email && !emailRegex.test(email)) {
-          email_vali.innerHTML = "正しいメールアドレスを入力してください。";
-          email_vali.style.display = "block";
-          email_vali.classList.add("shake");
-          emailError = true;
-          setTimeout(() => {
-            email_vali.style.display = "none";
-          }, 2000);
-        } else {
-          email_vali.style.display = "none";
-          email_vali.classList.remove("shake");
-        }
-
-        if (!emailError) {
-          const ageValues = {
+        const ageValues = {
               '10代': 5000,
               '20代': 67500,
               '30代': 15000,
@@ -671,14 +652,14 @@ async function completeStep() {
               past_accidents_hubspot: past_accidents.join(";")
             }),
           };
-          let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
-          // let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
+          // let url = "https://hook.us1.make.com/qi9wfgajkxhyvvgd3qsy4cfucf947qyj";
+          let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
           const data = await fetch(url, sendData);
 
           sessionStorage.setItem("ageValue", value);
+          sessionStorage.setItem("personal", JSON.stringify([phone_number, email]));
 
           window.location.href = "thanks/";
-        }
       }
     }
   }

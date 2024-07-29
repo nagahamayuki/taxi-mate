@@ -16,6 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KX8ZQFSX');</script>
     <!-- End Google Tag Manager -->
 
+    <link rel="stylesheet" href="../assets/css/style.min.css">
     <link rel="canonical" href="https://taxi-mate.jp/lp-2/thanks/">
 
     <style>
@@ -128,6 +129,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               }
             }
         }
+        main#main .fourth {
+            display: block;
+        }
     </style>
 </head>
 
@@ -136,7 +140,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX8ZQFSX"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
     <header id="header" class="header">
         <div class="header-top">
             <div>
@@ -150,62 +153,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="header-bottom">
             <p>
-                <span class="sm-txt">未経験<img src="../assets/img/biginner.webp" height="20px" alt="未経験" style="margin:0px 2px;">でも</span>
-                <span class="green-txt">月給45万円が目指せる求人</span>
+                <span class="sm-txt"><img src="../assets/img/biginner.webp" height="20px" alt="未経験" style="margin:0px 2px;">タクシー未経験でも</span>
+                <span class="green-txt">月給45万円が目指せる会社</span>
                 <span class="sm-txt">のみを</span>
-                <span>ご紹介！</span>
+                <span>推薦！</span>
             </p>
         </div>
     </header>
 
-    <div class="thanks">
-        <p>
-            ご登録ありがとうございました。<br>
-            営業時間内に
-            <span class="tel green-marker">
-                <span class="material-icons original-icon">
-                    phone_in_talk
-                </span>
-            0120-935-196
-            </span>
-            の番号よりお電話いたします。<br>
-            こちらの番号を「<span class="green-marker">タクシーメイト</span>」で登録ください。<br>
-            <br>
-            <span class="small thin">折り返しお電話時間（営業時間）<br><span class="marker-light-green">平日</span>10:00〜19:00
-            </span>
-        </p>
-
-        <div class="link">
-            <a href="tel:0120-935-196" class="button b_tel">
-                ＼最短で面談！このまま電話で転職相談する／
-                <span class="tel_icon">
-                    0120-935-196
-                </span>
-                <div>
-                    <p>
-                        <span>平日</span>
-                        10:00-19:00
-                    </p>
-                    <p>
-                        <span>定休日</span>
-                        土日・祝日
-                    </p>
+    <main id="main" class="mainpage">
+        <div class="fourth last" id="times">
+            <div class="last-des">
+                <div class="common-img">
+                    <img src="../assets/img/stuff.webp" alt="">
                 </div>
-            </a>
-            <a href="https://lin.ee/ufsBuLq" class="button b_line" target="_blank">
-                ＼LINEでもやり取りできます／
-                <span>
-                    LINEの友達登録する
-                </span>
-            </a>
-            <a href="../../job" class="button b_job">
-                ＼月給45万円が目指せる求人を厳選／
-                <span>
-                    おすすめ求人を見る
-                </span>
-            </a>
+                <div class="common-des">
+                    <div class="description-triangle"></div>
+                    <div class="description-text sixth-des">
+                        お電話で転職支援を行っております。<br>繋がりやすい時間を教えてください。
+                    </div>
+                </div>
+            </div>
+            <div class="common-title">
+                <span></span>
+                <p>お電話が繋がりやすい時間(複数)</p>
+            </div>
+
+            <div class="four-options">
+                <div class="next-img-four">
+                    <img src="../assets/img/arrow-left.webp" alt="">
+                </div>
+                <p>平日</p>
+                <div class="option-one bg-white" id="f1" data-index="1" data-value="平日｜午前中(09:00〜12:00)" onclick="timeClick(this)">平日｜午前中(09:00〜12:00)</div>
+                <div class="option-one bg-white" id="f2" data-index="2" data-value="平日｜お昼休み(12:00〜13:00)" onclick="timeClick(this)">平日｜お昼休み(12:00〜13:00)</div>
+                <div class="option-one bg-white" id="f3" data-index="3" data-value="平日｜午後(13:00〜16:00)" onclick="timeClick(this)">平日｜午後(13:00〜16:00)</div>
+                <div class="option-one bg-white" id="f4" data-index="4" data-value="平日｜夕方(16:00〜18:00)" onclick="timeClick(this)">平日｜夕方(16:00〜18:00)</div>
+                <div class="option-one bg-white" id="f5" data-index="5" data-value="平日｜夜(18:00〜20:00)" onclick="timeClick(this)">平日｜夜(18:00〜20:00)</div>
+                <p>土日祝</p>
+                <div class="option-one bg-white" id="f6" data-index="6" data-value="土日祝｜午前(09:00〜12:00)" onclick="timeClick(this)">土日祝｜午前(09:00〜12:00)</div>
+                <div class="option-one bg-white" id="f7" data-index="7" data-value="土日祝｜午後(12:00〜18:00)" onclick="timeClick(this)">土日祝｜午後(12:00〜18:00)</div>
+            </div>
+
+            <div class="next">
+                <span class="next-button disabled" style="width:340px;" id="four-next" onclick="completeTime()">この内容で送信する</span>
+            </div>
         </div>
-    </div>
+    </main>
 
     <footer id="footer" class="footer">
         <div class="footer-relations">
@@ -217,6 +210,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="copyright">2024 AnyTrail Inc. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        let choice_time = [];
+        let choice_time_number = [];
+        function updateNextButtonState() {
+          if (choice_time.length !== 0) {
+            document.getElementById("four-next").classList.remove("disabled");
+          } else {
+            document.getElementById("four-next").classList.add("disabled");
+            document.querySelector(".next-img-four").style.top = "30px";
+          }
+        }
+        function timeClick(element) {
+            let clicked_choice_data_value = element.getAttribute("data-value");
+            let clicked_choice_data_index = element.getAttribute("data-index");
+            if (choice_time.includes(clicked_choice_data_value)) {
+                choice_time = choice_time.filter(reason => reason !== clicked_choice_data_value);
+                choice_time_number = choice_time_number.filter(index => index !== clicked_choice_data_index);
+                element.classList.add("bg-white");
+                element.style.color = "currentcolor";
+            } else {
+                choice_time.push(clicked_choice_data_value);
+                choice_time_number.push(clicked_choice_data_index);
+                element.classList.remove("bg-white");
+                element.style.backgroundColor = "#93d7dc";
+                element.style.color = "#0d8ea3";
+            }
+            const img_container_dom = document.querySelector(".next-img-four");
+            img_container_dom.style.top = "400px";
+            updateNextButtonState();
+        }
+
+        async function completeTime() {
+            let personal = JSON.parse(sessionStorage.getItem('personal'));
+            if (!personal) {
+                // sessionStorageに値がない場合、直接次の画面に進む
+                window.location.href = "../next/";
+                return;
+            }
+            let sessionPhoneNum = personal[0];
+            let sessionEmail = personal[1];
+            let sendData = {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    phone_number: sessionPhoneNum,
+                    email: sessionEmail,
+                    check_time: choice_time,
+                    check_time_number: choice_time_number
+                }),
+            };
+            let url = "https://hook.us1.make.com/vhu926ggpkpva0oc4gleldtt3dll3n9l";
+            const data = await fetch(url, sendData);
+
+            window.location.href = "../next/";
+        }
+    </script>
 </body>
 
 </html>

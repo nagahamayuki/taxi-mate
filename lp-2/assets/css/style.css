@@ -2999,6 +2999,7 @@ main#main {
   padding:40px 20px;
   font-size: 16px;
   gap:0.6rem;
+  position: relative;
 }
 .carrier-support .t-large {
   font-size: 1.3em;
@@ -3018,14 +3019,23 @@ main#main {
 .carrier-support button {
   cursor:pointer;
   border-radius: 100px;
-  height:64px;
+  height:74px;
   font-size: 1.2em;
   padding:0px 30px;
   margin:10px 0px 7px 0px;
-  background: #13988b;
   color: #fff;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
   position: relative;
+  background: -moz-linear-gradient(left, #00897b, #26a69a);
+  background: -webkit-linear-gradient(left, #00897b, #26a69a);
+  background: linear-gradient(to right, #00897b, #26a69a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carrier-support button span {
+  font-size: 0.65em;
 }
 main#main .common-title {
   margin-top: 16px;
@@ -3271,7 +3281,7 @@ main#main .second-head {
 main#main .second-head .step-car {
   position: absolute;
   top: 44px;
-  left: 20px;
+  left: 84px;
   z-index: 10;
   width: 34px;
   height: auto;
@@ -3281,7 +3291,7 @@ main#main .second-head .step-car img {
 }
 main#main .second-head .step-text {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
 }
 main#main .second-head .step-text p {
@@ -3307,7 +3317,7 @@ main#main .second-head .step-text .step-check .span-check {
 }
 main#main .second-head .step-road .road-bar {
   background-color: #d9d9d9;
-  width: 328px;
+  width: 180px;
   height: 3px;
   margin-top: 20px;
   margin-left: auto;
@@ -3322,7 +3332,7 @@ main#main .second-head .step-road .span-round1 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 24px;
+  left: 92px;
 }
 main#main .second-head .step-road .span-round2 {
   border-radius: 50%;
@@ -3332,7 +3342,7 @@ main#main .second-head .step-road .span-round2 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 70px;
+  left: 152px;
 }
 main#main .second-head .step-road .span-round3 {
   border-radius: 50%;
@@ -3342,7 +3352,7 @@ main#main .second-head .step-road .span-round3 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 117px;
+  left: 212px;
 }
 main#main .second-head .step-road .span-round4 {
   border-radius: 50%;
@@ -3352,7 +3362,7 @@ main#main .second-head .step-road .span-round4 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 164px;
+  left: 272px;
 }
 main#main .second-head .step-road .span-round5 {
   border-radius: 50%;
@@ -3488,6 +3498,18 @@ main#main .second-three-check .no-license:hover {
 main#main .second-three-check .red-taxi:active, main#main .second-three-check .black-taxi:active, main#main .second-three-check .no-license:active {
   background-color: #46aec0;
 }
+main#main .next-img-first {
+  width: 60px;
+  position: absolute;
+  right: 0px;
+  top: 380px;
+  z-index: 20;
+  transition: top 0.5s ease;
+  animation: moveSideways 0.7s infinite alternate;
+}
+main#main .next-img-first img {
+  width: 100%;
+}
 main#main .second-three-check .next-img-second {
   width: 60px;
   position: absolute;
@@ -3553,6 +3575,17 @@ main#main .third .step-car-third {
   height: auto;
 }
 main#main .third .step-car-third img {
+  width: 100%;
+}
+main#main .fifth .step-car-third {
+  position: absolute;
+  top: 44px;
+  left: 65px;
+  z-index: 10;
+  width: 34px;
+  height: auto;
+}
+main#main .fifth .step-car-third img {
   width: 100%;
 }
 main#main .third-five-part {
@@ -3693,15 +3726,15 @@ main#main .fourth {
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
 }
-main#main .fourth .step-car-four {
+main#main .newstep .step-car-four {
   position: absolute;
   top: 44px;
-  left: 110px;
+  left: 200px;
   z-index: 10;
   width: 34px;
   height: auto;
 }
-main#main .fourth .step-car-four img {
+main#main .newstep .step-car-four img {
   width: 100%;
 }
 main#main .fourth .four-options {
@@ -3733,9 +3766,10 @@ main#main .fourth .four-options .next-img-four {
   width: 60px;
   position: absolute;
   right: 8px;
-  top: 1.4rem;
+  top: 30px;
   transition: top 0.5s ease;
   animation: moveSideways 0.7s infinite alternate;
+  z-index: 100;
 }
 main#main .fourth .four-options .next-img-four img {
   width: 100%;
@@ -3791,12 +3825,23 @@ main#main .fifth .common-title-five .common-text {
 main#main .fifth .step-car-five {
   position: absolute;
   top: 44px;
-  left: 155px;
+  left: 142px;
   z-index: 10;
   width: 34px;
   height: auto;
 }
 main#main .fifth .step-car-five img {
+  width: 100%;
+}
+main#main .last .step-car-five {
+  position: absolute;
+  top: 44px;
+  left: 262px;
+  z-index: 10;
+  width: 34px;
+  height: auto;
+}
+main#main .last .step-car-five img {
   width: 100%;
 }
 main#main .fifth .four-options {
@@ -4426,6 +4471,7 @@ main#main .last .last-name {
   align-items: center;
   gap: 10px;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 main#main .last .last-name .last-name-input {
   display: flex;
