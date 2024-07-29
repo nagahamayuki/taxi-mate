@@ -3097,7 +3097,7 @@ main#main .common-description .common-des .description-text {
   height: 67px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   font-size: 11px;
   line-height: 22px;
   text-align: left;
