@@ -652,8 +652,8 @@ async function completeStep() {
               past_accidents_hubspot: past_accidents.join(";")
             }),
           };
-          // let url = "https://hook.us1.make.com/qi9wfgajkxhyvvgd3qsy4cfucf947qyj";
-          let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
+          let url = "https://hook.us1.make.com/qi9wfgajkxhyvvgd3qsy4cfucf947qyj";
+          // let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
           const data = await fetch(url, sendData);
 
           sessionStorage.setItem("ageValue", value);
