@@ -3020,7 +3020,7 @@ main#main {
   cursor:pointer;
   border-radius: 100px;
   height:74px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding:0px 30px;
   margin:10px 0px 7px 0px;
   color: #fff;
@@ -3075,7 +3075,7 @@ main#main .next {
 main#main .next .next-button {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   color: white;
-  width: 230px;
+  width: 228px;
   height: 45px;
   display: flex;
   justify-content: center;
@@ -3160,7 +3160,7 @@ main#main .disabled {
   opacity: 0.5;
 }
 main#main .first {
-  width: 375px;
+  width: 350px;
   background-color: rgba(255, 255, 255, 0.6);
   margin-left: auto;
   margin-right: auto;
@@ -3267,7 +3267,7 @@ main#main .disabled {
 }
 main#main .second {
   display: none;
-  width: 375px;
+  width: 350px;
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
   margin-left: auto;
@@ -3281,7 +3281,7 @@ main#main .second-head {
 main#main .second-head .step-car {
   position: absolute;
   top: 44px;
-  left: 84px;
+  left: 72px;
   z-index: 10;
   width: 34px;
   height: auto;
@@ -3332,7 +3332,7 @@ main#main .second-head .step-road .span-round1 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 92px;
+  left: 82px;
 }
 main#main .second-head .step-road .span-round2 {
   border-radius: 50%;
@@ -3342,7 +3342,7 @@ main#main .second-head .step-road .span-round2 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 152px;
+  left: 141px;
 }
 main#main .second-head .step-road .span-round3 {
   border-radius: 50%;
@@ -3352,7 +3352,7 @@ main#main .second-head .step-road .span-round3 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 212px;
+  left: 200px;
 }
 main#main .second-head .step-road .span-round4 {
   border-radius: 50%;
@@ -3362,7 +3362,7 @@ main#main .second-head .step-road .span-round4 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 272px;
+  left: 259px;
 }
 main#main .second-head .step-road .span-round5 {
   border-radius: 50%;
@@ -3729,7 +3729,7 @@ main#main .fourth {
 main#main .newstep .step-car-four {
   position: absolute;
   top: 44px;
-  left: 200px;
+  left: 190px;
   z-index: 10;
   width: 34px;
   height: auto;
@@ -3787,7 +3787,7 @@ main#main .fourth .four-options .option-one:hover {
 }
 main#main .fifth {
   display: none;
-  width: 375px;
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -3825,7 +3825,7 @@ main#main .fifth .common-title-five .common-text {
 main#main .fifth .step-car-five {
   position: absolute;
   top: 44px;
-  left: 142px;
+  left: 132px;
   z-index: 10;
   width: 34px;
   height: auto;
@@ -3836,7 +3836,7 @@ main#main .fifth .step-car-five img {
 main#main .last .step-car-five {
   position: absolute;
   top: 44px;
-  left: 262px;
+  left: 250px;
   z-index: 10;
   width: 34px;
   height: auto;
@@ -4102,7 +4102,7 @@ main#main .sixth .next-six .next-button:active {
 }
 main#main .newstep {
   display: none;
-  width: 375px;
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -4442,7 +4442,7 @@ main#main .seven .nearest-description .common-des .description-text {
 }
 main#main .last {
   display: none;
-  width: 375px;
+  width: 350px;
   overflow-y: visible;
   z-index: 10;
   position: relative;
