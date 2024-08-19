@@ -260,6 +260,11 @@ fieldset {
   border: 0;
 }
 
+.span-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 [hidden] {
   display: none !important;
 }

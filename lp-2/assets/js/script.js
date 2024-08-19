@@ -656,6 +656,8 @@ async function completeStep() {
           // let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
           const data = await fetch(url, sendData);
 
+          document.getElementById("last-next").classList.add("span-disabled");
+
           sessionStorage.setItem("ageValue", value);
           sessionStorage.setItem("personal", JSON.stringify([phone_number, email]));
 
