@@ -4065,7 +4065,7 @@ main#main .newstep .next-img-newstep {
   width: 60px;
   position: absolute;
   right: 8px;
-  top: 165px;
+  top: 140px;
   transition: top 0.5s ease;
   z-index: 3;
   animation: moveSideways 0.7s infinite alternate;

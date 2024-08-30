@@ -358,7 +358,7 @@ function sixAreaClick(element) {
   }
 }
 function updateSixNextButtonState() {
-  if (commute_ways.length !== 0 && residence !== "") {
+  if (commute_ways.length !== 0) {
     document.getElementById("six-next").classList.remove("disabled");
   } else {
     document.getElementById("six-next").classList.add("disabled");
@@ -380,11 +380,11 @@ function sixWayClick(element) {
     element.style.color = "#0d8ea3";
   }
   if (commute_ways.length === 0) {
-    img_container_dom.style.top = "180px";
+    img_container_dom.style.top = "0px";
     updateSixNextButtonState();
   } else {
     updateSixNextButtonState();
-    img_container_dom.style.top = "340px";
+    img_container_dom.style.top = "260px";
   }
 }
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let inputStation = document.getElementById("nearest_station");
   inputStation.addEventListener("input", () => {
     if (inputStation.value.length > 1) {
-      img_container_dom.style.top = "430px";
+      img_container_dom.style.top = "260px";
     } 
   });
 });
@@ -527,6 +527,7 @@ function gotoNewStep() {
   // Display the second div
   next_page.style.display = "none";
   post_number = "";
+  document.getElementById("newstep-next").classList.add("disabled");
 }
 
 function sevenHidden() {
@@ -665,8 +666,8 @@ async function completeStep() {
               past_accidents_hubspot: past_accidents.join(";")
             }),
           };
-          let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
-          // let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
+          // let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
+          let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
           const data = await fetch(url, sendData);
 
           document.getElementById("last-next").classList.add("span-disabled");
