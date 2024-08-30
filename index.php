@@ -1023,7 +1023,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						  <input
 							type="text"
 							name="firstname"
-							onchange="getFirstname()"
 							id="firstname"
 							class="form-control"
 							placeholder="山田"
