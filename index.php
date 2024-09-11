@@ -71,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<a href="contact/" class="button b_mail">
 							<span>メールで求人を受け取る</span>
 						</a>
-						<a href="registration/" class="button b_service">
+						<a href="lp-1/" class="button b_service" target="_blank">
 							<span>転職支援サービスに登録</span>
 						</a>
 						<a href="tel:0120-935-196" class="button b_tel">
@@ -102,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<a href="job/">求人一覧</a>
 				</li>
 				<li>
-					<a href="registration/" class="button b_service">
+					<a href="lp-1/" class="button b_service" target="_blank">
 						＼転職スピードNo.1／
 						<span>
 							転職支援サービスに登録(無料)
@@ -147,7 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							タクシーメイトは、タクシー業界に特化した企業紹介サービスです。あなたの住んでいる場所や希望の条件の中から最もマッチしたタクシー会社を厳選して紹介します。
 						</p>
 						<div class="link">
-							<a href="registration/" class="button b_service">
+							<a href="lp-1/" class="button b_service" target="_blank">
 								＼転職スピードNo.1／
 								<span>
 									転職支援サービスに登録(無料)
@@ -269,7 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								タクシー業界を知り尽くしたアドバイザーが転職を支援します
 							</p>
 						</div>
-						<a href="registration/" class="button b_service">
+						<a href="lp-1/" class="button b_service" target="_blank">
 							＼転職スピードNo.1／
 							<span>
 								転職支援サービスに登録(無料)
@@ -394,7 +394,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							タクシー業界を知り尽くしたアドバイザーが転職を支援します
 						</p>
 					</div>
-					<a href="registration/" class="button b_service">
+					<a href="lp-1/" class="button b_service" target="_blank">
 						＼転職スピードNo.1／
 						<span>
 							転職支援サービスに登録(無料)
@@ -1173,7 +1173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								タクシー業界を知り尽くしたアドバイザーが転職を支援します
 							</p>
 						</div>
-						<a href="registration/" class="button b_service">
+						<a href="lp-1/" class="button b_service" target="_blank">
 							＼転職スピードNo.1／
 							<span>
 								転職支援サービスに登録(無料)
@@ -1303,7 +1303,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<a href="contact/">
 					メールで求人を受け取る
 				</a>
-				<a href="registration/">
+				<a href="lp-1/" target="button">
 					転職支援サービスに登録
 				</a>
 			</li>
