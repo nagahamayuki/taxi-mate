@@ -3538,20 +3538,22 @@ main#main .third-five-part .third-two {
   justify-content: center;
   cursor: pointer;
   align-items: center;
+  flex-flow: column;
 }
 main#main .third-five-part .third-one .third-cycle,
 main#main .third-five-part .third-two .third-cycle {
   display: flex;
-  margin-top: 10px;
   gap: 6px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border: 1px solid gray;
   border-radius: 5px;
-  width: 160px;
-  height: 100px;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+  width: 340px;
+  height: 42px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  letter-spacing: -.04em;
 }
 main#main .third-five-part .third-one .third-cycle .third-img,
 main#main .third-five-part .third-two .third-cycle .third-img {
@@ -3580,7 +3582,7 @@ main#main .third-five-part .third-two .next-img-third {
   position: absolute;
   right: 8px;
   transition: top 0.5s ease;
-  top: 4rem;
+  top: 2rem;
   z-index: 200;
   animation: moveSideways 0.7s infinite alternate;
 }

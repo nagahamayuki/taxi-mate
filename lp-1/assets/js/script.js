@@ -174,14 +174,14 @@ function updateThirdNextButtonState() {
 }
 
 var changing_jobs_time = "";
-function disableJob(clickedId) {
-  var buttons = ["plane", "train", "bus", "bike", "rickshaw"];
-  buttons.forEach(function (buttonId) {
-    if (buttonId !== clickedId) {
-      document.getElementById(buttonId).classList.add("disabled");
-    }
-  });
-}
+// function disableJob(clickedId) {
+//   var buttons = ["plane", "train", "bus", "bike", "rickshaw"];
+//   buttons.forEach(function (buttonId) {
+//     if (buttonId !== clickedId) {
+//       document.getElementById(buttonId).classList.add("disabled");
+//     }
+//   });
+// }
 
 function thirdCheck(element) {
   changing_jobs_time = element.getAttribute("data-value");
