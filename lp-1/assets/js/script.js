@@ -672,8 +672,6 @@ async function completeStep() {
 
           document.getElementById("last-next").classList.add("span-disabled");
 
-          sessionStorage.setItem("ageValue", value);
-
           window.location.href = "thanks/";
         }
       }
