@@ -3231,7 +3231,7 @@ main#main .disabled {
   opacity: 0.5;
 }
 main#main .step-license {
-  display: block;
+  display: none;
   width: 375px;
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
@@ -3243,7 +3243,7 @@ main#main .second-head {
   border-bottom: 2px solid black;
   height: 80px;
 }
-main#main .second-head .step-car {
+/* main#main .second-head .step-car {
   position: absolute;
   top: 44px;
   left: 20px;
@@ -3253,6 +3253,47 @@ main#main .second-head .step-car {
 }
 main#main .second-head .step-car img {
   width: 100%;
+} */
+.step-changing-job-reasons .step-car {
+  position: absolute;
+  top: 44px;
+  left: 20px;
+  z-index: 10;
+  width: 34px;
+  height: auto;
+}
+.step-changing-job-reasons .step-car img {
+  width: 100%;
+}
+.step-license .step-car {
+  position: absolute;
+  top: 44px;
+  left: 78px;
+  z-index: 10;
+  width: 34px;
+  height: auto;
+}
+.step-license .step-car img {
+  width: 100%;
+}
+main#main .license_back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #000;
+  height: 70px;
+  margin-top: 10px;
+}
+main#main .license_back #license_back_button {
+  width: 290px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 main#main .second-head .step-text {
   display: flex;
@@ -3282,7 +3323,7 @@ main#main .second-head .step-text .step-check .span-check {
 }
 main#main .second-head .step-road .road-bar {
   background-color: #d9d9d9;
-  width: 328px;
+  width: 290px;
   height: 3px;
   margin-top: 20px;
   margin-left: auto;
@@ -3297,7 +3338,7 @@ main#main .second-head .step-road .span-round1 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 24px;
+  left: 40px;
 }
 main#main .second-head .step-road .span-round2 {
   border-radius: 50%;
@@ -3307,7 +3348,7 @@ main#main .second-head .step-road .span-round2 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 70px;
+  left: 88px;
 }
 main#main .second-head .step-road .span-round3 {
   border-radius: 50%;
@@ -3317,7 +3358,7 @@ main#main .second-head .step-road .span-round3 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 117px;
+  left: 135px;
 }
 main#main .second-head .step-road .span-round4 {
   border-radius: 50%;
@@ -3327,7 +3368,7 @@ main#main .second-head .step-road .span-round4 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 164px;
+  left: 182px;
 }
 main#main .second-head .step-road .span-round5 {
   border-radius: 50%;
@@ -3337,7 +3378,7 @@ main#main .second-head .step-road .span-round5 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 211px;
+  left: 229px;
 }
 main#main .second-head .step-road .span-round6 {
   border-radius: 50%;
@@ -3347,7 +3388,7 @@ main#main .second-head .step-road .span-round6 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 258px;
+  left: 276px;
 }
 main#main .second-head .step-road .span-round7 {
   border-radius: 50%;
@@ -3357,7 +3398,7 @@ main#main .second-head .step-road .span-round7 {
   display: flex;
   position: absolute;
   top: 53px;
-  left: 305px;
+  left: 323px;
 }
 main#main .second-head .step-road .span-round8 {
   border-radius: 50%;
@@ -3521,15 +3562,15 @@ main#main .step-changing-jobs-time {
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
 }
-main#main .step-changing-jobs-time .step-car-third {
+main#main .step-changing-jobs-time .step-car {
   position: absolute;
   top: 44px;
-  left: 65px;
+  left: 124px;
   z-index: 10;
   width: 34px;
   height: auto;
 }
-main#main .step-changing-jobs-time .step-car-third img {
+main#main .step-changing-jobs-time .step-car img {
   width: 100%;
 }
 main#main .third-five-part {
@@ -3664,7 +3705,7 @@ main#main .step-changing-jobs-time .next-third .next-button:active {
   background-color: #46aec0;
 }
 main#main .step-changing-job-reasons {
-  display: none;
+  display: block;
   width: 375px;
   margin-left: auto;
   margin-right: auto;
@@ -3674,11 +3715,14 @@ main#main .step-changing-job-reasons {
 }
 main#main .step-changing-job-reasons .step-car-four {
   position: absolute;
-  top: 44px;
+  top: 20px;
   left: 110px;
   z-index: 10;
   width: 34px;
   height: auto;
+}
+#choice_job_reasons_next_button {
+  width: 340px !important;
 }
 main#main .step-changing-job-reasons .step-car-four img {
   width: 100%;
@@ -3739,6 +3783,14 @@ main#main .step-taxi-attracts {
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
 }
+main#main .step-changing-job-reasons .common-title {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 15px;
+  gap: 4px;
+  align-items: flex-start;
+}
 main#main .step-taxi-attracts .common-title-five {
   margin-top: 16px;
   display: flex;
@@ -3747,13 +3799,13 @@ main#main .step-taxi-attracts .common-title-five {
   gap: 4px;
   align-items: flex-start;
 }
-main#main .step-taxi-attracts .common-title-five span {
+main#main .step-changing-job-reasons .common-title span {
   width: 12px;
   height: 12px;
   background-color: #2bbbad;
   margin-top: 5px;
 }
-main#main .step-taxi-attracts .common-title-five .five-title {
+main#main .step-changing-job-reasons .common-title .choice_job_reasons_title {
   font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.02em;
@@ -3840,15 +3892,15 @@ main#main .step-commute-ways {
   background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 20px;
 }
-main#main .step-commute-ways .step-car-six {
+main#main .step-commute-ways .step-car {
   position: absolute;
   top: 44px;
-  left: 200px;
+  left: 173px;
   z-index: 10;
   width: 34px;
   height: auto;
 }
-main#main .step-commute-ways .step-car-six img {
+main#main .step-commute-ways .step-car img {
   width: 100%;
 }
 main#main .step-commute-ways .sixth-one {
@@ -4107,15 +4159,15 @@ main#main .step-post-number .next-img-newstep img {
     right: 22px;
   }
 }
-main#main .step-post-number .step-car-newstep {
+main#main .step-post-number .step-car {
   position: absolute;
   top: 44px;
-  left: 245px;
+  left: 219px;
   z-index: 10;
   width: 34px;
   height: auto;
 }
-main#main .step-post-number .step-car-newstep img {
+main#main .step-post-number .step-car img {
   width: 100%;
 }
 main#main .step-post-number .six-input {
@@ -4279,15 +4331,15 @@ main#main .step-past-accidents {
   background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 20px;
 }
-main#main .step-past-accidents .step-car-seven {
+main#main .step-past-accidents .step-car {
   position: absolute;
   top: 44px;
-  left: 295px;
+  left: 265px;
   z-index: 10;
   width: 34px;
   height: auto;
 }
-main#main .step-past-accidents .step-car-seven img {
+main#main .step-past-accidents .step-car img {
   width: 100%;
 }
 main#main .step-past-accidents .four-options-seven {
@@ -4416,15 +4468,15 @@ main#main .step-last {
   background-color: rgba(255, 255, 255, 0.8);
   margin-bottom: 20px;
 }
-main#main .step-last .step-car-last {
+main#main .step-last .step-car {
   position: absolute;
   top: 44px;
-  left: 340px;
+  left: 314px;
   z-index: 10;
   width: 34px;
   height: auto;
 }
-main#main .step-last .step-car-last img {
+main#main .step-last .step-car img {
   width: 100%;
 }
 main#main .step-last .last-name {
