@@ -72,13 +72,13 @@ function licenseClick2() {
 
   // Display the second div
   next_page.style.display = "block";
-  if (license === "⼆種免許") {
+  if (license === "二種免許") {
     license = "";
     enableAllButtons();
     img_container_dom.style.top = "2.5rem";
     black_taxi_dom.style.backgroundColor = "";
   } else {
-    license = "⼆種免許";
+    license = "二種免許";
   }
   // Hide the first button
   prev_page.style.display = "none";
@@ -87,7 +87,7 @@ function licenseClick2() {
   next_page.style.display = "block";
 
   // updateNextButtonState();
-  console.log(license);
+  console.log(license.codePointAt(0).toString(16));
 }
 
 function licenseClick3() {
@@ -609,9 +609,9 @@ async function LastNextStep() {
               past_accidents_hubspot: past_accidents.join(";"),
             }),
           };
+          // let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
           let url =
-            "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
-          // let url = "https://hook.us1.make.com/qi9wfgajkxhyvvgd3qsy4cfucf947qyj"; //ローカルで利用するもの
+            "https://hook.us1.make.com/qi9wfgajkxhyvvgd3qsy4cfucf947qyj"; //ローカルで利用するもの
           const data = await fetch(url, sendData);
 
           document.getElementById("last-next").classList.add("span-disabled");
