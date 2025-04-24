@@ -167,14 +167,6 @@ function updateThirdNextButtonState() {
 }
 
 var changing_jobs_time = "";
-// function disableJob(clickedId) {
-//   var buttons = ["plane", "train", "bus", "bike", "rickshaw"];
-//   buttons.forEach(function (buttonId) {
-//     if (buttonId !== clickedId) {
-//       document.getElementById(buttonId).classList.add("disabled");
-//     }
-//   });
-// }
 
 function ChangingJobsTimeClick(element) {
   changing_jobs_time = element.getAttribute("data-value");
@@ -233,7 +225,7 @@ function Choice_job_reasons_Click(element) {
     element.style.color = "#0d8ea3";
   }
   const img_container_dom = document.getElementById("nextImgFourth");
-  img_container_dom.style.top = "340px";
+  img_container_dom.style.top = "455px";
   console.log(choice_job_reasons);
   UpdateChoiceJobReasonsClickButtonState();
 }
