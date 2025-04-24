@@ -586,9 +586,9 @@ async function LastNextStep() {
               past_accidents_hubspot: past_accidents.join(";"),
             }),
           };
-          // let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
           let url =
-            "https://hook.us1.make.com/qi9wfgajkxhyvvgd3qsy4cfucf947qyj"; //ローカルで利用するもの
+            "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
+          // let url = "https://hook.us1.make.com/qi9wfgajkxhyvvgd3qsy4cfucf947qyj"; //ローカルで利用するもの
           const data = await fetch(url, sendData);
 
           document.getElementById("last-next").classList.add("span-disabled");
