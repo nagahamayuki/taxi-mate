@@ -18,112 +18,89 @@ document.addEventListener("DOMContentLoaded", function () {
 let exp_type;
 // ============================Second =================================
 var license = "";
-function disableOtherButtons(clickedId) {
-  var buttons = ["redtaxi", "blacktaxi", "nolicense"];
-  buttons.forEach(function (buttonId) {
-    if (buttonId !== clickedId) {
-      document.getElementById(buttonId).classList.add("disabled");
-    }
-  });
-}
-function enableAllButtons() {
-  var buttons = ["redtaxi", "blacktaxi", "nolicense"];
-  buttons.forEach(function (buttonId) {
-    document.getElementById(buttonId).classList.remove("disabled");
-  });
-}
+// function disableOtherButtons(clickedId) {
+//   var buttons = ["redtaxi", "blacktaxi", "nolicense"];
+//   buttons.forEach(function (buttonId) {
+//     if (buttonId !== clickedId) {
+//       document.getElementById(buttonId).classList.add("disabled");
+//     }
+//   });
+// }
+// function enableAllButtons() {
+//   var buttons = ["redtaxi", "blacktaxi", "nolicense"];
+//   buttons.forEach(function (buttonId) {
+//     document.getElementById(buttonId).classList.remove("disabled");
+//   });
+// }
 
 function licenseClick1() {
-  var prev_page = document.getElementById("license");
-
-  var next_page = document.getElementById("changing_jobs_time");
-
-  // Hide the first button
-  prev_page.style.display = "none";
-
-  // Display the second div
-  next_page.style.display = "block";
-
   var img_container_dom = document.getElementById("ani_second");
   var red_taxi_dom = document.getElementById("redtaxi");
-
-  if (license === "普通免許") {
-    license = "";
-  } else {
-    license = "普通免許";
-  }
-  // Hide the first button
+  var prev_page = document.getElementById("license");
+  var next_page = document.getElementById("changing_jobs_time");
   prev_page.style.display = "none";
-  // Display the second div
   next_page.style.display = "block";
+  license = "普通免許";
 
-  // updateNextButtonState();
+  // if (license === "普通免許") {
+  //   license = "";
+  //   console.log("普通免許が選択されている場合の処理");
+  // } else {
+  //   license = "普通免許";
+  // }
+  prev_page.style.display = "none";
+  next_page.style.display = "block";
   console.log(license);
 }
 function licenseClick2() {
   var img_container_dom = document.getElementById("ani_second");
   var black_taxi_dom = document.getElementById("blacktaxi");
   var prev_page = document.getElementById("license");
-
   var next_page = document.getElementById("changing_jobs_time");
-
-  // Hide the first button
   prev_page.style.display = "none";
-
-  // Display the second div
   next_page.style.display = "block";
-  if (license === "二種免許") {
-    license = "";
-    enableAllButtons();
-    img_container_dom.style.top = "2.5rem";
-    black_taxi_dom.style.backgroundColor = "";
-  } else {
-    license = "二種免許";
-  }
-  // Hide the first button
+  const LICENSE_TYPE_BLACK = "二種免許".normalize("NFKC");
+  license = LICENSE_TYPE_BLACK;
+
+  // if (license === LICENSE_TYPE_BLACK) {
+  //   license = "";
+  //   enableAllButtons();
+  //   img_container_dom.style.top = "2.5rem";
+  //   black_taxi_dom.style.backgroundColor = "";
+  // } else {
+  //   license = LICENSE_TYPE_BLACK;
+  // }
   prev_page.style.display = "none";
-
-  // Display the second div
   next_page.style.display = "block";
-
-  // updateNextButtonState();
-  console.log(license.codePointAt(0).toString(16));
+  console.log(license);
 }
 
 function licenseClick3() {
   var prev_page = document.getElementById("license");
-
   var next_page = document.getElementById("changing_jobs_time");
-
-  // Hide the first button
   prev_page.style.display = "none";
-
-  // Display the second div
   next_page.style.display = "block";
   var no_license_dom = document.getElementById("nolicense");
+  license = "免許は持っていない";
 
-  if (license === "免許は持っていない") {
-    license = "";
-    enableAllButtons();
-    no_license_dom.style.backgroundColor = "";
-  } else {
-    license = "免許は持っていない";
-    disableOtherButtons("nolicense");
-  }
-  // Hide the first button
+  // if (license === "免許は持っていない") {
+  //   license = "";
+  //   enableAllButtons();
+  //   no_license_dom.style.backgroundColor = "";
+  // } else {
+  //   license = "免許は持っていない";
+  //   disableOtherButtons("nolicense");
+  // }
+
   prev_page.style.display = "none";
-
-  // Display the second div
   next_page.style.display = "block";
-
-  // updateNextButtonState();
   console.log(license);
 }
 function LicenseBackStep() {
   var prev_page = document.getElementById("choice_job_reasons");
 
   var next_page = document.getElementById("license");
-  enableAllButtons();
+  // enableAllButtons();
   // Hide the first button
   prev_page.style.display = "block";
 
@@ -184,7 +161,7 @@ function ChangingJobsTimeBackStep() {
   var prev_page = document.getElementById("license");
 
   var next_page = document.getElementById("changing_jobs_time");
-  enableAllButtons();
+  // enableAllButtons();
   // Hide the first button
   prev_page.style.display = "block";
 
