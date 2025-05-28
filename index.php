@@ -1150,7 +1150,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<section class="page_link_02">
 				<div class="title">
 					<p>
-						どんなテクシー会社があるのかの質問だけでも構いません<br>
+						どんなタクシー会社があるのかの質問だけでも構いません<br>
 						まずはお気軽にお問い合わせください
 					</p>
 					<h2>
