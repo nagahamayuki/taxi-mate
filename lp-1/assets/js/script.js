@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   inputStation.addEventListener("input", () => {
     if (inputStation.value.length > 1) {
       img_container_dom.style.top = "260px";
-    } 
+    }
   });
 });
 // six input
@@ -598,7 +598,8 @@ async function completeStep() {
       age_vali.style.display = "none";
       age_vali.classList.remove("shake");
 
-      const phoneRegex = /^(0[5-9]0[-(]?[0-9]{4}[-)]?[0-9]{4}|0120[-]?\d{1,3}[-]?\d{4}|050[-]?\d{4}[-]?\d{4}|0\d{1,3}[-]?\d{1,4}[-]?\d{4}|0570[-]?\d{1,4}[-]?\d{4})$/;
+      const phoneRegex =
+        /^(0[5-9]0[-(]?[0-9]{4}[-)]?[0-9]{4}|0120[-]?\d{1,3}[-]?\d{4}|050[-]?\d{4}[-]?\d{4}|0\d{1,3}[-]?\d{1,4}[-]?\d{4}|0570[-]?\d{1,4}[-]?\d{4})$/;
       if (phone_number === "" || !phoneRegex.test(phone_number)) {
         phone_vali.style.display = "block";
         phone_vali.classList.add("shake");
@@ -610,7 +611,8 @@ async function completeStep() {
         phone_vali.classList.remove("shake");
 
         // メールアドレスのバリデーション（任意項目）
-        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        const emailRegex =
+          /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         let emailError = false;
 
         if (email && !emailRegex.test(email)) {
@@ -628,13 +630,13 @@ async function completeStep() {
 
         if (!emailError) {
           const ageValues = {
-              '10代': 5000,
-              '20代': 67500,
-              '30代': 15000,
-              '40代': 15000,
-              '50代': 0,
-              '60代': 0,
-              '70代': 0
+            "10代": 5000,
+            "20代": 67500,
+            "30代": 15000,
+            "40代": 15000,
+            "50代": 0,
+            "60代": 0,
+            "70代": 0,
           };
           const value = ageValues[age] || 0;
 
@@ -663,10 +665,11 @@ async function completeStep() {
               changing_job_reasons_hubspot: changing_job_reasons.join(";"),
               taxi_attracts_hubspot: taxi_attracts.join(";"),
               commute_ways_hubspot: commute_ways.join(";"),
-              past_accidents_hubspot: past_accidents.join(";")
+              past_accidents_hubspot: past_accidents.join(";"),
             }),
           };
-          let url = "https://hook.us1.make.com/1od0hmbiakapcmo3h2h2id2jdki57y83";
+          let url =
+            "https://hook.us1.make.com/dcv555toufdmuopgvlc5zhxtguw5egp7";
           // let url = "https://hook.us1.make.com/sb3s7hkgx380o517s7ny94yw67zhn252"; //ローカルで利用するもの
           const data = await fetch(url, sendData);
 
