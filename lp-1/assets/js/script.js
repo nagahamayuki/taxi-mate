@@ -31,14 +31,6 @@ let exp_type;
 
 var license = "";
 
-// function updateNextButtonState() {
-//   if (license === "") {
-//     document.getElementById("second-next").classList.add("disabled");
-//   } else {
-//     document.getElementById("second-next").classList.remove("disabled");
-//   }
-// }
-
 function disableOtherButtons(clickedId) {
   var buttons = ["redtaxi", "blacktaxi", "nolicense"];
   buttons.forEach(function (buttonId) {
@@ -47,12 +39,6 @@ function disableOtherButtons(clickedId) {
     }
   });
 }
-// function enableAllButtons() {
-//   var buttons = ["redtaxi", "blacktaxi", "nolicense"];
-//   buttons.forEach(function (buttonId) {
-//     document.getElementById(buttonId).classList.remove("disabled");
-//   });
-// }
 
 function secondCheck1() {
   var prev_page = document.getElementById("second");
@@ -68,13 +54,6 @@ function secondCheck1() {
   var img_container_dom = document.querySelector(".next-img-second");
   var red_taxi_dom = document.getElementById("redtaxi");
   license = "普通免許";
-
-  // これらのコードは意味がないのでコメントアウト
-  // if (license === "普通免許") {
-  //   license = "";
-  // } else {
-  //   license = "普通免許";
-  // }
 
   // Hide the first button
   prev_page.style.display = "none";
@@ -99,14 +78,7 @@ function secondCheck2() {
   next_page.style.display = "block";
   const LICENSE_TYPE_BLACK = "二種免許".normalize("NFKC");
   license = LICENSE_TYPE_BLACK;
-  // if (license === "⼆種免許") {
-  //   license = "";
-  //   enableAllButtons();
-  //   img_container_dom.style.top = "2.5rem";
-  //   black_taxi_dom.style.backgroundColor = "";
-  // } else {
-  //   license = "⼆種免許";
-  // }
+
   // Hide the first button
   prev_page.style.display = "none";
 
@@ -130,14 +102,7 @@ function secondCheck3() {
   next_page.style.display = "block";
   var no_license_dom = document.getElementById("nolicense");
   license = "免許は持っていない";
-  // if (license === "免許は持っていない") {
-  //   license = "";
-  //   enableAllButtons();
-  //   no_license_dom.style.backgroundColor = "";
-  // } else {
-  //   license = "免許は持っていない";
-  //   disableOtherButtons("nolicense");
-  // }
+
   // Hide the first button
   prev_page.style.display = "none";
 
@@ -158,8 +123,6 @@ function gotoFirst() {
 
   // Display the second Page
   secondpage.style.display = "none";
-
-  // enableAllButtons();
 }
 
 ///////////////////////////////////////////////////////////////
@@ -175,23 +138,8 @@ function secondHidden() {
   // Display the second div
   next_page.style.display = "block";
 }
-function updateThirdNextButtonState() {
-  if (license === "") {
-    document.getElementById("third-next").classList.add("disabled");
-  } else {
-    document.getElementById("third-next").classList.remove("disabled");
-  }
-}
 
 var changing_jobs_time = "";
-// function disableJob(clickedId) {
-//   var buttons = ["plane", "train", "bus", "bike", "rickshaw"];
-//   buttons.forEach(function (buttonId) {
-//     if (buttonId !== clickedId) {
-//       document.getElementById(buttonId).classList.add("disabled");
-//     }
-//   });
-// }
 
 function thirdCheck(element) {
   changing_jobs_time = element.getAttribute("data-value");
@@ -208,7 +156,6 @@ function gotoSecond() {
   var prev_page = document.getElementById("second");
 
   var next_page = document.getElementById("third");
-  // enableAllButtons();
   // Hide the first button
   prev_page.style.display = "block";
 
