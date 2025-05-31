@@ -15,17 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-let exp_type;
-// 質問を消したのでコメントアウト
-// function toggleDivs(element) {
-//   var exp = element.querySelector("p");
-//   exp_type = exp.textContent;
-//   var prev_page = document.getElementById("first");
-//   var next_page = document.getElementById("second");
-//   prev_page.style.display = "none";
-//   next_page.style.display = "block";
-// }
-
 // //////////////////////////////////////////////////////////////////
 // ============================Second =================================
 
@@ -603,7 +592,6 @@ async function completeStep() {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              experience: exp_type,
               license: license,
               changing_jobs_time: changing_jobs_time,
               changing_job_reasons: changing_job_reasons,
