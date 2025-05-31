@@ -47,12 +47,12 @@ function disableOtherButtons(clickedId) {
     }
   });
 }
-function enableAllButtons() {
-  var buttons = ["redtaxi", "blacktaxi", "nolicense"];
-  buttons.forEach(function (buttonId) {
-    document.getElementById(buttonId).classList.remove("disabled");
-  });
-}
+// function enableAllButtons() {
+//   var buttons = ["redtaxi", "blacktaxi", "nolicense"];
+//   buttons.forEach(function (buttonId) {
+//     document.getElementById(buttonId).classList.remove("disabled");
+//   });
+// }
 
 function secondCheck1() {
   var prev_page = document.getElementById("second");
@@ -67,16 +67,21 @@ function secondCheck1() {
 
   var img_container_dom = document.querySelector(".next-img-second");
   var red_taxi_dom = document.getElementById("redtaxi");
+  license = "普通免許";
 
-  if (license === "普通免許") {
-    license = "";
-  } else {
-    license = "普通免許";
-  }
+  // これらのコードは意味がないのでコメントアウト
+  // if (license === "普通免許") {
+  //   license = "";
+  // } else {
+  //   license = "普通免許";
+  // }
+
   // Hide the first button
   prev_page.style.display = "none";
   // Display the second div
   next_page.style.display = "block";
+
+  console.log("license", license);
 
   // updateNextButtonState();
 }
@@ -92,19 +97,23 @@ function secondCheck2() {
 
   // Display the second div
   next_page.style.display = "block";
-  if (license === "⼆種免許") {
-    license = "";
-    enableAllButtons();
-    img_container_dom.style.top = "2.5rem";
-    black_taxi_dom.style.backgroundColor = "";
-  } else {
-    license = "⼆種免許";
-  }
+  const LICENSE_TYPE_BLACK = "二種免許".normalize("NFKC");
+  license = LICENSE_TYPE_BLACK;
+  // if (license === "⼆種免許") {
+  //   license = "";
+  //   enableAllButtons();
+  //   img_container_dom.style.top = "2.5rem";
+  //   black_taxi_dom.style.backgroundColor = "";
+  // } else {
+  //   license = "⼆種免許";
+  // }
   // Hide the first button
   prev_page.style.display = "none";
 
   // Display the second div
   next_page.style.display = "block";
+
+  console.log("license", license);
 
   // updateNextButtonState();
 }
@@ -120,15 +129,15 @@ function secondCheck3() {
   // Display the second div
   next_page.style.display = "block";
   var no_license_dom = document.getElementById("nolicense");
-
-  if (license === "免許は持っていない") {
-    license = "";
-    enableAllButtons();
-    no_license_dom.style.backgroundColor = "";
-  } else {
-    license = "免許は持っていない";
-    disableOtherButtons("nolicense");
-  }
+  license = "免許は持っていない";
+  // if (license === "免許は持っていない") {
+  //   license = "";
+  //   enableAllButtons();
+  //   no_license_dom.style.backgroundColor = "";
+  // } else {
+  //   license = "免許は持っていない";
+  //   disableOtherButtons("nolicense");
+  // }
   // Hide the first button
   prev_page.style.display = "none";
 
@@ -136,6 +145,7 @@ function secondCheck3() {
   next_page.style.display = "block";
 
   // updateNextButtonState();
+  console.log("license", license);
 }
 // Initial check to ensure the second-next button is disabled on page load
 function gotoFirst() {
@@ -149,7 +159,7 @@ function gotoFirst() {
   // Display the second Page
   secondpage.style.display = "none";
 
-  enableAllButtons();
+  // enableAllButtons();
 }
 
 ///////////////////////////////////////////////////////////////
@@ -198,7 +208,7 @@ function gotoSecond() {
   var prev_page = document.getElementById("second");
 
   var next_page = document.getElementById("third");
-  enableAllButtons();
+  // enableAllButtons();
   // Hide the first button
   prev_page.style.display = "block";
 
